@@ -116,6 +116,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="cameraCalibration.cpp" />
     <ClCompile Include="captureFrame.cpp" />
     <ClCompile Include="findEyeCenter.cpp" />
     <ClCompile Include="findEyeCorner.cpp" />
@@ -127,6 +128,7 @@
     <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="cameraCalibration.h" />
     <ClInclude Include="captureFrame.h" />
     <ClInclude Include="constantes.h" />
     <ClInclude Include="findEyeCenter.h" />
