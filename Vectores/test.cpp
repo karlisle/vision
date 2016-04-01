@@ -1,7 +1,8 @@
 #include "test.h"
+#include "hough.h"
 
 using namespace std;
-void Test::display(cv::Mat frame, std::vector<cv::Rect> faces, cv::Rect lEye, cv::Rect rEye, cv::Point Ell, cv::Point Elr)
+void Test::display(cv::Mat frame, std::vector<cv::Rect> faces, cv::Rect lEye, cv::Rect rEye, cv::Mat X0)
 //void Test::display()
 {
 	string wName = "Gaze";
@@ -12,22 +13,49 @@ void Test::display(cv::Mat frame, std::vector<cv::Rect> faces, cv::Rect lEye, cv
 	cv::namedWindow(nrEye, CV_WINDOW_NORMAL);
 	
 	cv::Mat faceROI = frame.clone();                                                //-- Hacemos un clon de la imagen que se recive como parametro
-	//cv::cvtColor(frame, frame, CV_RGB2GRAY);
+	cv::cvtColor(frame, frame, CV_RGB2GRAY);
 	frame.convertTo(faceROI, CV_8U, 2.48, -10.68);									//-- Posterior a eso modificamos el contraste de la imagen 
 	
-	cv::bilateralFilter(frame, faceROI, 10, 60, 60);
-	GaussianBlur(frame, frame, cv::Size(3, 3), 0, 0);
+	//cv::bilateralFilter(frame, faceROI, 10, 60, 60);
+	//GaussianBlur(frame, faceROI, cv::Size(3, 3), 0, 0);
 
 	cv::Mat leye(faceROI(lEye));
 	cv::Mat reye(faceROI(rEye));
 
+	cv::Mat cleye = leye.clone();
+
+	cv::bilateralFilter(cleye, leye, 7, 30, 30);
 	//cv::line(faceROI, Ell, Elr,  cv::Scalar(134, 0, 255), 1);
 	cv::medianBlur(leye, leye, 5);
 	cv::medianBlur(reye, reye, 5);
+	//cv::bilateralFilter(leye, leye, 10, 4, 4);
 	
-	//cv::bitwise_not(leye, leye);
-	//cv::bitwise_not(reye, reye);	
+	cv::bitwise_not(leye, leye);
+	cv::bitwise_not(reye, reye);	
+	
+	//cv::circle(faceROI, cv::Point((int)X0.at<float>(0, 24), (int)X0.at<float>(1, 24)), 1, cv::Scalar(0, 255, 255), 1);	
 
+	//-- Estos puntos se ilustran en el diagrama del block de notas
+	cv::Point a1((int)X0.at<float>(0, 20), (int)X0.at<float>(1, 20));
+	cv::Point a2((int)X0.at<float>(0, 21), (int)X0.at<float>(1, 21));
+	cv::Point b2((int)X0.at<float>(0, 23), (int)X0.at<float>(1, 23));
+	cv::Point b1((int)X0.at<float>(0, 24), (int)X0.at<float>(1, 24));
+
+	
+	/*-- Formamos una cuadricula para indicar la zona central de la region de interes, en este caso el iris
+	*    dado que IntraFace ya nos da los puntos circundantes es solo cuestion de moverse sobre el eje 'Y'
+	*    para obtener los M y N
+	*/
+	cv::Point m1((int)X0.at<float>(0, 19), (int)X0.at<float>(1, 19) - 12);
+	cv::Point m2((int)X0.at<float>(0, 22), (int)X0.at<float>(1, 22) - 12);
+	cv::line(faceROI, m1, m2, cv::Scalar(255, 255, 0), 1);
+	cv::Point n1((int)X0.at<float>(0, 19), (int)X0.at<float>(1, 19) + 3);
+	cv::Point n2((int)X0.at<float>(0, 22), (int)X0.at<float>(1, 22) + 3);
+	cv::line(faceROI, n1, n2, cv::Scalar(255, 255, 0), 1);
+	//-- Esto es solo para servir de guía visual, se trazan lineas que unen los puntos mencionados.
+	cv::line(faceROI, a1, b1, cv::Scalar(0, 255, 0), 1);
+	cv::line(faceROI, a2, b2, cv::Scalar(0, 255, 0), 1);
+	
 
 	/*######################################################################*/
 	cv::imshow(nlEye, leye);

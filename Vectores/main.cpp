@@ -11,11 +11,11 @@ int main(int argc, char** argv)
 	cout << "\t****************************" << endl;
 	cout << "\n >>> ";
 
-	Calibration camCalib;
-	camCalib.camCalibration();
+	//Calibration camCalib;
+	//camCalib.camCalibration();
 
-	//CaptureFrame begin;
-	//begin.detect();
+	CaptureFrame begin;
+	begin.detect();
 
 	//Test cosos;
 	//cosos.display();

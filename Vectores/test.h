@@ -25,7 +25,7 @@ class Test
 public:
 	Test() {
 	}
-	void display(cv::Mat frame, std::vector<cv::Rect> faces, cv::Rect lEye, cv::Rect rEye, cv::Point El, cv::Point Er);
+	void display(cv::Mat frame, std::vector<cv::Rect> faces, cv::Rect lEye, cv::Rect rEye, cv::Mat X0);
 	//void display();
 private:
 	cv::Mat getSkin(cv::Mat face);

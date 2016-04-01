@@ -1,3 +1,4 @@
-﻿  cameraCalibration.cpp
+﻿  test.cpp
+c:\users\kharl\documents\git\vision\vectores\test.cpp(97): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   Vectores.vcxproj -> C:\Users\kharl\Documents\Git\vision\Vectores\Debug\Vectores.exe
   Vectores.vcxproj -> C:\Users\kharl\Documents\Git\vision\Vectores\Debug\Vectores.pdb (Partial PDB)

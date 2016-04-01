@@ -197,8 +197,8 @@ void CaptureFrame::detect()
 				//-- Obtenemos los puntos 19 y 22 de los ojos 
 				//-- Ell -> punto izquierdo del ojo izquierdo (19)
 				//-- Elr -> punto derecho del ojo izquierdo	(22)
-				Point Ell(X0.at<float>(0, 19), X0.at<float>(1, 19));
-				Point Elr(X0.at<float>(0, 22), X0.at<float>(1, 22));
+				//Point Ell(X0.at<float>(0, 20), X0.at<float>(1, 20));
+				//Point Elr(X0.at<float>(0, 22), X0.at<float>(1, 22));
 				
 
 				//-- Obtenemos los puntos 19 y 22 de los ojos
@@ -266,7 +266,7 @@ void CaptureFrame::detect()
 				//-- intentare hacerlo por el otro metodo, si no funciona las envio directamente
 				//prepare.display(frame, faces, leftBoundRect);
 				//cv::equalizeHist(frame, frame);
-				prueba.display(frame, faces, lEye, rEye, Ell, Elr);
+				prueba.display(frame, faces, lEye, rEye, X0);
 				// Mostramos la imagen completa del rostro con los ojos punteados.
 				//imshow("Gaze", frame);				
 				
