@@ -1,15 +1,21 @@
 #include "captureFrame.h"
 #include "test.h"
+#include "cameraCalibration.h"
 
 using namespace std;
 
 int main(int argc, char** argv)
 {
-	cout << "\t\n\nOk, ahora curso intensivo de vectores!" << endl;
-	cout << "\n" << endl;
+	cout << "\n\n\t****************************" << endl;
+	cout << "\t* Welcome to EyeGaze-Dev!  *" << endl;
+	cout << "\t****************************" << endl;
+	cout << "\n >>> ";
 
-	CaptureFrame begin;
-	begin.detect();
+	Calibration camCalib;
+	camCalib.camCalibration();
+
+	//CaptureFrame begin;
+	//begin.detect();
 
 	//Test cosos;
 	//cosos.display();
