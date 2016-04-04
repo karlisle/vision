@@ -8,7 +8,7 @@ void Calibration::camCalibration() {
 	cv::imshow("Chess-Table", chess);
 
 
-	bool found = cv::findChess
+	//bool found = cv::findChess
 	cv::waitKey(0);
 	cv::destroyAllWindows();
 }
