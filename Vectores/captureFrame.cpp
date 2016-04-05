@@ -234,18 +234,19 @@ void CaptureFrame::detect()
 				//cv::rectangle(frame, leftBoundRect, cv::Scalar(255, 155, 0), 1);
 				//cv::rectangle(frame, rightBoundRect, cv::Scalar(255, 155, 0), 1);
 
+
+				leftBoundRect.x = leftBoundRect.x - 5;
+				leftBoundRect.y = leftBoundRect.y - 5;
+				leftBoundRect.width = leftBoundRect.width + 8;
+				leftBoundRect.height = leftBoundRect.height + 8;
+
+				rightBoundRect.x = rightBoundRect.x - 5;
+				rightBoundRect.y = rightBoundRect.y - 5;
+				rightBoundRect.width = rightBoundRect.width + 8;
+				rightBoundRect.height = rightBoundRect.height + 8;
+
 				lEye = leftBoundRect;
 				rEye = rightBoundRect;
-
-				leftBoundRect.x = leftBoundRect.x - 15;
-				leftBoundRect.y = leftBoundRect.y - 15;
-				leftBoundRect.width = leftBoundRect.width + 10;
-				leftBoundRect.height = leftBoundRect.height + 10;
-
-				rightBoundRect.x = rightBoundRect.x - 15;
-				rightBoundRect.y = rightBoundRect.y - 15;
-				rightBoundRect.width = rightBoundRect.width + 12;
-				rightBoundRect.height = rightBoundRect.height + 12;
 
 				Mat leftEye = frameOrig(leftBoundRect);
 				Mat rightEye = frameOrig(rightBoundRect);
