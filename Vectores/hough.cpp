@@ -87,7 +87,7 @@ void NewHough::hough_circle(Mat eye)
 {
 	Mat img;
 	img = eye.clone();
-	Mat dest = img.clone();
+	Mat dest;
 
 	/*
 	resize(img, dest, Size(), 4, 4);
