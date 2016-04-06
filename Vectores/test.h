@@ -28,6 +28,11 @@ public:
 	void display(cv::Mat frame, std::vector<cv::Rect> faces, cv::Rect lEye, cv::Rect rEye, cv::Mat X0);
 	//void display();
 private:
+	//-- capturar algunos frames de los ojos y guardar tanto las coordenadas como las imagenes
+
+	void getPositions(cv::Mat leye, cv::Mat reye, cv::Mat X);
+
+
 	cv::Mat getSkin(cv::Mat face);
 	void getCenter(cv::Mat eye, string nWindow);
 

@@ -124,6 +124,7 @@
     <ClCompile Include="helpers.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="hough.cpp" />
+    <ClCompile Include="muestras.cpp" />
     <ClCompile Include="prepare.cpp" />
     <ClCompile Include="test.cpp" />
   </ItemGroup>
@@ -136,6 +137,7 @@
     <ClInclude Include="getEye.h" />
     <ClInclude Include="helpers.h" />
     <ClInclude Include="hough.h" />
+    <ClInclude Include="muestras.h" />
     <ClInclude Include="prepare.h" />
     <ClInclude Include="test.h" />
   </ItemGroup>

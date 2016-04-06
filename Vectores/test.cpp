@@ -13,18 +13,26 @@ void Test::display(cv::Mat frame, std::vector<cv::Rect> faces, cv::Rect lEye, cv
 	cv::namedWindow(nrEye, CV_WINDOW_NORMAL);
 	
 	cv::Mat faceROI = frame.clone();                                                //-- Hacemos un clon de la imagen que se recive como parametro
+<<<<<<< HEAD
 	cv::cvtColor(frame, faceROI, CV_RGB2GRAY);
 	frame.convertTo(faceROI, CV_8U, 2.48, -10.68);									//-- Posterior a eso modificamos el contraste de la imagen 
 	
 	cv::bilateralFilter(frame, faceROI, 10, 60, 60);
 	//GaussianBlur(frame, faceROI, cv::Size(3, 3), 0, 0);
+=======
+	//cv::cvtColor(frame, frame, CV_RGB2GRAY);
+	frame.convertTo(faceROI, CV_8U, 2.48, -10.68);									//-- Posterior a eso modificamos el contraste de la imagen 
+	
+	//cv::bilateralFilter(frame, faceROI, 10, 60, 60);
+	GaussianBlur(frame, faceROI, cv::Size(3, 3), 0, 0);
+>>>>>>> 13bedf7982093df7f8cff2d784aed625c0edcffe
 
 	cv::Mat leye(faceROI(lEye));
 	cv::Mat reye(faceROI(rEye));
 
 	cv::Mat cleye = leye.clone();
 
-	cv::bilateralFilter(cleye, leye, 7, 30, 30);
+	//cv::bilateralFilter(cleye, leye, 7, 30, 30);
 	//cv::line(faceROI, Ell, Elr,  cv::Scalar(134, 0, 255), 1);
 	cv::medianBlur(leye, leye, 5);
 	cv::medianBlur(reye, reye, 5);
@@ -46,15 +54,19 @@ void Test::display(cv::Mat frame, std::vector<cv::Rect> faces, cv::Rect lEye, cv
 	*    dado que IntraFace ya nos da los puntos circundantes es solo cuestion de moverse sobre el eje 'Y'
 	*    para obtener los M y N
 	*/
-	cv::Point m1((int)X0.at<float>(0, 19), (int)X0.at<float>(1, 19) - 12);
-	cv::Point m2((int)X0.at<float>(0, 22), (int)X0.at<float>(1, 22) - 12);
+	cv::Point m1((int)X0.at<float>(0, 19), (int)X0.at<float>(1, 19) - 10);
+	cv::Point m2((int)X0.at<float>(0, 22), (int)X0.at<float>(1, 22) - 10);
 	cv::line(faceROI, m1, m2, cv::Scalar(255, 255, 0), 1);
 	cv::Point n1((int)X0.at<float>(0, 19), (int)X0.at<float>(1, 19) + 3);
 	cv::Point n2((int)X0.at<float>(0, 22), (int)X0.at<float>(1, 22) + 3);
-	cv::line(faceROI, n1, n2, cv::Scalar(255, 255, 0), 1);
+	//cv::line(faceROI, n1, n2, cv::Scalar(255, 255, 0), 1);
 	//-- Esto es solo para servir de guía visual, se trazan lineas que unen los puntos mencionados.
-	cv::line(faceROI, a1, b1, cv::Scalar(0, 255, 0), 1);
+	//cv::line(faceROI, a1, b1, cv::Scalar(0, 255, 0), 1);
 	cv::line(faceROI, a2, b2, cv::Scalar(0, 255, 0), 1);
+	//--------------------------------------------
+
+
+	
 	
 
 	/*######################################################################*/
@@ -69,6 +81,7 @@ void Test::display(cv::Mat frame, std::vector<cv::Rect> faces, cv::Rect lEye, cv
 	
 }
 
+<<<<<<< HEAD
 void Test::getCenter(cv::Mat eye, string nWindow)
 {
 	cv::Point center;
@@ -77,6 +90,11 @@ void Test::getCenter(cv::Mat eye, string nWindow)
 
 
 	
+=======
+void getPositions(cv::Mat leye, cv::Mat reye, cv::Mat X)
+{
+
+>>>>>>> 13bedf7982093df7f8cff2d784aed625c0edcffe
 }
 
 cv::Mat Test::getSkin(cv::Mat src)
