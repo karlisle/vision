@@ -23,21 +23,31 @@
 // Cabeceras locales
 //#include "prepare.h"
 #include "test.h"
+#include "muestras.h"
+#include "prepare.h"
+#include "cameraCalibration.h"
 
 
 class CaptureFrame {
 public:
 	CaptureFrame() {
 	}
-	
-	//Prepare prepare;
-	void detect();
+	//--Menu
+	void menu();
 
-	Test prueba;
+	//Prepare prepare;
+	int detect(int opt);
+
+	//-- instancias la clase de pruebas
+	Test test;
 	
-	
+	//-- instancias la clase de Cummulative Distribution Function
+	Prepare prepare;
+	//-- instancias la clase de CammeraCalibration
+	Calibration calibration;
 
 private:
-
+	
+	
 };
 #endif // !CAPTUREFRAME_H

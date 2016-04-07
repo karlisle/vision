@@ -2,9 +2,44 @@
 
 #include "captureFrame.h"
 
+
+
 using namespace std;
 using namespace cv;
 
+void CaptureFrame::menu()
+{
+	cout << "\t****************************" << endl;
+	cout << "\t*   Seleccione una opción  *" << endl;
+	cout << "\t* 1) Cargar (CDF)          *" << endl;
+	cout << "\t* 2) Pruebas               *" << endl;
+	cout << "\t* 3) Tomar muestras        *" << endl;
+	cout << "\t* 0) Salir                 *" << endl;
+	cout << "\t****************************" << endl;
+	cout << "\t>>> ";
+
+	int opcion;
+	cin >> opcion;
+
+	switch (opcion)
+	{
+		case 0:
+			return;
+			break;
+		case 1:
+			this->detect(1);
+			break;
+		case 2:
+			this->detect(2);
+			break;
+		case 3:
+			this->detect(3);
+			break;
+		default:
+			this->detect(NULL);
+			break;
+	}
+}
 void drawPose(cv::Mat& img, const cv::Mat& rot, float lineL)
 {
 	int loc[2] = { 70, 70 };
@@ -25,8 +60,10 @@ void drawPose(cv::Mat& img, const cv::Mat& rot, float lineL)
 	line(img, p0, cv::Point(P.at<float>(0, 3), P.at<float>(1, 3)), cv::Scalar(0, 0, 255), thickness, lineType);
 }
 
-void CaptureFrame::detect()
+int CaptureFrame::detect(int opt)
 {
+	cout << "Iniciando componentes y variables del sistema Eye-gaze...!!" << endl;
+
 	// Inicializar variables y la estructura de datos.
 	int frameWidth = 1;
 	int frameHeight = 1;
@@ -45,14 +82,11 @@ void CaptureFrame::detect()
 	string videoName;
 	string outputName;
 
-
 	// Cargar los modeos entrenados y  los binarios de IntraFace
 	char detectionModel[] = "models/DetectionModel-v1.5.bin";
 	char trackingModel[] = "models/TrackingModel-v1.10.bin";
 	string faceDetectionModel("models/haarcascade_frontalface_alt2.xml");
 
-
-	cout << "Iniciando componentes y variables del sistema Eye-gaze...!!" << endl;
 	// Inicualizar objeto XXDescriptor
 	INTRAFACE::XXDescriptor xxd(4);
 	// Inicializar objeto de FaceAligment
@@ -61,18 +95,18 @@ void CaptureFrame::detect()
 	if (!fa.Initialized())
 	{
 		cerr << "FaceAligment cannot be initialized" << endl;
-		return;
+		return 0; 
 	}
 	// Cargar el modelo de detecion de rostros de OpenCV
 	cv::CascadeClassifier face_cascade;
 	if (!face_cascade.load(faceDetectionModel))
 	{
 		cerr << "Error: No se ha podido cargar el modelo de teccion de rostos!!" << endl;
-		return;
+		return 0;
 	}
 
 	// Inicializar variables para el loop principal
-	// Inicializar dispositivo de captur.
+	// Inicializar dispositivo de captura.
 	// Posteriormente se seleccionara a partir de un dialogo.
 	
 
@@ -80,20 +114,18 @@ void CaptureFrame::detect()
 	//capture.open("videoEyes.avi");
 	//capture.open("eyes_two.avi");
 	capture.open(0);
-	Sleep(1000);
 	Mat fOrig;
 	Rect lEye;
 	Rect rEye;
+	Mat leftEye;
+	Mat rightEye;
 	Mat lEyeBW;
 	Mat rEyeBW;
 	Mat leftEyeBW;
 	Mat rightEyeBW;
 	Vec3i lCircle;
 	Vec3i rCircle;
-	// Creamos unas ventanas
-	//namedWindow("Gaze", CV_WINDOW_NORMAL);
-	//namedWindow("LeftEye", CV_WINDOW_AUTOSIZE);
-	//namedWindow("RightEye", CV_WINDOW_AUTOSIZE);
+
 	int key = 0;
 	int intent = 0;
 	bool isDetect = true;
@@ -101,6 +133,7 @@ void CaptureFrame::detect()
 	Mat X, X0;
 	vector<Rect> faces;
 	vector<Rect> eyes;
+
 	// Si el dispositivo se inicializo correctamente se inicia el ciclo principal.
 	if (capture.isOpened())
 	{
@@ -134,7 +167,6 @@ void CaptureFrame::detect()
 				if (faces.empty())
 				{
 					imshow("Gaze", frame);
-					//prepare.display(frame, faces, lEye);
 					key = waitKey(5);
 					continue;
 				}
@@ -167,47 +199,18 @@ void CaptureFrame::detect()
 			}
 			else
 			{
-				
 				// Dibujamos los marcadores faciales
 				for (int i = 0; i < faces.size(); i++)
 				{
 					circle(frame, Point((int)X0.at<float>(0, i), (int)X0.at<float>(1, i)), 1, Scalar(0, 255, 0), -1);
-					//circle(frame, Point((int)X0.at<float>(0, i), (int)X0.at<float>(1, i)), 4, Scalar(255, 255, 0), 1);
-
 				}
+
 				// Estimar la posicion de la cabeza
 				INTRAFACE::HeadPose hp;
 				fa.EstimateHeadPose(X0, hp);
 				// Dibujamos los ejes de la posicion.
 				drawPose(frame, hp.rot, 50);
-				//cout << ".";
-				double x = hp.angles[0];
-				double y = hp.angles[1];
-				double z = hp.angles[2];
-
-				cout << "X = " << x  << " : Y = " << y << " : Z = " << z << endl;
-				// Posicion estimada de la cabeza [mm]
-				/*
-				for (int i = 19; i <= 30; i++)
-				{
-					circle(frame, Point((int)X0.at<float>(0, i), (int)X0.at<float>(1, i)), 2, Scalar(255, 255, 0), -1);
-				}
-				*/
-				//-- Para cuestiones de prueba se dibujan los puntos, solo para ver donde estan ubicados.
-				//circle(frame, Point((int)X0.at<float>(0, 19), (int)X0.at<float>(1, 19)), 1, Scalar(255, 255, 0), 1);
-				//circle(frame, Point((int)X0.at<float>(0, 22), (int)X0.at<float>(1, 22)), 1, Scalar(0, 255, 255), 1);
-				//circle(frame, Point((int)X0.at<float>(0, 28), (int)X0.at<float>(1, 28)), 2, Scalar(255, 255, 0), -1);
 				
-				//-- Obtenemos los puntos 19 y 22 de los ojos 
-				//-- Ell -> punto izquierdo del ojo izquierdo (19)
-				//-- Elr -> punto derecho del ojo izquierdo	(22)
-				//Point Ell(X0.at<float>(0, 20), X0.at<float>(1, 20));
-				//Point Elr(X0.at<float>(0, 22), X0.at<float>(1, 22));
-				
-
-				//-- Obtenemos los puntos 19 y 22 de los ojos
-				Point Erl(X0.at<float>(0, 25), X0.at<float>(1, 25));
-				//Point Err(X0.at<float>(0, 19), X0.at<float>(1, 28));
 				// Identificar los ojos
 				// Puntos del ojo izquierdo
 				vector<Point> leftEyePoints;
@@ -222,7 +225,6 @@ void CaptureFrame::detect()
 				for (int i = 19; i <= 24; i++)
 				{
 					rightEyePoints.push_back(Point(X0.at<float>(0, i), X0.at<float>(1, i)));
-					//circle(frame, Point((int)X0.at<float>(0, i), (int)X0.at<float>(1, i)), 2, Scalar(255, 255, 0), -1);
 				}
 
 				Rect leftBoundRect = boundingRect(leftEyePoints);
@@ -251,39 +253,77 @@ void CaptureFrame::detect()
 
 				lEye = leftBoundRect;
 				rEye = rightBoundRect;
-
-				Mat leftEye = frameOrig(leftBoundRect);
-				Mat rightEye = frameOrig(rightBoundRect);
+				
+				leftEye = frameOrig(leftBoundRect);
+				rightEye = frameOrig(rightBoundRect);
 				//-- Rectangulos externos
 				//cv::rectangle(frame, leftBoundRect, cv::Scalar(0, 155, 0), 1);
 				//cv::rectangle(frame, rightBoundRect, cv::Scalar(0, 155, 0), 1);
 				
 
-				//Mat temp;
-				//Mat gray;
-				//Mat eqEye;
-				//lEye = leftEye.clone();
-				//resize(lEye, temp, Size(2 * leftEye.cols, 2 * leftEye.rows));
-				//GaussianBlur(temp, eqEye, Size(9, 7), 3);
+				
+				
 				/*NT:Desarrollo*/
 				//-- Enviamos la imagen  del ojo para procesar.
 				//-- Aqui puedo enviar las regiones de interes directamente, pero por ahora 
 				//-- intentare hacerlo por el otro metodo, si no funciona las envio directamente
 				//prepare.display(frame, faces, leftBoundRect);
-				//cv::equalizeHist(frame, frame);
+				
+				/* Instanciamos la clase Muestras
+				* A la misma enviaremos solo 
+				* frame, faces, y aunque podemos enviar los Rect de los ojos, 
+				* ya tenemos las imagenes Mat, asi que enviamos esas.
+				*/
+				
 				//prueba.display(frame, faces, lEye, rEye, X0);
+				
 				// Mostramos la imagen completa del rostro con los ojos punteados.
-				imshow("Gaze", frame);				
+				/* Por ahora implementamos una forma de control rudimentaria para definir que
+				* clases usaremos, aunque el menú de opciones esta en el main, la opcin se usa aqui :)
+				*/
+
+				//Muestras muestra;
+				//muestra.guardar(frame, X0, leftEye, rightEye, NULL);
+
+				//imshow("Gaze", frame);	
 				
 			}
 
-			//imshow("Gaze", frame);
-
-			if (waitKey(27) >= 0)
+			if (opt == 3)
 			{
-				break;
+				//cout << "\tTomando imagenes para muestras..." << endl;
+				//cv::imshow(wName, frame);
+				string nlEye = "lEye" + to_string(intent) + "_.bmp";
+				string nrEye = "rEye" + to_string(intent) + "_.bmp";
+				//++intent;
+				//cout << "Izquierdo: " << nlEye << " ||  Derecho: " << nrEye << endl;
+				
+				//-- instancias la clase de muestras-
+				Muestras get;
+				get.guardar(frame, X0, leftEye, rightEye, intent);
 			}
 
+			imshow("Gaze", frame);
+			char k = cv::waitKey(1);
+			/*
+			if (k == 's')
+			{
+				
+				++intent;
+				
+			}
+			else {
+				if (k == 'q')
+				{
+					cout << "\tTerminando el programa...." << endl;
+					//this->detect(NULL);
+					cv::destroyAllWindows();
+					capture.release();
+					this->menu();
+					//break;
+				}
+			}
+		*/
 		}
 	}
 	else
@@ -291,8 +331,6 @@ void CaptureFrame::detect()
 		cerr << "No se puede cargar el dispositivo de captura" << endl;
 		cerr << "Asegurese de que el dispositivo esta conectado, \n e intentelo nuevamente." << endl;			
 	}
-	cvDestroyAllWindows();
-	capture.release();
-	//return;
+	return 0;
 	// Fin del metodo
 }

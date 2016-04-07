@@ -17,6 +17,8 @@
 #include <math.h>
 #include <string>
 
+#include "captureFrame.h"
+
 
 using namespace std;
 
@@ -26,9 +28,11 @@ public:
 	//-- Constructor
 	Muestras(){
 	}
+	void guardar(cv::Mat frame, cv::Mat X, cv::Mat lEye, cv::Mat rEye, int& intent);
 
 private:
 	//-- capturar algunos frames de los ojos y guardar tanto las coordenadas como las imagenes
+	
 
 };
 
