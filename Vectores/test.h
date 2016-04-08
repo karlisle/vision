@@ -34,6 +34,7 @@ private:
 
 
 	cv::Mat getSkin(cv::Mat face);
+	void getCenter(cv::Mat eye, string nWindow);
 
 	bool R1(int R, int G, int B)
 	{

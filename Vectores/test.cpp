@@ -13,11 +13,19 @@ void Test::display(cv::Mat frame, std::vector<cv::Rect> faces, cv::Rect lEye, cv
 	cv::namedWindow(nrEye, CV_WINDOW_NORMAL);
 	
 	cv::Mat faceROI = frame.clone();                                                //-- Hacemos un clon de la imagen que se recive como parametro
+
+	cv::cvtColor(frame, faceROI, CV_RGB2GRAY);
+	frame.convertTo(faceROI, CV_8U, 2.48, -10.68);									//-- Posterior a eso modificamos el contraste de la imagen 
+	
+	cv::bilateralFilter(frame, faceROI, 10, 60, 60);
+	//GaussianBlur(frame, faceROI, cv::Size(3, 3), 0, 0);
+
 	//cv::cvtColor(frame, frame, CV_RGB2GRAY);
 	frame.convertTo(faceROI, CV_8U, 2.48, -10.68);									//-- Posterior a eso modificamos el contraste de la imagen 
 	
 	//cv::bilateralFilter(frame, faceROI, 10, 60, 60);
 	GaussianBlur(frame, faceROI, cv::Size(3, 3), 0, 0);
+
 
 	cv::Mat leye(faceROI(lEye));
 	cv::Mat reye(faceROI(rEye));
@@ -62,8 +70,9 @@ void Test::display(cv::Mat frame, std::vector<cv::Rect> faces, cv::Rect lEye, cv
 	
 
 	/*######################################################################*/
-	cv::imshow(nlEye, leye);
-	cv::imshow(nrEye, reye);
+	//cv::imshow(nlEye, leye);
+	//cv::imshow(nrEye, reye);
+	this->getCenter(reye, nlEye);
 	
 	//cv::rectangle(faceROI, lEye, cv::Scalar(0, 255, 0));
 	//cv::rectangle(faceROI, rEye, cv::Scalar(0, 255, 0));
@@ -72,8 +81,19 @@ void Test::display(cv::Mat frame, std::vector<cv::Rect> faces, cv::Rect lEye, cv
 	
 }
 
+
+void Test::getCenter(cv::Mat eye, string nWindow)
+{
+	cv::Point center;
+	cv::imshow(nWindow, eye);
+
+
+
+}
+
 void getPositions(cv::Mat leye, cv::Mat reye, cv::Mat X)
 {
+
 
 }
 
