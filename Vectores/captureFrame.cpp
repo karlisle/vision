@@ -225,6 +225,7 @@ int CaptureFrame::detect(int opt)
 				for (int i = 19; i <= 24; i++)
 				{
 					rightEyePoints.push_back(Point(X0.at<float>(0, i), X0.at<float>(1, i)));
+					circle(frame, Point((int)X0.at<float>(0, i), (int)X0.at<float>(1, i)), 2, Scalar(255, 255, 0), -1);
 				}
 
 				Rect leftBoundRect = boundingRect(leftEyePoints);

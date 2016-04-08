@@ -88,5 +88,8 @@
     <Text Include="puntos.txt">
       <Filter>Source Files</Filter>
     </Text>
+    <Text Include="contador.txt">
+      <Filter>Source Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

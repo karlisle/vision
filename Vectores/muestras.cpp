@@ -2,7 +2,7 @@
 #include "captureFrame.h"
 
 
-void Muestras::guardar(cv::Mat frame, cv::Mat X0, cv::Mat lEye, cv::Mat rEye, int& intent, cv::VideoCapture& capture)
+void Muestras::guardar(cv::Mat frame, cv::Mat X0, cv::Mat lEye, cv::Mat rEye, int& nFrame, cv::VideoCapture& capture)
 {
 	//cout << "\tTomando imagenes para muestras..." << endl;
 	char k = cv::waitKey(1);
@@ -38,16 +38,18 @@ void Muestras::guardar(cv::Mat frame, cv::Mat X0, cv::Mat lEye, cv::Mat rEye, in
 	
 	cv::imshow(wName, frame);
 	bool openClose = this->openEye(X0);
-
-	//-- enviamos los datos.
-	this->setData(lEye, rEye, p19, p22, p25, p28, intent);
+	if (openClose)
+	{
+		//-- enviamos los datos.
+		this->setData(lEye, rEye, p19, p22, p25, p28, nFrame);
+	}
 
 	cv::imshow(wlEye, lEye);
 	cv::imshow(wrEye, rEye);
 	/*-- Incrementamos el contador de frames, se hace desde aqui, aunque bien 
 	*--- podria ser desde captureFrame, al caso es mas intuitivo desde aqui.
 	*/
-	++intent;
+	++nFrame;
 	
 	
 	if (k == 'r')
@@ -60,11 +62,26 @@ void Muestras::guardar(cv::Mat frame, cv::Mat X0, cv::Mat lEye, cv::Mat rEye, in
 	}
 }
 
-void Muestras::setData(cv::Mat, cv::Mat rEye, string p19, string p22, string p25, string p28, int intent)
+void Muestras::setData(cv::Mat, cv::Mat rEye, string p19, string p22, string p25, string p28, int nFrame)
 {
 
 	fstream imgPuntos;
+	fstream contador;
+
 	imgPuntos.open("puntos.txt", ios::app);
+	
+	char cont[128];
+	//-- Obtenemos el ultimo valor de nFrame
+	ifstream fe("contador.txt");
+	fe.getline(cont, 128);
+	cout << cont << endl;
+	nFrame = stoi(cont);
+	fe.close();
+
+	
+	ofstream fs("contador.txt");
+	fs << nFrame + 1;
+	fs.close();
 
 	string id;
 	string puntos = p19 + "," + p22 + "," + "," + p25 + "," + "," + p28;
@@ -72,23 +89,23 @@ void Muestras::setData(cv::Mat, cv::Mat rEye, string p19, string p22, string p25
 	** a falta de una forma mas optima, esto funciona por ahora.
 	++ podria usarse alguna forma de formateo, pero bueno, funciona así.
 	*/
-	if (intent <= 9)
+	if (nFrame <= 9)
 	{
-		id = "000" + to_string(intent);
+		id = "000" + to_string(nFrame);
 	}
-	else if (intent >= 10 && intent <= 99)
+	else if (nFrame >= 10 && nFrame <= 99)
 	{
-		id = "00" + to_string(intent);
+		id = "00" + to_string(nFrame);
 	}
-	else if (intent >= 100 && intent <= 999)
+	else if (nFrame >= 100 && nFrame <= 999)
 	{
-		id = "0" + to_string(intent);
+		id = "0" + to_string(nFrame);
 	}
-	else if (intent >= 1000 && intent <= 9990)
+	else if (nFrame >= 1000 && nFrame <= 9990)
 	{
-		id = to_string(intent);
+		id = to_string(nFrame);
 	}
-	else if (intent == 9999)
+	else if (nFrame == 9999)
 	{
 		cout << "Se han capturado suficientes muestras!" << endl;
 		return;
@@ -97,19 +114,54 @@ void Muestras::setData(cv::Mat, cv::Mat rEye, string p19, string p22, string p25
 	string nlEye = id + "l.bmp";
 	string nrEye = id + "r.bmp";
 
-	cout << nlEye << endl;
-	cout << nrEye << endl;
+	//cout << nlEye << endl;
+	//cout << nrEye << endl;
 
 
 	imgPuntos << id << ","<< puntos << endl;
+
 	//imgPuntos << nname << endl;
-	//imgPuntos.close();
+	imgPuntos.close();
 	//return;
 	//--registra los puntos	
 }
 
-bool Muestras::openEye(cv::Mat puntos)
-{
 
+
+/*- Obtenemos un promedio en la separacion del los puntos (20, 24) y (21, 23) 
+--- consideramos un umbral igual o mayor a 6 pixeles para considerar habierto el ojo
+--- al menos en resoluciones de (640x420), es posible que haya que hacerlo en funcion 
+--- de la resolucion del cudro, pero para eso primero conseguir otro dispositivo.
+*/
+bool Muestras::openEye(cv::Mat P)
+{
+	//-- Obtenemos los puntos del ojo derecho (19, 24)
+	cv::Point p1((int)P.at<float>(0, 20), (int)P.at<float>(1, 20));
+	cv::Point p2((int)P.at<float>(0, 21), (int)P.at<float>(1, 21));
+	cv::Point q2((int)P.at<float>(0, 23), (int)P.at<float>(1, 23));
+	cv::Point q1((int)P.at<float>(0, 24), (int)P.at<float>(1, 24));
+
+	//-- Obtenemos los puntos del ojo derecho (25, 30)
+	cv::Point r1((int)P.at<float>(0, 26), (int)P.at<float>(1, 26));
+	cv::Point r2((int)P.at<float>(0, 27), (int)P.at<float>(1, 27));
+	cv::Point s2((int)P.at<float>(0, 30), (int)P.at<float>(1, 30));
+	cv::Point s1((int)P.at<float>(0, 29), (int)P.at<float>(1, 29));
+
+	//cout << to_string(p1.y) << ":" << to_string(q1.y) << endl;
+	
+	double maxR = (q1.y - p2.y) / 2;
+	double maxL = (s1.y - r1.y) / 2;
+
+	if (maxR >= 6 && maxL >= 6)
+	{
+		//cout << "Está abierto" << endl;
+		return true;
+	}
+	else if (maxR < 6 && maxL < 6)
+	{
+		//cout << "Está cerrado" << endl;
+		return false;
+	}
+	return false;
 }
 
