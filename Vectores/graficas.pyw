@@ -17,6 +17,7 @@ for punto in cursor:
 	p20y.append(punto[0])
 	p24y.append(punto[1])
 	pass
+plt.suptitle("Media")
 plt.plot(media)
 plt.plot(p20y)
 plt.plot(p24y)
