@@ -92,4 +92,9 @@
       <Filter>Source Files</Filter>
     </Text>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="openClose.sql">
+      <Filter>Source Files</Filter>
+    </None>
+  </ItemGroup>
 </Project>

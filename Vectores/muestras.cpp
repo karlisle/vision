@@ -42,6 +42,7 @@ void Muestras::guardar(cv::Mat frame, cv::Mat X0, cv::Mat lEye, cv::Mat rEye, in
 	{
 		//-- enviamos los datos.
 		this->setData(lEye, rEye, p19, p22, p25, p28, nFrame);
+
 	}
 
 	cv::imshow(wlEye, lEye);
@@ -62,7 +63,7 @@ void Muestras::guardar(cv::Mat frame, cv::Mat X0, cv::Mat lEye, cv::Mat rEye, in
 	}
 }
 
-void Muestras::setData(cv::Mat, cv::Mat rEye, string p19, string p22, string p25, string p28, int nFrame)
+void Muestras::setData(cv::Mat lEye, cv::Mat rEye, string p19, string p22, string p25, string p28, int nFrame)
 {
 
 	fstream imgPuntos;
@@ -114,16 +115,22 @@ void Muestras::setData(cv::Mat, cv::Mat rEye, string p19, string p22, string p25
 	string nlEye = id + "l.bmp";
 	string nrEye = id + "r.bmp";
 
-	//cout << nlEye << endl;
-	//cout << nrEye << endl;
-
-
 	imgPuntos << id << ","<< puntos << endl;
+
+	//-- Guardamos la captura de los ojos 
+	cv::imwrite("muestras\\" + nlEye, lEye);
+	cv::imwrite("muestras\\" + nrEye, rEye);
 
 	//imgPuntos << nname << endl;
 	imgPuntos.close();
 	//return;
 	//--registra los puntos	
+
+	mysql
+
+
+
+
 }
 
 
