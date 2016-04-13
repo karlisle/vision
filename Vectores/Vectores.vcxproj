@@ -74,11 +74,11 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>C:\Users\kharl\Documents\Git\godzila\Eye\Libraries\Intraface\include;$(OPENCV_DIR)\..\..\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../include;C:\Program Files %28x86%29\MySQL\MySQL Connector C++ 1.1.7\lib\opt;C:\Program Files %28x86%29\MySQL\MySQL Connector C++ 1.1.7\include;C:\Users\kharl\Documents\Git\godzila\Eye\Libraries\Intraface\include;$(OPENCV_DIR)\..\..\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalLibraryDirectories>C:\Users\kharl\Documents\Git\godzila\Eye\Libraries\Intraface\lib;$(OPENCV_DIR)\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>opencv_ts300d.lib;opencv_world300d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Program Files %28x86%29\MySQL\MySQL Connector C++ 1.1.7\lib\opt;C:\Users\kharl\Documents\Git\godzila\Eye\Libraries\Intraface\lib;$(OPENCV_DIR)\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opencv_ts300d.lib;opencv_world300d.lib;mysqlcppconn.lib;sqlite3.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>IntraFaceDLL-x86.lib %(AdditionalOptions)</AdditionalOptions>
     </Link>
   </ItemDefinitionGroup>
@@ -118,6 +118,7 @@
   <ItemGroup>
     <ClCompile Include="cameraCalibration.cpp" />
     <ClCompile Include="captureFrame.cpp" />
+    <ClCompile Include="dataBase.cpp" />
     <ClCompile Include="findEyeCenter.cpp" />
     <ClCompile Include="findEyeCorner.cpp" />
     <ClCompile Include="getEye.cpp" />
@@ -132,6 +133,7 @@
     <ClInclude Include="cameraCalibration.h" />
     <ClInclude Include="captureFrame.h" />
     <ClInclude Include="constantes.h" />
+    <ClInclude Include="dataBase.h" />
     <ClInclude Include="findEyeCenter.h" />
     <ClInclude Include="findEyeCorner.h" />
     <ClInclude Include="getEye.h" />
