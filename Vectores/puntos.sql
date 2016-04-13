@@ -2,7 +2,7 @@ use eyegaze;
 
 
 create table  if not exists puntos(
-     id int  PRIMARY KEY NOT NULL,
+     id int  PRIMARY KEY NOT NULL AUTO_INCREMENT,
      p19 int(4) NOT NULL,
      p20 int(4) NOT NULL,
      p21 int(4) NOT NULL,
@@ -17,3 +17,4 @@ create table  if not exists puntos(
      p30 int(4) NOT NULL);
 
 insert into puntos values(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11);
+insert into puntos(p19, p20, p21, p22, p23, p24, p25, p26, p27, p28, p29, p30) values(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
