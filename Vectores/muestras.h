@@ -9,8 +9,9 @@
 #include <opencv2/imgproc/imgproc.hpp>
 #include <opencv2/imgcodecs/imgcodecs.hpp>
 
-
-
+#include <sstream>
+#include <Windows.h>
+#include <stdlib.h>
 #include <iostream>
 #include <queue>
 #include <stdio.h>
@@ -18,10 +19,12 @@
 #include <string>
 #include <fstream>
 
+
 #include "captureFrame.h"
 
 
 using namespace std;
+
 
 class Muestras
 {
@@ -29,12 +32,13 @@ public:
 	//-- Constructor
 	Muestras(){
 	}
-	void guardar(cv::Mat frame, cv::Mat X, cv::Mat lEye, cv::Mat rEye, int& intent, cv::VideoCapture& capture);
+	void guardar(cv::Mat frame, cv::Mat X, vector<float> angles, cv::Mat lEye, cv::Mat rEye, int& intent, cv::VideoCapture& capture);
 
 private:
 	//-- capturar algunos frames de los ojos y guardar tanto las coordenadas como las imagenes
-	void setData(cv::Mat, cv::Mat rEye, string p1, string p2, string p25, string p28, int intent );
+	void setData(cv::Mat, cv::Mat rEye, float roll, float yaw, float pitch, int p19x, int p19y, int p20x, int p20y, int p21x, int p21y, int p22x, int p22y, int p23x, int p23y, int p24x, int p24y, int p25x, int p25y, int p26x, int p26y, int p27x, int p27y, int p28x, int p28y, int p29x, int p29y, int p30x, int p30y, int intent );
 	bool openEye(cv::Mat puntos);
+	void dataBase();
 
 };
 
