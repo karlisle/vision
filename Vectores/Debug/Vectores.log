@@ -37,6 +37,9 @@ c:\users\kharl\documents\git\godzila\eye\libraries\intraface\include\intraface\f
   c:\opencv\build\include\opencv2\core\mat.hpp(731): note: see declaration of 'cv::Mat'
 c:\users\kharl\documents\git\godzila\eye\libraries\intraface\include\intraface\facealignment.h(86): warning C4251: 'INTRAFACE::FaceAlignment::m_cropROI': class 'cv::Rect_<int>' needs to have dll-interface to be used by clients of class 'INTRAFACE::FaceAlignment'
 c:\users\kharl\documents\git\godzila\eye\libraries\intraface\include\intraface\facealignment.h(87): warning C4251: 'INTRAFACE::FaceAlignment::m_offset': class 'cv::Rect_<double>' needs to have dll-interface to be used by clients of class 'INTRAFACE::FaceAlignment'
-c:\users\kharl\documents\git\vision\vectores\trainer.cpp(5): warning C4018: '<': signed/unsigned mismatch
+c:\users\kharl\documents\git\vision\vectores\trainer.cpp(6): warning C4018: '<': signed/unsigned mismatch
+c:\users\kharl\documents\git\vision\vectores\trainer.cpp(10): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\kharl\documents\git\vision\vectores\trainer.cpp(11): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\kharl\documents\git\vision\vectores\trainer.cpp(12): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
   Vectores.vcxproj -> C:\Users\kharl\Documents\Git\vision\Vectores\Debug\Vectores.exe
   Vectores.vcxproj -> C:\Users\kharl\Documents\Git\vision\Vectores\Debug\Vectores.pdb (Partial PDB)

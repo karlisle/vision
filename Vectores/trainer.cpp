@@ -2,18 +2,43 @@
 
 void reciveData(vector<vector<string>> datos)
 {
+	cout << datos.size() << endl;
 	for (int i = 0; i < datos.size(); i++)
 	{
 		cout << "Ahora vamos a hacer algo genial" << endl;
-		int p19x = stoi(datos[0][4]);
-		int p19y = stoi(datos[0][5]);
-		cout << "P19y:" << p19x << "," << p19y << endl;
-		cin.get();
+		int id = stoi(datos[i][0]);
+		float roll = atof(datos[i][1].c_str());
+		float yaw = atof(datos[i][2].c_str());
+		float pitch = atof(datos[i][3].c_str());
+		int p19x = stoi(datos[i][4]);
+		int p19y = stoi(datos[i][5]);
+		int p20x = stoi(datos[i][6]);
+		int p20y = stoi(datos[i][7]);
+		int p21x = stoi(datos[i][8]);
+		int p21y = stoi(datos[i][9]);
+		int p22x = stoi(datos[i][10]);
+		int p22y = stoi(datos[i][11]);
+		int p23x = stoi(datos[i][12]);
+		int p23y = stoi(datos[i][13]);
+		int p24x = stoi(datos[i][14]);
+		int p24y = stoi(datos[i][15]);
+		int p25x = stoi(datos[i][16]);
+		int p25y = stoi(datos[i][17]);
+		int p26x = stoi(datos[i][18]);
+		int p26y = stoi(datos[i][19]);
+		int p27x = stoi(datos[i][20]);
+		int p27y = stoi(datos[i][21]);
+		int p28x = stoi(datos[i][22]);
+		int p28y = stoi(datos[i][23]);
+		int p29x = stoi(datos[i][24]);
+		int p29y = stoi(datos[i][25]);
+		int p30x = stoi(datos[i][26]);
+		int p30y = stoi(datos[i][27]);
+		int state = stoi(datos[i][28]);
 
-
+		cout << "ID:"<< id << " : Roll:" << roll << " : P19y:" << p19x << "," << p19y << endl;
 	}
 	cin.get();
-	
 }
 
 
@@ -50,7 +75,7 @@ int Train::openClose()
 	}
 
 	/* Create SQL statement */
-	sql = "SELECT * from puntosroi";
+	sql = "SELECT * from ojos";
 
 	/* Execute SQL statement */
 	rc = sqlite3_exec(db, sql, callback, (void*)data, &zErrMsg);
