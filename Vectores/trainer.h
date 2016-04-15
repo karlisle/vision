@@ -26,17 +26,16 @@
 
 using namespace std;
 
-
 class Train
 {
 public:
 	//-- Constructor
 	Train() {
 	}
-	void openClose();
+	int openClose();
+	void process();
 
 private:
-	static int getData(void *nada, int argc, int **argv, char **colNames);
+	//static int callback(void *data, int argc, char **argv, char **azColName);
 };
-
 #endif // !TRAINER_H
