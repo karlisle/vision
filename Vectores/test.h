@@ -25,7 +25,7 @@ class Test
 public:
 	Test() {
 	}
-	void display(cv::Mat frame, std::vector<cv::Rect> faces, cv::Rect lEye, cv::Rect rEye, cv::Mat X0);
+	void display(cv::Mat frame, std::vector<cv::Rect> faces, cv::Rect lEye, cv::Rect rEye, cv::Mat X0, cv::VideoCapture& capture);
 	//void display();
 private:
 	//-- capturar algunos frames de los ojos y guardar tanto las coordenadas como las imagenes

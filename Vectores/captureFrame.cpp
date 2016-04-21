@@ -19,6 +19,7 @@ void CaptureFrame::menu()
 	cout << "\t>>> ";
 
 	Train begin;
+	Database data;
 
 	int opcion;
 	cin >> opcion;
@@ -26,13 +27,13 @@ void CaptureFrame::menu()
 	switch (opcion)
 	{
 		case 0:
-			return;
-			break;
+			exit(0);
+			//break;
 		case 1:
 			this->detect(1);
 			break;
 		case 2:
-			begin.openClose();
+			data.dataBase();
 			break;
 		case 3:
 			this->detect(3);
@@ -168,7 +169,7 @@ int CaptureFrame::detect(int opt)
 				// y se contia a la siguiente instruccion
 				if (faces.empty())
 				{
-					//imshow("Gaze", frame);
+					imshow("Gaze", frame);
 					key = waitKey(5);
 					continue;
 				}
@@ -279,18 +280,26 @@ int CaptureFrame::detect(int opt)
 
 				//Muestras muestra;
 				//muestra.guardar(frame, X0, leftEye, rightEye, NULL);
-				if (opt == 2)
+				if (opt == 1)
+				{
+					Test test;
+					test.display(frameOrig, faces, lEye, rEye, X0, capture);
+					cout << ".";
+				}
+				else if (opt == 2)
 				{
 					break;
 				}
 				else if (opt == 3)
 				{
 					Muestras get;
-					get.guardar(frame, X0, angles, leftEye, rightEye, intent, capture);
+					get.guardar(frameOrig, X0, angles, leftEye, rightEye, intent, capture);
 				}
 				//imshow("Gaze", frame);	
 				else if (opt == 0)
 				{
+					capture.release();
+					destroyAllWindows();
 					break;
 				}
 				
@@ -302,6 +311,7 @@ int CaptureFrame::detect(int opt)
 		cerr << "No se puede cargar el dispositivo de captura" << endl;
 		cerr << "Asegurese de que el dispositivo esta conectado, \n e intentelo nuevamente." << endl;			
 	}
+	//exit(0);
 	return 0;
 	// Fin del metodo
 }

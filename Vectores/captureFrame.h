@@ -27,6 +27,7 @@
 #include "prepare.h"
 #include "cameraCalibration.h"
 #include "trainer.h"
+#include "dataBase.h"
 
 
 class CaptureFrame {
