@@ -1,20 +1,19 @@
-use eyegaze;
-
-
-create table  if not exists puntos(
-     id int  PRIMARY KEY NOT NULL AUTO_INCREMENT,
-     p19 int(4) NOT NULL,
-     p20 int(4) NOT NULL,
-     p21 int(4) NOT NULL,
-     p22 int(4) NOT NULL,
-     p23 int(4) NOT NULL,
-     p24 int(4) NOT NULL,
-     p25 int(4) NOT NULL,
-     p26 int(4) NOT NULL,
-     p27 int(4) NOT NULL,
-     p28 int(4) NOT NULL,
-     p29 int(4) NOT NULL,
-     p30 int(4) NOT NULL);
-
-insert into puntos values(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11);
-insert into puntos(p19, p20, p21, p22, p23, p24, p25, p26, p27, p28, p29, p30) values(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
+CREATE TABLE ojos(
+  "id" INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL,
+  "roll" FLOAT NOT NULL, 
+  "yaw" FLOAT NOT NULL, 
+  "pitch" FLOAT NOT NULL,
+  "p19x" INTEGER NOT NULL , "p19y" INTEGER NOT NULL,
+  "p20x" INTEGER NOT NULL , "p20y" INTEGER NOT NULL,
+  "p21x" INTEGER NOT NULL , "p21y" INTEGER NOT NULL,
+  "p22x" INTEGER NOT NULL , "p22y" INTEGER NOT NULL,
+  "p23x" INTEGER NOT NULL , "p23y" INTEGER NOT NULL,
+  "p24x" INTEGER NOT NULL , "p24y" INTEGER NOT NULL,
+  "p25x" INTEGER NOT NULL , "p25y" INTEGER NOT NULL,
+  "p26x" INTEGER NOT NULL , "p26y" INTEGER NOT NULL,
+  "p27x" INTEGER NOT NULL , "p27y" INTEGER NOT NULL,
+  "p28x" INTEGER NOT NULL , "p28y" INTEGER NOT NULL,
+  "p29x" INTEGER NOT NULL , "p29y" INTEGER NOT NULL,
+  "p30x" INTEGER NOT NULL , "p30y" INTEGER NOT NULL,
+  "state" INTEGER NOT NULL
+  );

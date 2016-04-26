@@ -51,6 +51,9 @@
     <ClCompile Include="dataBase.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="trainer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="captureFrame.h">
@@ -89,6 +92,9 @@
     <ClInclude Include="dataBase.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="trainer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="puntos.txt">
@@ -97,5 +103,10 @@
     <Text Include="contador.txt">
       <Filter>Source Files</Filter>
     </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="openClose.sql">
+      <Filter>Source Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

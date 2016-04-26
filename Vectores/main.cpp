@@ -15,6 +15,6 @@ int main(int argc, char** argv)
 	cout << "\t* Gracias por usar EyeGaze-Dev!  *" << endl;
 	cout << "\t**********************************" << endl;
 	cout << "\n\t\t =.= ";
-	Sleep(2000);
+	cin.get();
 	return 0;
 }
