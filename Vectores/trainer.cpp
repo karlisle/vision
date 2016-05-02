@@ -119,5 +119,5 @@ int Train::openClose(vector<vector<float>> euler, vector<vector<int>> puntos)
 
 void  Train::lr()
 {
-	Logisti
+	
 }
