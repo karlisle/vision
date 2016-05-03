@@ -284,7 +284,7 @@ int CaptureFrame::detect(int opt)
 				if (opt == 1)
 				{
 					Test test;
-					test.display(frameOrig, faces, lEye, rEye, X0, capture);
+					test.display(frame, faces, lEye, rEye, X0, capture);
 					cout << ".";
 				}
 				else if (opt == 2)
@@ -294,7 +294,7 @@ int CaptureFrame::detect(int opt)
 				else if (opt == 3)
 				{
 					Muestras get;
-					get.guardar(frameOrig, X0, angles, leftEye, rightEye, intent, capture);
+					get.guardar(frame, X0, angles, leftEye, rightEye, intent, capture);
 				}
 				//imshow("Gaze", frame);	
 				else if (opt == 0)
