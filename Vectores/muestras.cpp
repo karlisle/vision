@@ -215,34 +215,85 @@ void Muestras::setData(cv::Mat lEye, cv::Mat rEye, float roll, float yaw, float 
 --- al menos en resoluciones de (640x420), es posible que haya que hacerlo en funcion
 --- de la resolucion del cudro, pero para eso primero conseguir otro dispositivo.
 */
-bool Muestras::openEye(cv::Mat P)
+bool Train::openClose(vector<vector<float>> euler, vector<vector<int>> puntos)
 {
-	//-- Obtenemos los puntos del ojo derecho (19, 24)
-	cv::Point p1((int)P.at<float>(0, 20), (int)P.at<float>(1, 20));
-	cv::Point p2((int)P.at<float>(0, 21), (int)P.at<float>(1, 21));
-	cv::Point q2((int)P.at<float>(0, 23), (int)P.at<float>(1, 23));
-	cv::Point q1((int)P.at<float>(0, 24), (int)P.at<float>(1, 24));
 
-	//-- Obtenemos los puntos del ojo derecho (25, 30)
-	cv::Point r1((int)P.at<float>(0, 26), (int)P.at<float>(1, 26));
-	cv::Point r2((int)P.at<float>(0, 27), (int)P.at<float>(1, 27));
-	cv::Point s2((int)P.at<float>(0, 30), (int)P.at<float>(1, 30));
-	cv::Point s1((int)P.at<float>(0, 29), (int)P.at<float>(1, 29));
+	cout << "Ok, intentando" << endl;
 
-	//cout << to_string(p1.y) << ":" << to_string(q1.y) << endl;
 
-	double maxR = (q1.y - p2.y) / 2;
-	double maxL = (s1.y - r1.y) / 2;
 
-	if (maxR >= 6 && maxL >= 6)
+	//-- Normalizar las distancias
+	for (int i = 0; i < puntos.size(); i++)
 	{
-		//cout << "Est? abierto" << endl;
-		return true;
+		cout << puntos[i][0] << ", ";
+		//Distancias ojo derecho
+		float h1 = puntos[i][7] - puntos[i][1];
+		float rn1 = (puntos[i][12] - puntos[i][4]) / h1;
+		float rn2 = (puntos[i][10] - puntos[i][6]) / h1;
+		//cout << puntos[i][12] << ":" << puntos[i][4] << endl;
+		//cout << rn1 << ":" << rn2 << endl;
+		//cout << endl;
+		//Distancias ojo izquierdo
+		float h2 = puntos[i][20] - puntos[i][13];
+		float ln1 = (puntos[i][24] - puntos[i][16]) / h2;
+		float ln2 = (puntos[i][22] - puntos[i][18]) / h2;
+		//cout << puntos[i][24] << ":" << puntos[i][16] << endl;
+		//cout << rn1 << ":" << rn2 << endl;
+
+
+		float coef[5] = { 39.2325,-0.6976, 23.8160, -5.0245 };
+		float dist[5] = { ln1, ln2, rn1, rn2 };
+
+		vector<float> OX;
+		vector<vector<float>> sig;
+		for (int i = 0; i < 5; i++)
+		{
+			vector<float> tempo;
+			float tmp = dist[i] * coef[i];
+			float  sigma = 1 / (1 + pow(2.71828183, -tmp));
+			//float  sigma = 1 / (1 + exp(-tmp));
+			OX.push_back(tmp);
+			tempo.push_back(sigma);
+			sig.push_back(tempo);
+		}
+
+		float sum = 0;
+
+
+
+		for (int i = 0; i < sig.size(); i++)
+		{
+			for (int j = 0; j < sig[0].size(); j++)
+			{
+				//cout << sig[i][j] << endl;
+				sum = sum + sig[i][j];
+
+			}
+			//cout << sum / 5 << endl;
+		}
+
+
+		if ((sum / 4) < 0.77)
+		{
+			cout << "Abierto ";
+			return 0;
+		}
+		else if ((sum / 4)>0.77)
+		{
+			cout << "Cerrado ";
+			return 1;
+		}
+		cout << sum / 4;
+		cout << " ," << puntos[i][25];
+		cout << endl;
+
+
 	}
-	else if (maxR < 6 && maxL < 6)
-	{
-		//cout << "Est? cerrado" << endl;
-		return false;
-	}
-	return false;
+
+
+
+	return 0;
+
 }
+
+

@@ -42,8 +42,8 @@ public:
 	//-- Constructor
 	Train() {
 	}
-	void tryit();
-	int openClose(vector<vector<float>> euler, vector<vector<int>> punto);
+	void tryit(cv::Mat X);
+	bool openClose(vector<vector<float>> euler, vector<vector<int>> punto);
 
 private:
 	//static int callback(void *data, int argc, char **argv, char **azColName);

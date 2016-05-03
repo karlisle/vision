@@ -51,8 +51,8 @@ c:\users\kharl\documents\git\vision\vectores\trainer.cpp(108): warning C4244: 'i
 c:\users\kharl\documents\git\vision\vectores\trainer.cpp(115): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
 c:\users\kharl\documents\git\vision\vectores\trainer.cpp(122): warning C4838: conversion from 'double' to 'float' requires a narrowing conversion
 c:\users\kharl\documents\git\vision\vectores\trainer.cpp(122): warning C4305: 'initializing': truncation from 'double' to 'float'
-c:\users\kharl\documents\git\vision\vectores\trainer.cpp(131): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\users\kharl\documents\git\vision\vectores\trainer.cpp(142): warning C4018: '<': signed/unsigned mismatch
-c:\users\kharl\documents\git\vision\vectores\trainer.cpp(144): warning C4018: '<': signed/unsigned mismatch
+c:\users\kharl\documents\git\vision\vectores\trainer.cpp(132): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\kharl\documents\git\vision\vectores\trainer.cpp(143): warning C4018: '<': signed/unsigned mismatch
+c:\users\kharl\documents\git\vision\vectores\trainer.cpp(145): warning C4018: '<': signed/unsigned mismatch
   Vectores.vcxproj -> C:\Users\kharl\Documents\Git\vision\Vectores\Debug\Vectores.exe
   Vectores.vcxproj -> C:\Users\kharl\Documents\Git\vision\Vectores\Debug\Vectores.pdb (Partial PDB)

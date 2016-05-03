@@ -1,7 +1,7 @@
 #include "trainer.h"
 #include "dataBase.h"
 
-void Train::tryit()
+void Train::tryit(cv::Mat X)
 {
 	this->dataBase();
 }
@@ -93,7 +93,7 @@ void Train::dataBase()
 }
 
 
-int Train::openClose(vector<vector<float>> euler, vector<vector<int>> puntos)
+bool Train::openClose(vector<vector<float>> euler, vector<vector<int>> puntos)
 {
 
 	cout << "Ok, intentando" << endl;
@@ -148,6 +148,18 @@ int Train::openClose(vector<vector<float>> euler, vector<vector<int>> puntos)
 				
 			}
 			//cout << sum / 5 << endl;
+		}
+		
+
+		if ((sum / 4) < 0.77 )
+		{
+			cout << "Abierto ";
+			return 0;
+		}
+		else if ((sum / 4)>0.77)
+		{
+			cout << "Cerrado ";
+			return 1;
 		}
 		cout << sum / 4;
 		cout << " ," << puntos[i][25];

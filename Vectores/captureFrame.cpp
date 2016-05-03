@@ -289,6 +289,7 @@ int CaptureFrame::detect(int opt)
 				}
 				else if (opt == 2)
 				{
+					oc.tryit(X0);
 					break;
 				}
 				else if (opt == 3)
