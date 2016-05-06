@@ -1,4 +1,4 @@
-﻿  trainer.cpp
+﻿  muestras.cpp
 c:\users\kharl\documents\git\godzila\eye\libraries\intraface\include\intraface\marcos.h(45): warning C4005: 'max': macro redefinition
   c:\program files (x86)\windows kits\8.1\include\shared\minwindef.h(193): note: see previous definition of 'max'
 c:\users\kharl\documents\git\godzila\eye\libraries\intraface\include\intraface\facealignment.h(80): warning C4251: 'INTRAFACE::FaceAlignment::m_DR': class 'std::vector<cv::Mat,std::allocator<_Ty>>' needs to have dll-interface to be used by clients of class 'INTRAFACE::FaceAlignment'
@@ -44,10 +44,5 @@ c:\program files\mysql\mysql connector c++ 1.1.7\include\cppconn\exception.h(145
 c:\program files\mysql\mysql connector c++ 1.1.7\include\mysql_connection.h(175): warning C4251: 'sql::mysql::MySQL_Connection::proxy': class 'boost::shared_ptr<sql::mysql::NativeAPI::NativeConnectionWrapper>' needs to have dll-interface to be used by clients of class 'sql::mysql::MySQL_Connection'
 c:\program files\mysql\mysql connector c++ 1.1.7\include\mysql_connection.h(179): warning C4251: 'sql::mysql::MySQL_Connection::service': class 'boost::scoped_ptr<sql::mysql::MySQL_Statement>' needs to have dll-interface to be used by clients of class 'sql::mysql::MySQL_Connection'
 c:\program files\mysql\mysql connector c++ 1.1.7\include\mysql_connection.h(181): warning C4251: 'sql::mysql::MySQL_Connection::intern': class 'boost::scoped_ptr<sql::mysql::MySQL_ConnectionData>' needs to have dll-interface to be used by clients of class 'sql::mysql::MySQL_Connection'
-c:\users\kharl\documents\git\vision\vectores\trainer.cpp(45): warning C4244: 'argument': conversion from 'long double' to 'float', possible loss of data
-c:\users\kharl\documents\git\vision\vectores\trainer.cpp(17): warning C4101: 'pstmt': unreferenced local variable
-c:\users\kharl\documents\git\vision\vectores\trainer.cpp(101): warning C4018: '<': signed/unsigned mismatch
-c:\users\kharl\documents\git\vision\vectores\trainer.cpp(103): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-c:\users\kharl\documents\git\vision\vectores\trainer.cpp(106): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
   Vectores.vcxproj -> C:\Users\kharl\Documents\Git\vision\Vectores\Debug\Vectores.exe
   Vectores.vcxproj -> C:\Users\kharl\Documents\Git\vision\Vectores\Debug\Vectores.pdb (Partial PDB)
