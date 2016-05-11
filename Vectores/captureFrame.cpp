@@ -9,16 +9,15 @@ using namespace cv;
 
 void CaptureFrame::menu()
 {
-	cout << "\t****************************" << endl;
-	cout << "\t*   Seleccione una opción  *" << endl;
-	cout << "\t* 1) Cargar (CDF)          *" << endl;
+	cout << "\t*****************************" << endl;
+	cout << "\t*   Seleccione una opción   *" << endl;
+	cout << "\t* 1) Cargar (CDF)           *" << endl;
 	cout << "\t* 2) Entrenar               *" << endl;
 	cout << "\t* 3) Tomar muestras        *" << endl;
 	cout << "\t* 4) Tomar muestras/seccion*" << endl;
 	cout << "\t* 0) Salir                 *" << endl;
 	cout << "\t****************************" << endl;
 	cout << "\t>>> ";
-
 
 	Database data;
 	int opcion;
@@ -39,6 +38,7 @@ void CaptureFrame::menu()
 			this->detect(3);
 			break;
 		case 4:
+
 			this - detect(4);
 			break;
 		default:
@@ -283,12 +283,13 @@ int CaptureFrame::detect(int opt)
 
 				//Muestras muestra;
 				//muestra.guardar(frame, X0, leftEye, rightEye, NULL);
+
 				Test test;
 				Train begin;
 				Muestras muestra;
+
 				if (opt == 1)
-				{
-					
+				{	
 					test.display(frame, faces, lEye, rEye, X0, capture);
 					cout << ".";
 				}
@@ -304,7 +305,7 @@ int CaptureFrame::detect(int opt)
 				}
 				else if (opt == 4)
 				{
-					muestra.muestrasSeccion(frame, X0, angles, leftEye, rightEye, intent, capture);
+					muestra.screenMap(frame, X0, angles, leftEye, rightEye, intent, capture);
 				}
 				//imshow("Gaze", frame);	
 				else if (opt == 0)

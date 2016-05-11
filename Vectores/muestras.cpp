@@ -6,6 +6,7 @@
 #include <stdio.h>
 
 
+
 void Muestras::muestrasSeccion(cv::Mat frame, cv::Mat X0, vector<float> angles, cv::Mat lEye, cv::Mat rEye, int& nFrame, cv::VideoCapture& capture)
 {
 	char k = cv::waitKey(1);
@@ -53,6 +54,213 @@ void Muestras::muestrasSeccion(cv::Mat frame, cv::Mat X0, vector<float> angles, 
 		capt.menu();
 	}
 	
+}
+
+
+void Muestras::screenMap(cv::Mat frame, cv::Mat X0, vector<float> angulos, cv::Mat lEye, cv::Mat rEye, int& intent, cv::VideoCapture& capture)
+{
+	CaptureFrame capt;
+	char k = cv::waitKey(1);
+	//--------------------------------------------------------------------------------
+	string wName = "Gaze";
+	string nBack = "Screen-Map";
+	cv::namedWindow(wName, CV_WINDOW_NORMAL);
+	cv::namedWindow(nBack, CV_WINDOW_NORMAL);
+	cv::Mat background = cv::imread("images/background.png", CV_LOAD_IMAGE_COLOR);
+
+	int cols = background.cols;
+	int rows = background.rows;
+	
+	int x = cols/4;
+	int y = rows/4;
+	string ncapt = to_string(intent);
+
+	bool openClose = this->openClose(X0);
+	
+	
+	
+		//---- 1
+		if (intent <= 100)
+		{
+			string sector = "sct1";
+			cv::circle(background, cv::Point((x * 1) - 150, (y * 1) - 40), 80, cv::Scalar(255, 255, 0), -1);
+			cv::putText(background, ncapt, cv::Point((x * 1) - 210, (y * 1) - 25), cv::FONT_HERSHEY_SCRIPT_SIMPLEX, 2, cv::Scalar(0, 0, 255), 3, 8);
+			cv::Point pos(((x + 1) - 150), ((y * 1) - 40));
+			this->setData(X0, angulos, pos, intent, sector);
+		}
+		//---- 2
+		else if (intent <= 200)
+		{
+			string sector = "sct2";
+			cv::circle(background, cv::Point(x * 2, (y * 1) - 40), 80, cv::Scalar(255, 255, 0), -1);
+			cv::putText(background, ncapt, cv::Point((x * 2) - 60, (y * 1) - 25), cv::FONT_HERSHEY_SCRIPT_SIMPLEX, 2, cv::Scalar(0, 0, 255), 3, 8);
+			cv::Point pos((x * 2), (y * 1) - 40);
+			this->setData(X0, angulos, pos, intent, sector);
+		}
+		//--- 3
+		else if (intent <= 300)
+		{
+			string sector = "sct3";
+			cv::circle(background, cv::Point((x * 3) + 150, (y * 1) - 40), 80, cv::Scalar(255, 255, 0), -1);
+			cv::putText(background, ncapt, cv::Point((x * 3) + 90, (y * 1) - 25), cv::FONT_HERSHEY_SCRIPT_SIMPLEX, 2, cv::Scalar(0, 0, 255), 3, 8);
+			cv::Point pos(((x * 3) + 150), ((y * 1) - 40));
+			this->setData(X0, angulos, pos, intent, sector);
+		}
+		//--- 4
+		else if (intent <= 400)
+		{
+			string sector = "sct4";
+			cv::circle(background, cv::Point((x * 1) - 150, y * 2), 80, cv::Scalar(255, 255, 0), 1);
+			cv::putText(background, ncapt, cv::Point((x * 1) - 210, (y * 2) + 10), cv::FONT_HERSHEY_SCRIPT_SIMPLEX, 2, cv::Scalar(0, 0, 255), 3, 8);
+			cv::Point pos(((x + 1) - 150), (y * 2));
+			this->setData(X0, angulos, pos, intent, sector);
+		}
+		//--- 5
+		else if (intent <= 500)
+		{
+			string sector = "sct5";
+			cv::circle(background, cv::Point(x * 2, y * 2), 80, cv::Scalar(255, 255, 0), 1);
+			cv::putText(background, ncapt, cv::Point((x * 2) - 60, (y * 2) + 10), cv::FONT_HERSHEY_SCRIPT_SIMPLEX, 2, cv::Scalar(0, 0, 255), 3, 8);
+			cv::Point pos((x * 2), (y * 2));
+			this->setData(X0, angulos, pos, intent, sector);
+		}
+		//--- 6
+		else if (intent <= 600)
+		{
+			string sector = "sct6";
+			cv::circle(background, cv::Point((x * 3) + 150, y * 2), 80, cv::Scalar(255, 255, 0), 1);
+			cv::putText(background, ncapt, cv::Point((x * 3) + 90, (y * 2) + 10), cv::FONT_HERSHEY_SCRIPT_SIMPLEX, 2, cv::Scalar(0, 0, 255), 3, 8);
+			cv::Point pos(((x * 3) + 150), (y * 2));
+			this->setData(X0, angulos, pos, intent, sector);
+		}
+		//--- 7
+		else if (intent <= 700)
+		{
+			string sector = "sct7";
+			cv::circle(background, cv::Point((x * 1) - 150, (y * 3) + 40), 80, cv::Scalar(255, 255, 0), 1);
+			cv::putText(background, ncapt, cv::Point((x * 1) - 210, (y * 3) + 50), cv::FONT_HERSHEY_SCRIPT_SIMPLEX, 2, cv::Scalar(0, 0, 255), 3, 8);
+			cv::Point pos(((x * 1) - 150), ((y * 3) + 40));
+			this->setData(X0, angulos, pos, intent, sector);
+		}
+		//--- 8
+		else if (intent <= 800)
+		{
+			string sector = "sct8";
+			cv::circle(background, cv::Point(x * 2, (y * 3) + 40), 80, cv::Scalar(255, 255, 0), 1);
+			cv::putText(background, ncapt, cv::Point((x * 2) - 60, (y * 3) + 50), cv::FONT_HERSHEY_SCRIPT_SIMPLEX, 2, cv::Scalar(0, 0, 255), 3, 8);
+			cv::Point pos((x * 2), ((y * 3) + 40));
+			this->setData(X0, angulos, pos, intent, sector);
+		}
+		//--- 9
+		else if (intent <= 900)
+		{
+			string sector = "sct9";
+			cv::circle(background, cv::Point((x * 3) + 150, (y * 3) + 40), 80, cv::Scalar(255, 255, 0), 1);
+			cv::putText(background, ncapt, cv::Point((x * 3) + 90, (y * 3) + 50), cv::FONT_HERSHEY_SCRIPT_SIMPLEX, 2, cv::Scalar(0, 0, 255), 3, 8);
+			cv::Point pos(((x * 3) + 150), ((y * 3) + 40));
+			this->setData(X0, angulos, pos, intent, sector);
+		}
+		else
+		{
+			cv::circle(background, cv::Point(background.cols / 3, background.rows / 3), background.cols / 4, cv::Scalar(255, 122, 56), -1);
+			cout << "Terminamos, pulsa 'r' para regresar al menu principal!!" << endl;
+		}
+		intent++;
+		cv::imshow(nBack, background);
+		cv::imshow(wName, frame);
+	
+	//------------------------------------------------------------//
+	if (k == 'r')
+	{
+		cout << "regresando al menu principal" << endl;
+		capture.release();
+		cv::destroyAllWindows();
+		capt.menu();
+	}
+}
+
+void Muestras::setData(cv::Mat X0, vector<float> angulos, cv::Point posicion, int intent, string sector)
+{
+	//-- obtenemos los 12 pares de coordenadas de los ojos y los 
+	//-- almacenamos en un vector 
+	vector<int> puntos = this->splitPuntos(X0);
+	//-- Este string es la estructura de la consulta.
+	string cadena = " ";
+	string vals = " ";
+	float roll = angulos[0];
+	float yaw = angulos[1];
+	float pitch = angulos[2];
+
+	cadena = "roll, yaw, pitch,";
+
+	for (int i = 19; i <= 30; i++)
+	{
+		cadena = cadena + "x" + to_string(i) + ",";
+		cadena = cadena + "y" + to_string(i) + ",";
+	}
+	for (int k = 0; k < 24; k++)
+	{
+		vals = vals + to_string(puntos[k]) + ",";
+	}
+
+	cadena = cadena + "cx,cy";
+	//cout << cadena << endl;
+	cout << vals << endl;
+
+	char consulta[9999] = " ";	
+	sprintf(consulta, "INSERT INTO %s(%s) VALUES(%f,%f,%f,%s %d,%d);", sector.c_str(),cadena.c_str(), roll, yaw, pitch, vals.c_str(), posicion.x, posicion.y);
+	//cout << consulta << endl;
+	//bool estatus =  db.insertarDatos(consulta);
+}
+
+bool Muestras::openClose(cv::Mat X0)
+{
+	vector<int> vPuntos = this->splitPuntos(X0);
+	//-- Normalizar las distancias
+	//Distancias ojo derecho
+	
+	float h1 = vPuntos[6] - vPuntos[0];
+	float rn1 = (vPuntos[11] - vPuntos[3]) / h1;
+	float rn2 = (vPuntos[9] - vPuntos[5]) / h1;
+	cout << vPuntos[6] << ":" << vPuntos[0] << endl;
+	cout << vPuntos[11] << ":" << vPuntos[3] << endl;
+	cout << vPuntos[9] << ":" << vPuntos[5] << endl;
+	cout << rn1 << ":" << rn2 << endl;
+	cout << endl;
+
+	//Distancias ojo izquierdo
+	float h2 = vPuntos[18] - vPuntos[12];
+	float ln1 = (vPuntos[23] - vPuntos[15]) / h2;
+	float ln2 = (vPuntos[21] - vPuntos[17]) / h2;
+	
+
+	//-- Los coeficientes los obtenemos al correr una regresion logistica 
+	//float coef[5] = { 39.2325, -0.6976, 23.8160, -5.0245 };
+	float coef[5] = {17.046281, -0.933207, 0.025291, -0.608294, -0.124300};
+	float dist[5] = {-1, ln1, ln2, rn1, rn2 };
+
+	float scalar = ((coef[0] * dist[0]) + (coef[1] * dist[1]) + (coef[2] * dist[2]) + (coef[3] * dist[3]) + (coef[4] * dist[4]));
+	cout << scalar <<endl;
+	float sigma = (1 / 1 + exp(-scalar));
+	return true;
+}
+
+vector<int> Muestras::splitPuntos(cv::Mat X0)
+{
+	/*-- Obtenemos los puntos de intres, en orden serian de la siguiente forma:
+	**-- [ojoIzqExterno, ojoIzqInterno, ojoDerInterno, ojoDerexterno]
+	**-- de cualquier forma revisar el diagrama en la documentacion del proyecto.
+	*/
+	vector<int> puntos;
+	//-- extraer los puntos de X0, y los agregamos al vector
+	for (int i = 19; i <= 30; i++)
+	{
+		int x = (int)X0.at<float>(0, i);
+		puntos.push_back(x);
+		int y = (int)X0.at<float>(1, i);
+		puntos.push_back(y);
+	}	
+	return puntos;
 }
 
 
@@ -159,7 +367,7 @@ void Muestras::guardar(cv::Mat frame, cv::Mat X0, vector<float> angles, cv::Mat 
 	}
 }
 
-void Muestras::setData(cv::Mat lEye, cv::Mat rEye, float roll, float yaw, float pitch, int p19x, int p19y, int p20x, int p20y, int p21x, int p21y, int p22x, int p22y, int p23x, int p23y, int p24x, int p24y, int p25x, int p25y, int p26x, int p26y, int p27x, int p27y, int p28x, int p28y, int p29x, int p29y, int p30x, int p30y, int nFrame)
+void Muestras::setDataLite(cv::Mat lEye, cv::Mat rEye, float roll, float yaw, float pitch, int p19x, int p19y, int p20x, int p20y, int p21x, int p21y, int p22x, int p22y, int p23x, int p23y, int p24x, int p24y, int p25x, int p25y, int p26x, int p26y, int p27x, int p27y, int p28x, int p28y, int p29x, int p29y, int p30x, int p30y, int nFrame)
 {
 
 	fstream imgPuntos;
