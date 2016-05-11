@@ -44,9 +44,9 @@ c:\program files\mysql\mysql connector c++ 1.1.7\include\cppconn\exception.h(145
 c:\program files\mysql\mysql connector c++ 1.1.7\include\mysql_connection.h(175): warning C4251: 'sql::mysql::MySQL_Connection::proxy': class 'boost::shared_ptr<sql::mysql::NativeAPI::NativeConnectionWrapper>' needs to have dll-interface to be used by clients of class 'sql::mysql::MySQL_Connection'
 c:\program files\mysql\mysql connector c++ 1.1.7\include\mysql_connection.h(179): warning C4251: 'sql::mysql::MySQL_Connection::service': class 'boost::scoped_ptr<sql::mysql::MySQL_Statement>' needs to have dll-interface to be used by clients of class 'sql::mysql::MySQL_Connection'
 c:\program files\mysql\mysql connector c++ 1.1.7\include\mysql_connection.h(181): warning C4251: 'sql::mysql::MySQL_Connection::intern': class 'boost::scoped_ptr<sql::mysql::MySQL_ConnectionData>' needs to have dll-interface to be used by clients of class 'sql::mysql::MySQL_Connection'
-c:\users\kharl\documents\git\vision\vectores\muestras.cpp(222): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-c:\users\kharl\documents\git\vision\vectores\muestras.cpp(232): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-c:\users\kharl\documents\git\vision\vectores\muestras.cpp(239): warning C4838: conversion from 'double' to 'float' requires a narrowing conversion
-c:\users\kharl\documents\git\vision\vectores\muestras.cpp(239): warning C4305: 'initializing': truncation from 'double' to 'float'
-  Vectores.vcxproj -> C:\Users\kharl\Documents\Git\vision\Vectores\Debug\Vectores.exe
-  Vectores.vcxproj -> C:\Users\kharl\Documents\Git\vision\Vectores\Debug\Vectores.pdb (Partial PDB)
+c:\users\kharl\documents\git\vision\vectores\muestras.cpp(222): error C2039: 'saveImage': is not a member of 'Muestras'
+  c:\users\kharl\documents\git\vision\vectores\muestras.h(31): note: see declaration of 'Muestras'
+c:\users\kharl\documents\git\vision\vectores\muestras.cpp(233): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+c:\users\kharl\documents\git\vision\vectores\muestras.cpp(239): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+c:\users\kharl\documents\git\vision\vectores\muestras.cpp(245): warning C4838: conversion from 'double' to 'float' requires a narrowing conversion
+c:\users\kharl\documents\git\vision\vectores\muestras.cpp(245): warning C4305: 'initializing': truncation from 'double' to 'float'

@@ -77,8 +77,8 @@ void Muestras::screenMap(cv::Mat frame, cv::Mat X0, vector<float> angulos, cv::M
 
 	bool openClose = this->openClose(X0);
 	
-	
-	
+	if (openClose)
+	{
 		//---- 1
 		if (intent <= 100)
 		{
@@ -87,6 +87,7 @@ void Muestras::screenMap(cv::Mat frame, cv::Mat X0, vector<float> angulos, cv::M
 			cv::putText(background, ncapt, cv::Point((x * 1) - 210, (y * 1) - 25), cv::FONT_HERSHEY_SCRIPT_SIMPLEX, 2, cv::Scalar(0, 0, 255), 3, 8);
 			cv::Point pos(((x + 1) - 150), ((y * 1) - 40));
 			this->setData(X0, angulos, pos, intent, sector);
+			this->saveImage(lEye, rEye, intent);
 		}
 		//---- 2
 		else if (intent <= 200)
@@ -96,6 +97,7 @@ void Muestras::screenMap(cv::Mat frame, cv::Mat X0, vector<float> angulos, cv::M
 			cv::putText(background, ncapt, cv::Point((x * 2) - 60, (y * 1) - 25), cv::FONT_HERSHEY_SCRIPT_SIMPLEX, 2, cv::Scalar(0, 0, 255), 3, 8);
 			cv::Point pos((x * 2), (y * 1) - 40);
 			this->setData(X0, angulos, pos, intent, sector);
+			this->saveImage(lEye, rEye, intent);
 		}
 		//--- 3
 		else if (intent <= 300)
@@ -105,6 +107,7 @@ void Muestras::screenMap(cv::Mat frame, cv::Mat X0, vector<float> angulos, cv::M
 			cv::putText(background, ncapt, cv::Point((x * 3) + 90, (y * 1) - 25), cv::FONT_HERSHEY_SCRIPT_SIMPLEX, 2, cv::Scalar(0, 0, 255), 3, 8);
 			cv::Point pos(((x * 3) + 150), ((y * 1) - 40));
 			this->setData(X0, angulos, pos, intent, sector);
+			this->saveImage(lEye, rEye, intent);
 		}
 		//--- 4
 		else if (intent <= 400)
@@ -114,6 +117,7 @@ void Muestras::screenMap(cv::Mat frame, cv::Mat X0, vector<float> angulos, cv::M
 			cv::putText(background, ncapt, cv::Point((x * 1) - 210, (y * 2) + 10), cv::FONT_HERSHEY_SCRIPT_SIMPLEX, 2, cv::Scalar(0, 0, 255), 3, 8);
 			cv::Point pos(((x + 1) - 150), (y * 2));
 			this->setData(X0, angulos, pos, intent, sector);
+			this->saveImage(lEye, rEye, intent);
 		}
 		//--- 5
 		else if (intent <= 500)
@@ -123,6 +127,7 @@ void Muestras::screenMap(cv::Mat frame, cv::Mat X0, vector<float> angulos, cv::M
 			cv::putText(background, ncapt, cv::Point((x * 2) - 60, (y * 2) + 10), cv::FONT_HERSHEY_SCRIPT_SIMPLEX, 2, cv::Scalar(0, 0, 255), 3, 8);
 			cv::Point pos((x * 2), (y * 2));
 			this->setData(X0, angulos, pos, intent, sector);
+			this->saveImage(lEye, rEye, intent);
 		}
 		//--- 6
 		else if (intent <= 600)
@@ -132,6 +137,7 @@ void Muestras::screenMap(cv::Mat frame, cv::Mat X0, vector<float> angulos, cv::M
 			cv::putText(background, ncapt, cv::Point((x * 3) + 90, (y * 2) + 10), cv::FONT_HERSHEY_SCRIPT_SIMPLEX, 2, cv::Scalar(0, 0, 255), 3, 8);
 			cv::Point pos(((x * 3) + 150), (y * 2));
 			this->setData(X0, angulos, pos, intent, sector);
+			this->saveImage(lEye, rEye, intent);
 		}
 		//--- 7
 		else if (intent <= 700)
@@ -141,6 +147,7 @@ void Muestras::screenMap(cv::Mat frame, cv::Mat X0, vector<float> angulos, cv::M
 			cv::putText(background, ncapt, cv::Point((x * 1) - 210, (y * 3) + 50), cv::FONT_HERSHEY_SCRIPT_SIMPLEX, 2, cv::Scalar(0, 0, 255), 3, 8);
 			cv::Point pos(((x * 1) - 150), ((y * 3) + 40));
 			this->setData(X0, angulos, pos, intent, sector);
+			this->saveImage(lEye, rEye, intent);
 		}
 		//--- 8
 		else if (intent <= 800)
@@ -150,6 +157,7 @@ void Muestras::screenMap(cv::Mat frame, cv::Mat X0, vector<float> angulos, cv::M
 			cv::putText(background, ncapt, cv::Point((x * 2) - 60, (y * 3) + 50), cv::FONT_HERSHEY_SCRIPT_SIMPLEX, 2, cv::Scalar(0, 0, 255), 3, 8);
 			cv::Point pos((x * 2), ((y * 3) + 40));
 			this->setData(X0, angulos, pos, intent, sector);
+			this->saveImage(lEye, rEye, intent);
 		}
 		//--- 9
 		else if (intent <= 900)
@@ -159,15 +167,22 @@ void Muestras::screenMap(cv::Mat frame, cv::Mat X0, vector<float> angulos, cv::M
 			cv::putText(background, ncapt, cv::Point((x * 3) + 90, (y * 3) + 50), cv::FONT_HERSHEY_SCRIPT_SIMPLEX, 2, cv::Scalar(0, 0, 255), 3, 8);
 			cv::Point pos(((x * 3) + 150), ((y * 3) + 40));
 			this->setData(X0, angulos, pos, intent, sector);
+			this->saveImage(lEye, rEye, intent);
 		}
 		else
 		{
-			cv::circle(background, cv::Point(background.cols / 3, background.rows / 3), background.cols / 4, cv::Scalar(255, 122, 56), -1);
+			cv::circle(background, cv::Point(background.cols / 2, background.rows / 2), background.cols / 4, cv::Scalar(255, 122, 56), -1);
 			cout << "Terminamos, pulsa 'r' para regresar al menu principal!!" << endl;
 		}
 		intent++;
+
 		cv::imshow(nBack, background);
 		cv::imshow(wName, frame);
+	}
+	else
+	{
+
+	}
 	
 	//------------------------------------------------------------//
 	if (k == 'r')
@@ -205,12 +220,35 @@ void Muestras::setData(cv::Mat X0, vector<float> angulos, cv::Point posicion, in
 
 	cadena = cadena + "cx,cy";
 	//cout << cadena << endl;
-	cout << vals << endl;
+	//cout << vals << endl;
 
 	char consulta[9999] = " ";	
 	sprintf(consulta, "INSERT INTO %s(%s) VALUES(%f,%f,%f,%s %d,%d);", sector.c_str(),cadena.c_str(), roll, yaw, pitch, vals.c_str(), posicion.x, posicion.y);
 	//cout << consulta << endl;
 	//bool estatus =  db.insertarDatos(consulta);
+
+}
+
+string Muestras::saveImage(cv::Mat lEye, cv::Mat rEye, int intent)
+{
+	string id;
+	if (intent <= 9)
+	{
+		id = "000" + to_string(intent);
+	}
+	else if (intent <= 99)
+	{
+		id = "00" + to_string(intent);
+	}
+	else if (intent < 999)
+	{
+		id = to_string(intent);
+	}
+	else if (intent = 999)
+	{
+		return;
+	}
+		
 }
 
 bool Muestras::openClose(cv::Mat X0)
@@ -222,27 +260,35 @@ bool Muestras::openClose(cv::Mat X0)
 	float h1 = vPuntos[6] - vPuntos[0];
 	float rn1 = (vPuntos[11] - vPuntos[3]) / h1;
 	float rn2 = (vPuntos[9] - vPuntos[5]) / h1;
-	cout << vPuntos[6] << ":" << vPuntos[0] << endl;
-	cout << vPuntos[11] << ":" << vPuntos[3] << endl;
-	cout << vPuntos[9] << ":" << vPuntos[5] << endl;
-	cout << rn1 << ":" << rn2 << endl;
-	cout << endl;
+	//cout << vPuntos[6] << ":" << vPuntos[0] << endl;
 
 	//Distancias ojo izquierdo
 	float h2 = vPuntos[18] - vPuntos[12];
 	float ln1 = (vPuntos[23] - vPuntos[15]) / h2;
-	float ln2 = (vPuntos[21] - vPuntos[17]) / h2;
-	
+	float ln2 = (vPuntos[21] - vPuntos[17]) / h2;	
 
 	//-- Los coeficientes los obtenemos al correr una regresion logistica 
 	//float coef[5] = { 39.2325, -0.6976, 23.8160, -5.0245 };
-	float coef[5] = {17.046281, -0.933207, 0.025291, -0.608294, -0.124300};
-	float dist[5] = {-1, ln1, ln2, rn1, rn2 };
+	float coef[4] = {-0.933207, 0.025291, -0.608294, -0.124300};
+	float dist[4] = {ln1, ln2, rn1, rn2 };
 
-	float scalar = ((coef[0] * dist[0]) + (coef[1] * dist[1]) + (coef[2] * dist[2]) + (coef[3] * dist[3]) + (coef[4] * dist[4]));
+	float scalar = ((coef[0] * dist[0]) + (coef[1] * dist[1]) + (coef[2] * dist[2]) + (coef[3] * dist[3]));
 	cout << scalar <<endl;
-	float sigma = (1 / 1 + exp(-scalar));
-	return true;
+	//float  sigma = 1 / (1 + pow(2.71828183, -scalar));
+	float  sigma = 1 / (1 + exp(-scalar));
+	cout << sigma << endl << endl;
+
+	if (sigma <= 0.3700)
+	{
+		return true;
+		cout << "abierto " << endl;
+	}
+	else if (sigma > 0.3750)
+	{
+		return false;
+		cout << "cerrado " << endl;
+	}
+	
 }
 
 vector<int> Muestras::splitPuntos(cv::Mat X0)
