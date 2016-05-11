@@ -23,72 +23,106 @@ void Muestras::screenMap(cv::Mat frame, cv::Mat X0, vector<float> angulos, cv::M
 	int x = cols/4;
 	int y = rows/4;
 	string ncapt = to_string(intent);
+
+	bool openClose = this->openClose(X0);
 	
-	
-	//---- 1
-	if (intent <= 100)
+	if (openClose)
 	{
-		string sector ="sct1";
-		cv::circle(background, cv::Point((x * 1) - 150, (y * 1) - 40), 80, cv::Scalar(255, 255, 0), -1);
-		cv::putText(background, ncapt, cv::Point((x * 1) - 210, (y * 1) -25), cv::FONT_HERSHEY_SCRIPT_SIMPLEX, 2, cv::Scalar(0, 0, 255), 3, 8);
-		cv::Point pos(((x + 1) - 150), ((y * 1) - 40));
-		this->setData(X0, angulos, pos, intent, sector);
-	}
-	//---- 2
-	else if (intent <= 200)
-	{
-		cv::circle(background, cv::Point(x * 2, (y * 1) - 40), 80, cv::Scalar(255, 255, 0), -1);
-		cv::putText(background, ncapt, cv::Point((x * 2)-60, (y * 1) - 25), cv::FONT_HERSHEY_SCRIPT_SIMPLEX, 2, cv::Scalar(0, 0, 255), 3, 8);
-	}
-	//--- 3
-	else if (intent <= 300)
-	{
-		cv::circle(background, cv::Point((x * 3) + 150, (y * 1) - 40), 80, cv::Scalar(255, 255, 0), -1);
-		cv::putText(background, ncapt, cv::Point((x * 3) + 90, (y * 1) - 25), cv::FONT_HERSHEY_SCRIPT_SIMPLEX, 2, cv::Scalar(0, 0, 255), 3, 8);
-	}
-	//--- 4
-	else if (intent <= 400)
-	{
-		cv::circle(background, cv::Point((x * 1) - 150, y * 2), 80, cv::Scalar(255, 255, 0), 1);
-		cv::putText(background, ncapt, cv::Point((x * 1) - 210, (y * 2)+10), cv::FONT_HERSHEY_SCRIPT_SIMPLEX, 2, cv::Scalar(0, 0, 255), 3, 8);
-	}
-	//--- 5
-	else if (intent <= 500)
-	{
-		cv::circle(background, cv::Point(x * 2, y * 2), 80, cv::Scalar(255, 255, 0), 1);
-		cv::putText(background, ncapt, cv::Point((x * 2) - 60, (y * 2)+10), cv::FONT_HERSHEY_SCRIPT_SIMPLEX, 2, cv::Scalar(0, 0, 255), 3, 8);
-	}
-	//--- 6
-	else if(intent <= 600)
-	{
-		cv::circle(background, cv::Point((x * 3) + 150, y * 2), 80, cv::Scalar(255, 255, 0), 1);
-		cv::putText(background, ncapt, cv::Point((x * 3) + 90, (y * 2)+10), cv::FONT_HERSHEY_SCRIPT_SIMPLEX, 2, cv::Scalar(0, 0, 255), 3, 8);
-	}
-	//--- 7
-	else if (intent <= 700)
-	{
-		cv::circle(background, cv::Point((x * 1) - 150, (y * 3) + 40), 80, cv::Scalar(255, 255, 0), 1);
-		cv::putText(background, ncapt, cv::Point((x * 1) - 210, (y * 3) + 50), cv::FONT_HERSHEY_SCRIPT_SIMPLEX, 2, cv::Scalar(0, 0, 255), 3, 8);
-	}
-	//--- 8
-	else if (intent <= 800)
-	{
-		cv::circle(background, cv::Point(x * 2, (y * 3) + 40), 80, cv::Scalar(255, 255, 0), 1);
-		cv::putText(background, ncapt, cv::Point((x * 2) - 60, (y * 3) + 50), cv::FONT_HERSHEY_SCRIPT_SIMPLEX, 2, cv::Scalar(0, 0, 255), 3, 8);
-	}
-	//--- 9
-	else if (intent <= 900)
-	{
-		cv::circle(background, cv::Point((x * 3) + 150, (y * 3) + 40), 80, cv::Scalar(255, 255, 0), 1);
-		cv::putText(background, ncapt, cv::Point((x * 3) + 90, (y * 3) + 50), cv::FONT_HERSHEY_SCRIPT_SIMPLEX, 2, cv::Scalar(0, 0, 255), 3, 8);
+		//---- 1
+		if (intent <= 100)
+		{
+			string sector = "sct1";
+			cv::circle(background, cv::Point((x * 1) - 150, (y * 1) - 40), 80, cv::Scalar(255, 255, 0), -1);
+			cv::putText(background, ncapt, cv::Point((x * 1) - 210, (y * 1) - 25), cv::FONT_HERSHEY_SCRIPT_SIMPLEX, 2, cv::Scalar(0, 0, 255), 3, 8);
+			cv::Point pos(((x + 1) - 150), ((y * 1) - 40));
+			this->setData(X0, angulos, pos, intent, sector);
+		}
+		//---- 2
+		else if (intent <= 200)
+		{
+			string sector = "sct2";
+			cv::circle(background, cv::Point(x * 2, (y * 1) - 40), 80, cv::Scalar(255, 255, 0), -1);
+			cv::putText(background, ncapt, cv::Point((x * 2) - 60, (y * 1) - 25), cv::FONT_HERSHEY_SCRIPT_SIMPLEX, 2, cv::Scalar(0, 0, 255), 3, 8);
+			cv::Point pos((x * 2), (y * 1) - 40);
+			this->setData(X0, angulos, pos, intent, sector);
+		}
+		//--- 3
+		else if (intent <= 300)
+		{
+			string sector = "sct3";
+			cv::circle(background, cv::Point((x * 3) + 150, (y * 1) - 40), 80, cv::Scalar(255, 255, 0), -1);
+			cv::putText(background, ncapt, cv::Point((x * 3) + 90, (y * 1) - 25), cv::FONT_HERSHEY_SCRIPT_SIMPLEX, 2, cv::Scalar(0, 0, 255), 3, 8);
+			cv::Point pos(((x * 3) + 150), ((y * 1) - 40));
+			this->setData(X0, angulos, pos, intent, sector);
+		}
+		//--- 4
+		else if (intent <= 400)
+		{
+			string sector = "sct4";
+			cv::circle(background, cv::Point((x * 1) - 150, y * 2), 80, cv::Scalar(255, 255, 0), 1);
+			cv::putText(background, ncapt, cv::Point((x * 1) - 210, (y * 2) + 10), cv::FONT_HERSHEY_SCRIPT_SIMPLEX, 2, cv::Scalar(0, 0, 255), 3, 8);
+			cv::Point pos(((x + 1) - 150), (y * 2));
+			this->setData(X0, angulos, pos, intent, sector);
+		}
+		//--- 5
+		else if (intent <= 500)
+		{
+			string sector = "sct5";
+			cv::circle(background, cv::Point(x * 2, y * 2), 80, cv::Scalar(255, 255, 0), 1);
+			cv::putText(background, ncapt, cv::Point((x * 2) - 60, (y * 2) + 10), cv::FONT_HERSHEY_SCRIPT_SIMPLEX, 2, cv::Scalar(0, 0, 255), 3, 8);
+			cv::Point pos((x * 2), (y * 2));
+			this->setData(X0, angulos, pos, intent, sector);
+		}
+		//--- 6
+		else if (intent <= 600)
+		{
+			string sector = "sct6";
+			cv::circle(background, cv::Point((x * 3) + 150, y * 2), 80, cv::Scalar(255, 255, 0), 1);
+			cv::putText(background, ncapt, cv::Point((x * 3) + 90, (y * 2) + 10), cv::FONT_HERSHEY_SCRIPT_SIMPLEX, 2, cv::Scalar(0, 0, 255), 3, 8);
+			cv::Point pos(((x * 3) + 150), (y * 2));
+			this->setData(X0, angulos, pos, intent, sector);
+		}
+		//--- 7
+		else if (intent <= 700)
+		{
+			string sector = "sct7";
+			cv::circle(background, cv::Point((x * 1) - 150, (y * 3) + 40), 80, cv::Scalar(255, 255, 0), 1);
+			cv::putText(background, ncapt, cv::Point((x * 1) - 210, (y * 3) + 50), cv::FONT_HERSHEY_SCRIPT_SIMPLEX, 2, cv::Scalar(0, 0, 255), 3, 8);
+			cv::Point pos(((x * 1) - 150), ((y * 3) + 40));
+			this->setData(X0, angulos, pos, intent, sector);
+		}
+		//--- 8
+		else if (intent <= 800)
+		{
+			string sector = "sct8";
+			cv::circle(background, cv::Point(x * 2, (y * 3) + 40), 80, cv::Scalar(255, 255, 0), 1);
+			cv::putText(background, ncapt, cv::Point((x * 2) - 60, (y * 3) + 50), cv::FONT_HERSHEY_SCRIPT_SIMPLEX, 2, cv::Scalar(0, 0, 255), 3, 8);
+			cv::Point pos((x * 2), ((y * 3) + 40));
+			this->setData(X0, angulos, pos, intent, sector);
+		}
+		//--- 9
+		else if (intent <= 900)
+		{
+			string sector = "sct9";
+			cv::circle(background, cv::Point((x * 3) + 150, (y * 3) + 40), 80, cv::Scalar(255, 255, 0), 1);
+			cv::putText(background, ncapt, cv::Point((x * 3) + 90, (y * 3) + 50), cv::FONT_HERSHEY_SCRIPT_SIMPLEX, 2, cv::Scalar(0, 0, 255), 3, 8);
+			cv::Point pos(((x * 3) + 150), ((y * 3) + 40));
+			this->setData(X0, angulos, pos, intent, sector);
+		}
+		else
+		{
+			cv::circle(background, cv::Point(background.cols / 3, background.rows / 3), background.cols / 4, cv::Scalar(255, 122, 56), -1);
+			cout << "Terminamos, pulsa 'r' para regresar al menu principal!!" << endl;
+		}
+		intent++;
+		cv::imshow(nBack, background);
+		cv::imshow(wName, frame);
 	}
 	else
 	{
-		cout << "Terminamos, pulsa 'r' para regresar al menu principal!!" << endl;
+		cv::imshow(nBack, background);
+		cv::imshow(wName, frame);
 	}
-	intent++;
-	cv::imshow(nBack, background);
-	//cv::imshow(wName, frame);
 	//------------------------------------------------------------//
 	if (k == 'r')
 	{
@@ -130,7 +164,39 @@ void Muestras::setData(cv::Mat X0, vector<float> angulos, cv::Point posicion, in
 	char consulta[9999] = " ";	
 	sprintf(consulta, "INSERT INTO %s(%s) VALUES(%f,%f,%f,%s %d,%d);", sector.c_str(),cadena.c_str(), roll, yaw, pitch, vals.c_str(), posicion.x, posicion.y);
 	cout << consulta << endl;
-	bool estatus =  db.insertarDatos(consulta);
+	//bool estatus =  db.insertarDatos(consulta);
+}
+
+bool Muestras::openClose(cv::Mat X0)
+{
+	vector<int> vPuntos = this->splitPuntos(X0);
+	//-- Normalizar las distancias
+	//Distancias ojo derecho
+	float h1 = vPuntos[7] - vPuntos[1];
+	float rn1 = vPuntos[12] - vPuntos[4] / h1;
+	float rn2 = vPuntos[10] - vPuntos[6] / h1;
+
+	//Distancias ojo izquierdo
+	float h2 = vPuntos[20] - vPuntos[13];
+	float ln1 = vPuntos[24] - vPuntos[16] / h2;
+	float ln2 = vPuntos[22] - vPuntos[18] / h2;
+
+	//-- Los coeficientes los obtenemos al correr una regresion logistica 
+	float coef[5] = { 39.2325, -0.6976, 23.8160, -5.0245 };
+	float dist[5] = { ln1, ln2, rn1, rn2 };
+
+
+	vector<float> OX;
+	for (int i = 0; i < 5; i++)
+	{
+		vector<float> temp;
+		float tmp = dist[i] * coef[i];
+		float sigma = 1 / (1 + exp(-tmp));
+		OX.push_back(sigma);
+
+	}
+
+	return true;
 }
 
 vector<int> Muestras::splitPuntos(cv::Mat X0)
