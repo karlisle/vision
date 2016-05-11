@@ -14,14 +14,13 @@ void CaptureFrame::menu()
 	cout << "\t* 1) Cargar (CDF)          *" << endl;
 	cout << "\t* 2) Entrenar               *" << endl;
 	cout << "\t* 3) Tomar muestras        *" << endl;
+	cout << "\t* 4) Tomar muestras/seccion*" << endl;
 	cout << "\t* 0) Salir                 *" << endl;
 	cout << "\t****************************" << endl;
 	cout << "\t>>> ";
 
-	Train begin;
+
 	Database data;
-
-
 	int opcion;
 	cin >> opcion;
 
@@ -34,10 +33,13 @@ void CaptureFrame::menu()
 			this->detect(1);
 			break;
 		case 2:
-			begin.tryit();
+			this->detect(2);
 			break;
 		case 3:
 			this->detect(3);
+			break;
+		case 4:
+			this - detect(4);
 			break;
 		default:
 			this->detect(NULL);
@@ -281,21 +283,28 @@ int CaptureFrame::detect(int opt)
 
 				//Muestras muestra;
 				//muestra.guardar(frame, X0, leftEye, rightEye, NULL);
+				Test test;
+				Train begin;
+				Muestras muestra;
 				if (opt == 1)
 				{
-					Test test;
+					
 					test.display(frame, faces, lEye, rEye, X0, capture);
 					cout << ".";
 				}
 				else if (opt == 2)
 				{
-					oc.tryit(X0);
+					//-- Instanciar la clase de entrenamient
+					begin.tryit(X0);
 					break;
 				}
 				else if (opt == 3)
 				{
-					Muestras get;
-					get.guardar(frame, X0, angles, leftEye, rightEye, intent, capture);
+					muestra.guardar(frame, X0, angles, leftEye, rightEye, intent, capture);
+				}
+				else if (opt == 4)
+				{
+					muestra.muestrasSeccion(frame, X0, angles, leftEye, rightEye, intent, capture);
 				}
 				//imshow("Gaze", frame);	
 				else if (opt == 0)

@@ -6,6 +6,56 @@
 #include <stdio.h>
 
 
+void Muestras::muestrasSeccion(cv::Mat frame, cv::Mat X0, vector<float> angles, cv::Mat lEye, cv::Mat rEye, int& nFrame, cv::VideoCapture& capture)
+{
+	char k = cv::waitKey(1);
+	vector<int> puntos;
+	vector<float> angulos;
+	string wName = "Secciones";
+	cv::namedWindow(wName, CV_WINDOW_NORMAL);
+
+	string wlEye = "Left-eye";
+	string wREye = "Right-Eye";
+	
+	cv::Mat background = cv::imread("images/background.png", CV_LOAD_IMAGE_ANYCOLOR);
+
+	vector<cv::Point> centros;
+	int rows = background.rows;
+	int cols = background.cols;
+
+	int x = 0;
+	int y = 0;
+	
+	for (int i = 0; i < 4; i++)
+	{
+		cv::circle(background, cv::Point((y + (rows/4)), (x + (cols/4))), 10, cv::Scalar(255, 0, 255), 1);
+		x = x + cols / 4;
+		y = y + rows / 4;
+
+		
+	}
+	
+
+		//circle(frame, Point((int)X0.at<float>(0, i), (int)X0.at<float>(1, i)), 2, Scalar(255, 255, 0), -1);
+	
+
+
+
+	cv::imshow(wName, background);
+	cv::imshow("Gaze", frame);
+
+	if (k == 'r')
+	{
+		cout << "regresando al menu principal" << endl;
+		capture.release();
+		cv::destroyAllWindows();
+		CaptureFrame capt;
+		capt.menu();
+	}
+	
+}
+
+
 void Muestras::guardar(cv::Mat frame, cv::Mat X0, vector<float> angles, cv::Mat lEye, cv::Mat rEye, int& nFrame, cv::VideoCapture& capture)
 {
 	//cout << "\tTomando imagenes para muestras..." << endl;
@@ -24,6 +74,7 @@ void Muestras::guardar(cv::Mat frame, cv::Mat X0, vector<float> angles, cv::Mat 
 	**-- [ojoIzqExterno, ojoIzqInterno, ojoDerInterno, ojoDerexterno]
 	**-- de cualquier forma revisar el diagrama en la documentacion del proyecto.
 	*/
+
 	cv::Point p19((int)X0.at<float>(0, 19), (int)X0.at<float>(1, 19));
 	cv::Point p20((int)X0.at<float>(0, 20), (int)X0.at<float>(1, 20));
 	cv::Point p21((int)X0.at<float>(0, 21), (int)X0.at<float>(1, 21));
@@ -215,85 +266,5 @@ void Muestras::setData(cv::Mat lEye, cv::Mat rEye, float roll, float yaw, float 
 --- al menos en resoluciones de (640x420), es posible que haya que hacerlo en funcion
 --- de la resolucion del cudro, pero para eso primero conseguir otro dispositivo.
 */
-bool Train::openClose(vector<vector<float>> euler, vector<vector<int>> puntos)
-{
-
-	cout << "Ok, intentando" << endl;
-
-
-
-	//-- Normalizar las distancias
-	for (int i = 0; i < puntos.size(); i++)
-	{
-		cout << puntos[i][0] << ", ";
-		//Distancias ojo derecho
-		float h1 = puntos[i][7] - puntos[i][1];
-		float rn1 = (puntos[i][12] - puntos[i][4]) / h1;
-		float rn2 = (puntos[i][10] - puntos[i][6]) / h1;
-		//cout << puntos[i][12] << ":" << puntos[i][4] << endl;
-		//cout << rn1 << ":" << rn2 << endl;
-		//cout << endl;
-		//Distancias ojo izquierdo
-		float h2 = puntos[i][20] - puntos[i][13];
-		float ln1 = (puntos[i][24] - puntos[i][16]) / h2;
-		float ln2 = (puntos[i][22] - puntos[i][18]) / h2;
-		//cout << puntos[i][24] << ":" << puntos[i][16] << endl;
-		//cout << rn1 << ":" << rn2 << endl;
-
-
-		float coef[5] = { 39.2325,-0.6976, 23.8160, -5.0245 };
-		float dist[5] = { ln1, ln2, rn1, rn2 };
-
-		vector<float> OX;
-		vector<vector<float>> sig;
-		for (int i = 0; i < 5; i++)
-		{
-			vector<float> tempo;
-			float tmp = dist[i] * coef[i];
-			float  sigma = 1 / (1 + pow(2.71828183, -tmp));
-			//float  sigma = 1 / (1 + exp(-tmp));
-			OX.push_back(tmp);
-			tempo.push_back(sigma);
-			sig.push_back(tempo);
-		}
-
-		float sum = 0;
-
-
-
-		for (int i = 0; i < sig.size(); i++)
-		{
-			for (int j = 0; j < sig[0].size(); j++)
-			{
-				//cout << sig[i][j] << endl;
-				sum = sum + sig[i][j];
-
-			}
-			//cout << sum / 5 << endl;
-		}
-
-
-		if ((sum / 4) < 0.77)
-		{
-			cout << "Abierto ";
-			return 0;
-		}
-		else if ((sum / 4)>0.77)
-		{
-			cout << "Cerrado ";
-			return 1;
-		}
-		cout << sum / 4;
-		cout << " ," << puntos[i][25];
-		cout << endl;
-
-
-	}
-
-
-
-	return 0;
-
-}
 
 
