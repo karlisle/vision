@@ -49,7 +49,7 @@ private:
 	vector<int> splitPuntos(cv::Mat X);
 	void setData(cv::Mat X0, vector<float> angulos, cv::Point posicion, int intent, string sector);
 	bool openClose(cv::Mat X0);
-	string saveImage(cv::Mat lEye, cv::Mat rEye, int intent);
+	void saveImage(cv::Mat lEye, cv::Mat rEye, int intent);
 
 
 };

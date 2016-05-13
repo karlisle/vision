@@ -31,17 +31,10 @@ void Muestras::muestrasSeccion(cv::Mat frame, cv::Mat X0, vector<float> angles, 
 	{
 		cv::circle(background, cv::Point((y + (rows/4)), (x + (cols/4))), 10, cv::Scalar(255, 0, 255), 1);
 		x = x + cols / 4;
-		y = y + rows / 4;
-
-		
+		y = y + rows / 4;	
 	}
-	
-
 		//circle(frame, Point((int)X0.at<float>(0, i), (int)X0.at<float>(1, i)), 2, Scalar(255, 255, 0), -1);
 	
-
-
-
 	cv::imshow(wName, background);
 	cv::imshow("Gaze", frame);
 
@@ -52,8 +45,7 @@ void Muestras::muestrasSeccion(cv::Mat frame, cv::Mat X0, vector<float> angles, 
 		cv::destroyAllWindows();
 		CaptureFrame capt;
 		capt.menu();
-	}
-	
+	}	
 }
 
 
@@ -229,7 +221,7 @@ void Muestras::setData(cv::Mat X0, vector<float> angulos, cv::Point posicion, in
 
 }
 
-string Muestras::saveImage(cv::Mat lEye, cv::Mat rEye, int intent)
+void Muestras::saveImage(cv::Mat lEye, cv::Mat rEye, int intent)
 {
 	string id;
 	if (intent <= 9)
@@ -240,15 +232,13 @@ string Muestras::saveImage(cv::Mat lEye, cv::Mat rEye, int intent)
 	{
 		id = "00" + to_string(intent);
 	}
-	else if (intent < 999)
+	else if (intent <= 999)
 	{
 		id = to_string(intent);
 	}
-	else if (intent = 999)
-	{
-		return;
-	}
-		
+	cout << id << endl;
+	
+
 }
 
 bool Muestras::openClose(cv::Mat X0)
@@ -273,20 +263,20 @@ bool Muestras::openClose(cv::Mat X0)
 	float dist[4] = {ln1, ln2, rn1, rn2 };
 
 	float scalar = ((coef[0] * dist[0]) + (coef[1] * dist[1]) + (coef[2] * dist[2]) + (coef[3] * dist[3]));
-	cout << scalar <<endl;
+	//cout << scalar <<endl;
 	//float  sigma = 1 / (1 + pow(2.71828183, -scalar));
 	float  sigma = 1 / (1 + exp(-scalar));
-	cout << sigma << endl << endl;
+	//cout << sigma << endl << endl;
 
 	if (sigma <= 0.3700)
 	{
+		//cout << "abierto " << endl;
 		return true;
-		cout << "abierto " << endl;
 	}
 	else if (sigma > 0.3750)
 	{
+		//cout << "cerrado " << endl;
 		return false;
-		cout << "cerrado " << endl;
 	}
 	
 }
