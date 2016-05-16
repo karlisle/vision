@@ -16,15 +16,11 @@
 using namespace std;
 using namespace cv;
 
-class NewHough {
+class Hough {
 public:
-	NewHough() {
-
+	Hough() {
 	}
-	
-	void hough_lines();
-	void hough_linesP();
-	void hough_circle(cv::Mat eye);
+	void circle(cv::Mat eye);
 private:
 
 };

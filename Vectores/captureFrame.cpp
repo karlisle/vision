@@ -287,10 +287,13 @@ int CaptureFrame::detect(int opt)
 				Test test;
 				Train begin;
 				Muestras muestra;
+				//-- instancias la clase de NewHough
+				//NewHough circulo;
 
 				if (opt == 1)
 				{	
-					test.display(frame, faces, lEye, rEye, X0, capture);
+					//test.display(frame, faces, lEye, rEye, X0, capture);
+					//circulo.contornos(frame);
 					cout << ".";
 				}
 				else if (opt == 2)

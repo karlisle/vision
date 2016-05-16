@@ -30,7 +30,6 @@
 #include "dataBase.h"
 
 
-
 class CaptureFrame {
 public:
 	CaptureFrame() {
