@@ -30,7 +30,6 @@
 #include "dataBase.h"
 
 
-
 class CaptureFrame {
 public:
 	CaptureFrame() {
@@ -43,6 +42,9 @@ public:
 
 	//-- instancias la clase de pruebas
 	Test test;
+
+	//-- Instanciar la clase de entrenamiento
+	
 	
 	//-- instancias la clase de Cummulative Distribution Function
 	Prepare prepare;

@@ -26,13 +26,8 @@ void Test::display(cv::Mat frame, std::vector<cv::Rect> faces, cv::Rect lEye, cv
 	cv::Mat leye(faceROI(lEye));
 	cv::Mat reye(faceROI(rEye));
 
-	cv::medianBlur(leye, leye, 5);
-	cv::medianBlur(reye, reye, 5);
-
-
-	/*
-	
-	cv::Mat faceROI = frame.clone();
+	cv::medianBlur(leye, leye, 3);
+	cv::medianBlur(reye, reye, 3);
 
 	cv::cvtColor(frame, faceROI, CV_RGB2GRAY);
 	frame.convertTo(faceROI, CV_8U, 2.48, -10.68);									//-- Posterior a eso modificamos el contraste de la imagen 
@@ -46,10 +41,6 @@ void Test::display(cv::Mat frame, std::vector<cv::Rect> faces, cv::Rect lEye, cv
 	//cv::bilateralFilter(frame, faceROI, 10, 60, 60);
 	//GaussianBlur(frame, faceROI, cv::Size(3, 3), 0, 0);
 
-
-	cv::Mat leye(faceROI(lEye));
-	cv::Mat reye(faceROI(rEye));
-
 	cv::Mat cleye = leye.clone();
 
 	//cv::bilateralFilter(cleye, leye, 7, 30, 30);
@@ -58,8 +49,8 @@ void Test::display(cv::Mat frame, std::vector<cv::Rect> faces, cv::Rect lEye, cv
 	cv::medianBlur(reye, reye, 5);
 	//cv::bilateralFilter(leye, leye, 10, 4, 4);
 	
-	//cv::bitwise_not(leye, leye);
-	//cv::bitwise_not(reye, reye);	
+	cv::bitwise_not(leye, leye);
+	cv::bitwise_not(reye, reye);	
 	
 	//cv::circle(faceROI, cv::Point((int)X0.at<float>(0, 24), (int)X0.at<float>(1, 24)), 1, cv::Scalar(0, 255, 255), 1);	
 
@@ -70,10 +61,10 @@ void Test::display(cv::Mat frame, std::vector<cv::Rect> faces, cv::Rect lEye, cv
 	cv::Point b1((int)X0.at<float>(0, 24), (int)X0.at<float>(1, 24));
 
 	
-	//*-- Formamos una cuadricula para indicar la zona central de la region de interes, en este caso el iris
+	/*-- Formamos una cuadricula para indicar la zona central de la region de interes, en este caso el iris
 	*    dado que IntraFace ya nos da los puntos circundantes es solo cuestion de moverse sobre el eje 'Y'
 	*    para obtener los M y N
-	/
+	*/
 	cv::Point m1((int)X0.at<float>(0, 19), (int)X0.at<float>(1, 19) - 10);
 	cv::Point m2((int)X0.at<float>(0, 22), (int)X0.at<float>(1, 22) - 10);
 	cv::line(faceROI, m1, m2, cv::Scalar(255, 255, 0), 1);
@@ -81,23 +72,19 @@ void Test::display(cv::Mat frame, std::vector<cv::Rect> faces, cv::Rect lEye, cv
 	cv::Point n2((int)X0.at<float>(0, 22), (int)X0.at<float>(1, 22) + 3);
 	//cv::line(faceROI, n1, n2, cv::Scalar(255, 255, 0), 1);
 	//-- Esto es solo para servir de guía visual, se trazan lineas que unen los puntos mencionados.
-	//cv::line(faceROI, a1, b1, cv::Scalar(0, 255, 0), 1);
+	cv::line(faceROI, a1, b1, cv::Scalar(0, 255, 0), 1);
 	cv::line(faceROI, a2, b2, cv::Scalar(0, 255, 0), 1);
+
 	//--------------------------------------------
-	*/
-
-	
-	
-
 	/*######################################################################*/
 	cv::imshow(nlEye, leye);
 	cv::imshow(nrEye, reye);
 	//this->getCenter(reye, nlEye);
 	
-	//cv::rectangle(faceROI, lEye, cv::Scalar(0, 255, 0));
-	//cv::rectangle(faceROI, rEye, cv::Scalar(0, 255, 0));
+	cv::rectangle(faceROI, lEye, cv::Scalar(0, 255, 0));
+	cv::rectangle(faceROI, rEye, cv::Scalar(0, 255, 0));
 	
-	cv::imshow(wName, frame);
+	cv::imshow(wName, faceROI);
 	if (k == 'r')
 	{
 		cout << "regresando al menu principal" << endl;

@@ -8,6 +8,7 @@
 #include <opencv2/highgui/highgui.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 #include <opencv2/imgcodecs/imgcodecs.hpp>
+#include <opencv2\ml\ml.hpp>
 
 #include <sstream>
 #include <Windows.h>
@@ -21,8 +22,16 @@
 #include <ios>
 #include <iomanip>
 
-#include "captureFrame.h"
+#include <cppconn\driver.h>
+#include <cppconn\exception.h>
+#include <cppconn\resultset.h>
+#include <cppconn\statement.h>
+
+
+#include "mysql_connection.h"
 #include "dataBase.h"
+#include "captureFrame.h"
+
 
 
 using namespace std;
@@ -33,8 +42,8 @@ public:
 	//-- Constructor
 	Train() {
 	}
-	void tryit();
-	int openClose(vector<vector<float>> euler, vector<vector<int>> punto);
+	void tryit(cv::Mat X);
+	bool openClose(vector<vector<float>> euler, vector<vector<int>> punto);
 
 private:
 	//static int callback(void *data, int argc, char **argv, char **azColName);

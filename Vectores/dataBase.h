@@ -32,7 +32,7 @@ public:
 	Database() {
 	}
 
-	void dataBase();
+	bool insertarDatos(string query);
 	
 
 private:
