@@ -1,34 +1,45 @@
 #include "test.h"
 #include "hough.h"
 
+
 using namespace std;
-void Test::display(cv::Mat frame, std::vector<cv::Rect> faces, cv::Rect lEye, cv::Rect rEye, cv::Mat X0)
+void Test::display(cv::Mat frame, std::vector<cv::Rect> faces, cv::Rect lEye, cv::Rect rEye, cv::Mat X0, cv::VideoCapture& capture)
 //void Test::display()
 {
+	char k = cv::waitKey(1);
+	//-- creamos la ventanas que se usaran localmente
+	cout << ".";
 	string wName = "Gaze";
-	string nrEye = "R_eye";
-	string nlEye = "L_eye";
+	string nlEye = "Left-Eye";
+	string nrEye = "Right-Eye";
 	cv::namedWindow(wName, CV_WINDOW_AUTOSIZE);
 	cv::namedWindow(nlEye, CV_WINDOW_NORMAL);
 	cv::namedWindow(nrEye, CV_WINDOW_NORMAL);
+
+	//cout << "\tTomando imagenes para muestras..." << endl;
 	
 	cv::Mat faceROI = frame.clone();                                                //-- Hacemos un clon de la imagen que se recive como parametro
+	cv::cvtColor(frame, faceROI, CV_RGB2GRAY);
+	frame.convertTo(faceROI, CV_8U, 2.48, -10.68);									//-- Posterior a eso modificamos el contraste de la imagen 
+
+
+	cv::Mat leye(faceROI(lEye));
+	cv::Mat reye(faceROI(rEye));
+
+	cv::medianBlur(leye, leye, 3);
+	cv::medianBlur(reye, reye, 3);
 
 	cv::cvtColor(frame, faceROI, CV_RGB2GRAY);
 	frame.convertTo(faceROI, CV_8U, 2.48, -10.68);									//-- Posterior a eso modificamos el contraste de la imagen 
 	
-	cv::bilateralFilter(frame, faceROI, 10, 60, 60);
+	//cv::bilateralFilter(frame, faceROI, 10, 60, 60);
 	//GaussianBlur(frame, faceROI, cv::Size(3, 3), 0, 0);
 
 	//cv::cvtColor(frame, frame, CV_RGB2GRAY);
 	frame.convertTo(faceROI, CV_8U, 2.48, -10.68);									//-- Posterior a eso modificamos el contraste de la imagen 
 	
 	//cv::bilateralFilter(frame, faceROI, 10, 60, 60);
-	GaussianBlur(frame, faceROI, cv::Size(3, 3), 0, 0);
-
-
-	cv::Mat leye(faceROI(lEye));
-	cv::Mat reye(faceROI(rEye));
+	//GaussianBlur(frame, faceROI, cv::Size(3, 3), 0, 0);
 
 	cv::Mat cleye = leye.clone();
 
@@ -38,8 +49,8 @@ void Test::display(cv::Mat frame, std::vector<cv::Rect> faces, cv::Rect lEye, cv
 	cv::medianBlur(reye, reye, 5);
 	//cv::bilateralFilter(leye, leye, 10, 4, 4);
 	
-	//cv::bitwise_not(leye, leye);
-	//cv::bitwise_not(reye, reye);	
+	cv::bitwise_not(leye, leye);
+	cv::bitwise_not(reye, reye);	
 	
 	//cv::circle(faceROI, cv::Point((int)X0.at<float>(0, 24), (int)X0.at<float>(1, 24)), 1, cv::Scalar(0, 255, 255), 1);	
 
@@ -61,23 +72,26 @@ void Test::display(cv::Mat frame, std::vector<cv::Rect> faces, cv::Rect lEye, cv
 	cv::Point n2((int)X0.at<float>(0, 22), (int)X0.at<float>(1, 22) + 3);
 	//cv::line(faceROI, n1, n2, cv::Scalar(255, 255, 0), 1);
 	//-- Esto es solo para servir de guía visual, se trazan lineas que unen los puntos mencionados.
-	//cv::line(faceROI, a1, b1, cv::Scalar(0, 255, 0), 1);
+	cv::line(faceROI, a1, b1, cv::Scalar(0, 255, 0), 1);
 	cv::line(faceROI, a2, b2, cv::Scalar(0, 255, 0), 1);
+
 	//--------------------------------------------
-
-
-	
-	
-
 	/*######################################################################*/
-	//cv::imshow(nlEye, leye);
-	//cv::imshow(nrEye, reye);
-	this->getCenter(reye, nlEye);
+	cv::imshow(nlEye, leye);
+	cv::imshow(nrEye, reye);
+	//this->getCenter(reye, nlEye);
 	
-	//cv::rectangle(faceROI, lEye, cv::Scalar(0, 255, 0));
-	//cv::rectangle(faceROI, rEye, cv::Scalar(0, 255, 0));
+	cv::rectangle(faceROI, lEye, cv::Scalar(0, 255, 0));
+	cv::rectangle(faceROI, rEye, cv::Scalar(0, 255, 0));
 	
 	cv::imshow(wName, faceROI);
+	if (k == 'r')
+	{
+		cout << "regresando al menu principal" << endl;
+		capture.release();
+		cv::destroyAllWindows();
+		exit(0);
+	}
 	
 }
 

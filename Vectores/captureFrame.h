@@ -27,6 +27,7 @@
 #include "prepare.h"
 #include "cameraCalibration.h"
 #include "trainer.h"
+#include "dataBase.h"
 
 
 class CaptureFrame {
@@ -41,6 +42,9 @@ public:
 
 	//-- instancias la clase de pruebas
 	Test test;
+
+	//-- Instanciar la clase de entrenamiento
+	
 	
 	//-- instancias la clase de Cummulative Distribution Function
 	Prepare prepare;

@@ -9,33 +9,37 @@ using namespace cv;
 
 void CaptureFrame::menu()
 {
-	cout << "\t****************************" << endl;
-	cout << "\t*   Seleccione una opción  *" << endl;
-	cout << "\t* 1) Cargar (CDF)          *" << endl;
+	cout << "\t*****************************" << endl;
+	cout << "\t*   Seleccione una opción   *" << endl;
+	cout << "\t* 1) Cargar (CDF)           *" << endl;
 	cout << "\t* 2) Entrenar               *" << endl;
 	cout << "\t* 3) Tomar muestras        *" << endl;
+	cout << "\t* 4) Tomar muestras/seccion*" << endl;
 	cout << "\t* 0) Salir                 *" << endl;
 	cout << "\t****************************" << endl;
 	cout << "\t>>> ";
 
-	Train begin;
-
+	Database data;
 	int opcion;
 	cin >> opcion;
 
 	switch (opcion)
 	{
 		case 0:
-			return;
-			break;
+			exit(0);
+			//break;
 		case 1:
 			this->detect(1);
 			break;
 		case 2:
-			begin.openClose();
+			this->detect(2);
 			break;
 		case 3:
 			this->detect(3);
+			break;
+		case 4:
+
+			this - detect(4);
 			break;
 		default:
 			this->detect(NULL);
@@ -168,7 +172,7 @@ int CaptureFrame::detect(int opt)
 				// y se contia a la siguiente instruccion
 				if (faces.empty())
 				{
-					//imshow("Gaze", frame);
+					imshow("Gaze", frame);
 					key = waitKey(5);
 					continue;
 				}
@@ -279,18 +283,38 @@ int CaptureFrame::detect(int opt)
 
 				//Muestras muestra;
 				//muestra.guardar(frame, X0, leftEye, rightEye, NULL);
-				if (opt == 2)
+
+				Test test;
+				Train begin;
+				Muestras muestra;
+				//-- instancias la clase de NewHough
+				//NewHough circulo;
+
+				if (opt == 1)
+				{	
+					//test.display(frame, faces, lEye, rEye, X0, capture);
+					//circulo.contornos(frame);
+					cout << ".";
+				}
+				else if (opt == 2)
 				{
+					//-- Instanciar la clase de entrenamient
+					begin.tryit(X0);
 					break;
 				}
 				else if (opt == 3)
 				{
-					Muestras get;
-					get.guardar(frame, X0, angles, leftEye, rightEye, intent, capture);
+					muestra.guardar(frame, X0, angles, leftEye, rightEye, intent, capture);
+				}
+				else if (opt == 4)
+				{
+					muestra.screenMap(frame, X0, angles, leftEye, rightEye, intent, capture);
 				}
 				//imshow("Gaze", frame);	
 				else if (opt == 0)
 				{
+					capture.release();
+					destroyAllWindows();
 					break;
 				}
 				
@@ -302,6 +326,7 @@ int CaptureFrame::detect(int opt)
 		cerr << "No se puede cargar el dispositivo de captura" << endl;
 		cerr << "Asegurese de que el dispositivo esta conectado, \n e intentelo nuevamente." << endl;			
 	}
+	//exit(0);
 	return 0;
 	// Fin del metodo
 }
