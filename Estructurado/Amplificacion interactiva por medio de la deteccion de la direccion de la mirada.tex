@@ -32,7 +32,7 @@
 
 %\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
 
-\linespread{1.1} % Line spacing
+\linespread{1.4} % Line spacing
 
 %\setlength\parindent{0pt} % Uncomment to remove all indentation from paragraphs
 \usepackage[utf8]{inputenc}
@@ -41,6 +41,8 @@
 \usepackage{fancyhdr}
 \usepackage{multicol}
 \usepackage{cite} % para contraer referencias
+
+
 % Configurar los encabezados, pies de pagina y paginas de capitulo
 % Encabezados
 \lhead[\thepage]{CAPÍTULO \thechapter. \rightmark}
@@ -51,9 +53,9 @@
 
 % Pie de pagina
 
-\lfoot[]{\today}
+\lfoot[]{}
 \cfoot[]{}
-\rfoot[J.Carlos Ávila]{}
+\rfoot[J.C.A.R]{}
 \renewcommand{\footrulewidth}{0pt}
 
 \usepackage{savesym}
@@ -191,7 +193,7 @@ Dr. Joaquin  \textsc{Salas Rodriguez} % Supervisor's Name
 
 \vfill % Fill the rest of the page with whitespace
 \newpage
-$\ $
+%$\ $
 \thispagestyle{empty}
 \end{titlepage}
 
@@ -213,18 +215,50 @@ $\ $
 %\setcounter{page}{1}
 	
 			 
-\newpage		 
 \pagestyle{fancy}
+\chapter*{Introducción}
 
-%\chapter*{Introducción}
-%&\addcontentsline{toc}{chapter}{Introducción}
-%	El presente documento expone las principales pautas en el desarrollo de un sistema de asistencia para débiles visuales,
-
+\addcontentsline{toc}{chapter}{Introducción}
+	La vista es uno de las principales capacidades sensoriales de los humanos que mas ocupamos en el día a día, 
+	nos sirve para percibir el color del mundo, orientarnos en el entorno, ver los peligros, etc.\\
+	Técnicamente se llama visión a la capacidad de interpretar nuestro entorno gracias a los rayos de luz que alcanzan
+	el ojo. También se entiende por visión toda acción de ver.\\	
+	La acción simple de \textit{ver}, es en términos simples una de las mas complejas tareas que como humanos realizamos, en
+	todo momento, la cantidad de factores que influyen en la correcta percepción de los estímulos visuales y su posterior 
+	procesado e interpretación, son tareas que abordadas desde la perspectiva de un dispositivo electrónico, son extremadamente
+	complicadas.\\
 	
+	No obstante las limitaciones que la tecnología actual presenta al momento de abordar dicha tarea, hay en este campo de la
+	\textit{visión artificial} un iteres constante en buscar y encontrar soluciones, al ya viejo problema de hacer que las 
+	máquinas puedan ver el mundo tal como nosotros lo hacemos.\\
+	Debe decirse que se han realizado enormes avances en el área 
+	desde que la idea fue propuesta, pero remontemos la memoria a mucho antes, quizá hasta los tiempos 
+	de grandes filósofos y matemáticos griegos, por ejemplo \textit{Thales de Mileto (640-585 A.C)}, fue capaz de predecir un 
+	eclipse y de medir una pirámide gracias a los conocimientos de geometría que poseía,
+	\textit{Euclides} concebía la trigonometría como un conjunto de lineas y puntos, independientemente del sistema de coordenadas.\\
+	Posteriormente vino el tiempo renacentista y con el grandes pintores, como \textit{Filippo Bruneleschi(1377-1446)} que invento
+	la perspectiva, algo que dio mucho sobre lo que estudiar en los años que siguieron, consiguiendo crear a partir de ella todo
+	un mundo de teorías y métodos al respecto.\\
+	Todo esto termino dando como resultado la construcción de maquinas y/o dispositivos que ayudaran al artista a capturar una 
+	imagen, todas estas máquinas y técnicas sobre la perspectiva dieron como resultado la invención final, 
+	la \textit{cámara fotográfica}.\\
+	En tiempos mas actuales fue la \textsc{NASA} en 1964 la que revoluciono el campo, logrando procesar por medios digitales
+	las imágenes del satélite \textsc{Mariner}, el avance desde entonces no ha parado en ningún momento.
 	
+	El presente proyecto es uno más de los trabajos que se realizan ahora mismo en el campo de visión por computadora o visión 
+	artificial, como se expone en los primeros párrafos la vista es uno de los sentidos que mas extensamente usamos en el día a día,
+	más aun en un mundo lleno de dispositivos que nos permiten visualizar información por medio de pantallas, específicamente,
+	\textit{computadoras}, sin embargo no todas las personas pueden hacerlo de manera optima o en condiciones que permitan 
+	obtener una buena \textit{visión} de las mismas, este segmento de personas son las que presentan alguna debilidad visual.\\
+	Por lo tanto, dicho segmento de personas tienen dificultades para sumergirse de manera optima en el medio digital, por ello
+	este proyecto busca una solución que permita un nivel de accesibilidad mucho mayor, ademas se busca de dotar de del elemento 
+	interactivo a los propios ojos, pues sera por medio de la detección de la dirección de la mirada que se realice todo el proceso.\\	
+	El proyecto en si es ambicioso de primeas, pues actualmente pese a que la tecnología de asistencia para magnificar áreas de la
+	pantalla ya existen, no hay una opción que permita a los usuarios hacerlo de forma interactiva, usando para ello solo la vista.\\
 	
-
-
+	Se abordara la el problema usando las herramientas de la ingeniería de software, las técnicas y herramientas se presentaran 
+	en los diferentes capítulos del presente documento, así como los resultados de las investigaciones y procesos para llevar a cavo 
+	la tarea expuesta.
 
 \newpage
 
