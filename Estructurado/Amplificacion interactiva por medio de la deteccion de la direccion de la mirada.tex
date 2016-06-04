@@ -16,7 +16,7 @@
 %----------------------------------------------------------------------------------------
 
 \documentclass[12pt]{book} % Default font size is 12pt, it can be changed here
-		\textheight = 28cm
+		\textheight = 29cm
 		\textwidth = 19cm
 		\topmargin = -1cm
 		\oddsidemargin = -1cm
@@ -32,7 +32,7 @@
 
 %\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
 
-\linespread{1.4} % Line spacing
+\linespread{1.1} % Line spacing
 
 %\setlength\parindent{0pt} % Uncomment to remove all indentation from paragraphs
 \usepackage[utf8]{inputenc}
@@ -41,22 +41,21 @@
 \usepackage{fancyhdr}
 \usepackage{multicol}
 \usepackage{cite} % para contraer referencias
-
-
 % Configurar los encabezados, pies de pagina y paginas de capitulo
 % Encabezados
-\lhead[\thepage]{CAPÍTULO \thechapter. \rightmark}
-\chead[]{}
-\rhead[CAPÍTULO \thechapter. \leftmark]{\thepage}
+%\lhead[\thepage]{\rightmark}
+%\chead[]{}
+%\rhead[\thechapter. \leftmark]{\thepage}
 
-\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\headrulewidth}{0.4pt}
 
 % Pie de pagina
 
-\lfoot[]{}
+\lfoot[]{ITSJR}
 \cfoot[]{}
-\rfoot[J.C.A.R]{}
-\renewcommand{\footrulewidth}{0pt}
+\rfoot[J.C. Àvila Resendiz]{CICATA}
+\renewcommand{\footrulewidth}{0.5pt}
+\usepackage{emptypage}
 
 \usepackage{savesym}
 \usepackage{amsmath}
@@ -64,24 +63,17 @@
 \usepackage{txfonts}
 \restoresymbol{TXF}{iint}
 
-
 \usepackage[x11names,table]{xcolor}
 \usepackage{pstricks}
 \usepackage[colorinlistoftodos, textwidth=2cm, shadow]{todonotes}
 %\usepackage{hyperref}
-
-
 
 \usepackage[colorlinks]{hyperref}
 \usepackage[nogroupskip,nopostdot]{glossaries}
 \setglossarystyle{altlist}
 \makenoidxglossaries
 
-
-
-
 %\usepackage[toc,style=altlistgroup,hyperfirst=false]{glossaries}
-
 
 \hypersetup{
     colorlinks=true,
@@ -123,8 +115,8 @@
 
 \begin{document}
 
-\lhead[\thepage]{CAPÍTULO \thechapter. \rightmark}
-\rhead[CAPÍTULO \thechapter. \leftmark]{\thepage}
+%\lhead[\thepage]{CAPÍTULO \thechapter. \rightmark}
+%\rhead[CAPÍTULO \thechapter. \leftmark]{\thepage}
 
 
 %----------------------------------------------------------------------------------------
@@ -191,32 +183,37 @@ Dr. Joaquin  \textsc{Salas Rodriguez} % Supervisor's Name
  
 %----------------------------------------------------------------------------------------
 
-\vfill % Fill the rest of the page with whitespace
+%\vfill % Fill the rest of the page with whitespace
 \newpage
-%$\ $
+$\ $
 \thispagestyle{empty}
 \end{titlepage}
 
 %----------------------------------------------------------------------------------------
 %	TABLE OF CONTENTS
-%----------------------------------------------------------------------------------------j
-\setcounter{tocdepth}{3}   %control deptness index
+%----------------------------------------------------------------------------------------
+\lhead[\thepage]{\rightmark}
+\rhead[\leftmark]{\thepage}
+\setcounter{tocdepth}{4}   %control deptness index
 %\setcounter{lofdepth}{2}  % control table of figures depth 
 \pagenumbering{roman} 
 \tableofcontents % Include a table of contents
 
-\newpage % Begins the essay on a new page instead of on the same page as the table of contents
+%\newpage % Begins the essay on a new page instead of on the same page as the table of contents
+$\ $
 \thispagestyle{empty} 
 %\appendix
 %----------------------------------------------------------------------------------------
 %	INTRODUCTION
 %----------------------------------------------------------------------------------------
 \pagenumbering{arabic}	
-%\setcounter{page}{1}
-	
-			 
-\pagestyle{fancy}
+\setcounter{page}{1}			 
+
 \chapter*{Introducción}
+%\markboth{}{}
+%\thispagestyle{empty}
+\lhead[\thepage]{}
+\rhead[]{\thepage}
 
 \addcontentsline{toc}{chapter}{Introducción}
 	La vista es uno de las principales capacidades sensoriales de los humanos que mas ocupamos en el día a día, 
@@ -262,8 +259,12 @@ Dr. Joaquin  \textsc{Salas Rodriguez} % Supervisor's Name
 
 \newpage
 
+
+
 \chapter{GENERALIDADES}
 \thispagestyle{empty}
+\lhead[\thepage]{CAPÍTULO \thechapter: \rightmark}
+\rhead[CAPÍTULO \thechapter: \leftmark]{\thepage}
 \markboth{GENERALIDADES}{GENERALIDADES}
 
 \begin{minipage}{0.5\textwidth}
@@ -394,7 +395,7 @@ Dr. Joaquin  \textsc{Salas Rodriguez} % Supervisor's Name
 	\begin{itemize}
 		\item Amplificar áreas de la pantalla donde se enfoque la vista usando la vista.
 		\item Detectar y seguir la dirección de la mirada.
-		\item 
+		\item Proporcionar una mayor accesibilidad a débiles visuales.
 	\end{itemize}
 \newpage
 \section{Alcances y limitaciones}
@@ -403,7 +404,7 @@ Dr. Joaquin  \textsc{Salas Rodriguez} % Supervisor's Name
 		usuario-maquina usando en el proceso únicamente los ojos y, proporcionar interactividad a esta parte del cuerpo.\\
 		
 		El uso directo e inmediato de la detección de la dirección de la mirada es el de proporcionar una forma interactiva 
-		para magnificar zonas de la pantalla donde se enfoque la mirada en determinado momento.\\
+		para magnificar zonas de la pantalla donde se enfoque la mirada en un todo momento.\\
 		
 		Inicialmente el sistema será desarrollado para funcionar en maquinas con sistema operativo Windows.\\
 		
@@ -411,12 +412,12 @@ Dr. Joaquin  \textsc{Salas Rodriguez} % Supervisor's Name
 		Ciertamente el proyecto presenta algunas dificultades técnicas y algunas otras funcionales, entre las cuales encontramos
 		las siguiente:\\
 		
-		Las condiciones no controladas, se espera unas condiciones de operación dentro de ciertos parámetros, es por tanto 
-		importante considerar el rendimiento en entornos donde las mismas se encuentres fuera de norma, provocando un 
-		funcionamiento incierto.\\
+		Las condiciones no controladas, se esperan condiciones de operación dentro de ciertos parámetros, el rendimiento se puede 
+		ver afectado acorde a las condiciones del entorno.\\
 		
 		La API de magnificación de Windows esta solo disponible en para arquitecturas de 32 bits, lo que imposibilita el desarrollo
-		del sistema para arquitecturas de 64 bits.
+		del sistema para arquitecturas de 64 bits.\\
+	
 		
 		 
 
