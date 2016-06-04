@@ -17,24 +17,44 @@
 \BOOKMARK [2][-]{subsection.1.5.2}{Limitaciones}{section.1.5}% 17
 \BOOKMARK [0][-]{chapter.2}{FUNDAMENTACI\323N TE\323RICA}{}% 18
 \BOOKMARK [1][-]{section.2.1}{Ingenier\355a del software}{chapter.2}% 19
-\BOOKMARK [1][-]{section.2.2}{Herramientas de desarrollo}{chapter.2}% 20
-\BOOKMARK [2][-]{subsection.2.2.1}{Visual Studio Community 2015}{section.2.2}% 21
-\BOOKMARK [2][-]{subsection.2.2.2}{MariaDB}{section.2.2}% 22
-\BOOKMARK [2][-]{subsection.2.2.3}{SQLite}{section.2.2}% 23
-\BOOKMARK [2][-]{subsection.2.2.4}{IntraFace}{section.2.2}% 24
-\BOOKMARK [2][-]{subsection.2.2.5}{OpenCV}{section.2.2}% 25
-\BOOKMARK [1][-]{section.2.3}{Lenguajes de programaci\363n}{chapter.2}% 26
-\BOOKMARK [2][-]{subsection.2.3.1}{C++}{section.2.3}% 27
-\BOOKMARK [2][-]{subsection.2.3.2}{Python}{section.2.3}% 28
-\BOOKMARK [2][-]{subsection.2.3.3}{R}{section.2.3}% 29
-\BOOKMARK [1][-]{section.2.4}{Metodolog\355as de desarrollo de software}{chapter.2}% 30
-\BOOKMARK [0][-]{chapter.3}{DESCRIPCI\323N DE ACTIVIDADES REALIZADAS}{}% 31
-\BOOKMARK [1][-]{section.3.1}{An\341lisis}{chapter.3}% 32
-\BOOKMARK [1][-]{section.3.2}{Dise\361o}{chapter.3}% 33
-\BOOKMARK [1][-]{section.3.3}{Desarrollo}{chapter.3}% 34
-\BOOKMARK [1][-]{section.3.4}{Pruebas}{chapter.3}% 35
-\BOOKMARK [1][-]{section.3.5}{Implementaci\363n}{chapter.3}% 36
-\BOOKMARK [1][-]{section.3.6}{Retroalimentaci\363n}{chapter.3}% 37
-\BOOKMARK [1][-]{section.3.7}{Resultados}{chapter.3}% 38
-\BOOKMARK [1][-]{section.3.8}{Conclusiones y recomendaciones}{chapter.3}% 39
-\BOOKMARK [1][-]{section.3.9}{Referencias Bibliogr\341ficas \046 Glosario}{chapter.3}% 40
+\BOOKMARK [2][-]{subsection.2.1.1}{Concepto de Software}{section.2.1}% 20
+\BOOKMARK [2][-]{subsection.2.1.2}{Clasificaci\363n del software }{section.2.1}% 21
+\BOOKMARK [2][-]{subsection.2.1.3}{Concepto de la Ingenier\355a de Software}{section.2.1}% 22
+\BOOKMARK [1][-]{section.2.2}{Herramientas de desarrollo}{chapter.2}% 23
+\BOOKMARK [2][-]{subsection.2.2.1}{Visual Studio Community 2015 }{section.2.2}% 24
+\BOOKMARK [2][-]{subsection.2.2.2}{Qt Creator }{section.2.2}% 25
+\BOOKMARK [2][-]{subsection.2.2.3}{PyCharm }{section.2.2}% 26
+\BOOKMARK [2][-]{subsection.2.2.4}{Sublime-Text }{section.2.2}% 27
+\BOOKMARK [2][-]{subsection.2.2.5}{Rstudio }{section.2.2}% 28
+\BOOKMARK [2][-]{subsection.2.2.6}{CMake }{section.2.2}% 29
+\BOOKMARK [2][-]{subsection.2.2.7}{Sistema de control de versiones Git }{section.2.2}% 30
+\BOOKMARK [2][-]{subsection.2.2.8}{MariaDB }{section.2.2}% 31
+\BOOKMARK [2][-]{subsection.2.2.9}{SQLite}{section.2.2}% 32
+\BOOKMARK [2][-]{subsection.2.2.10}{OpenCV }{section.2.2}% 33
+\BOOKMARK [2][-]{subsection.2.2.11}{IntraFace}{section.2.2}% 34
+\BOOKMARK [1][-]{section.2.3}{Lenguajes de programaci\363n}{chapter.2}% 35
+\BOOKMARK [2][-]{subsection.2.3.1}{C++}{section.2.3}% 36
+\BOOKMARK [3][-]{section*.10}{Historia}{subsection.2.3.1}% 37
+\BOOKMARK [3][-]{section*.11}{Caracter\355sticas}{subsection.2.3.1}% 38
+\BOOKMARK [3][-]{section*.12}{Conceptos generales de POO}{subsection.2.3.1}% 39
+\BOOKMARK [2][-]{subsection.2.3.2}{Python }{section.2.3}% 40
+\BOOKMARK [3][-]{section*.13}{Instalacion de Python}{subsection.2.3.2}% 41
+\BOOKMARK [3][-]{section*.14}{Herramientas b\341sicas}{subsection.2.3.2}% 42
+\BOOKMARK [2][-]{subsection.2.3.3}{R }{section.2.3}% 43
+\BOOKMARK [1][-]{section.2.4}{Metodolog\355as de desarrollo de software}{chapter.2}% 44
+\BOOKMARK [2][-]{subsection.2.4.1}{Metodolog\355a de desarrollo extremo }{section.2.4}% 45
+\BOOKMARK [3][-]{section*.15}{El proceso de desarrollo extremo}{subsection.2.4.1}% 46
+\BOOKMARK [3][-]{section*.16}{Interacci\363n con el cliente }{subsection.2.4.1}% 47
+\BOOKMARK [3][-]{section*.17}{Planificaci\363n del proyecto}{subsection.2.4.1}% 48
+\BOOKMARK [3][-]{section*.18}{Dise\361o, desarrollo y pruebas}{subsection.2.4.1}% 49
+\BOOKMARK [3][-]{section*.19}{Resumen de XP}{subsection.2.4.1}% 50
+\BOOKMARK [0][-]{chapter.3}{DESCRIPCI\323N DE ACTIVIDADES REALIZADAS}{}% 51
+\BOOKMARK [1][-]{section.3.1}{An\341lisis}{chapter.3}% 52
+\BOOKMARK [1][-]{section.3.2}{Dise\361o}{chapter.3}% 53
+\BOOKMARK [1][-]{section.3.3}{Desarrollo}{chapter.3}% 54
+\BOOKMARK [1][-]{section.3.4}{Pruebas}{chapter.3}% 55
+\BOOKMARK [1][-]{section.3.5}{Implementaci\363n}{chapter.3}% 56
+\BOOKMARK [1][-]{section.3.6}{Retroalimentaci\363n}{chapter.3}% 57
+\BOOKMARK [1][-]{section.3.7}{Resultados}{chapter.3}% 58
+\BOOKMARK [1][-]{section.3.8}{Conclusiones y recomendaciones}{chapter.3}% 59
+\BOOKMARK [1][-]{section.3.9}{Referencias Bibliogr\341ficas \046 Glosario}{chapter.3}% 60
