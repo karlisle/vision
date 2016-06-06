@@ -68,13 +68,12 @@
 \contentsline {subsection}{\numberline {3.3.3}Procesado}{50}{subsection.3.3.3}
 \contentsline {subsection}{\numberline {3.3.4}Amplificaci\IeC {\'o}n}{51}{subsection.3.3.4}
 \contentsline {section}{\numberline {3.4}Pruebas}{52}{section.3.4}
-\contentsline {section}{\numberline {3.5}Resultados}{52}{section.3.5}
-\contentsline {section}{\numberline {3.6}Conclusiones}{52}{section.3.6}
-\contentsline {chapter}{Apendice}{53}{chapter*.33}
-\contentsline {section}{\numberline {3.7}Redes Neuronales }{54}{section.3.7}
-\contentsline {subsection}{\numberline {3.7.1}Historia}{54}{subsection.3.7.1}
-\contentsline {subsection}{\numberline {3.7.2}Modelo de neurona biol\IeC {\'o}gica}{55}{subsection.3.7.2}
-\contentsline {subsection}{\numberline {3.7.3}Modelo de neurona artificial}{55}{subsection.3.7.3}
-\contentsline {subsection}{\numberline {3.7.4}Red Neuronal Artificial}{56}{subsection.3.7.4}
-\contentsline {subsection}{\numberline {3.7.5}Tipos de arquitectura de las RNA}{57}{subsection.3.7.5}
-\contentsline {subsection}{\numberline {3.7.6}Aprendizaje de las RNA}{58}{subsection.3.7.6}
+\contentsline {section}{\numberline {3.5}Conclusiones}{52}{section.3.5}
+\contentsline {chapter}{Apendice}{55}{chapter*.33}
+\contentsline {section}{\numberline {3.6}Redes Neuronales }{56}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}Historia}{56}{subsection.3.6.1}
+\contentsline {subsection}{\numberline {3.6.2}Modelo de neurona biol\IeC {\'o}gica}{57}{subsection.3.6.2}
+\contentsline {subsection}{\numberline {3.6.3}Modelo de neurona artificial}{57}{subsection.3.6.3}
+\contentsline {subsection}{\numberline {3.6.4}Red Neuronal Artificial}{58}{subsection.3.6.4}
+\contentsline {subsection}{\numberline {3.6.5}Tipos de arquitectura de las RNA}{59}{subsection.3.6.5}
+\contentsline {subsection}{\numberline {3.6.6}Aprendizaje de las RNA}{60}{subsection.3.6.6}
