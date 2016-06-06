@@ -1,9 +1,9 @@
 \BOOKMARK [0][-]{chapter*.2}{Introducci\363n}{}% 1
-\BOOKMARK [0][-]{chapter.1}{GENERALIDADES}{}% 2
-\BOOKMARK [1][-]{section.1.1}{Objetivos}{chapter.1}% 3
+\BOOKMARK [0][-]{chapter.1}{GENERALIDADES }{}% 2
+\BOOKMARK [1][-]{section.1.1}{Objetivos }{chapter.1}% 3
 \BOOKMARK [2][-]{subsection.1.1.1}{Objetivo general}{section.1.1}% 4
 \BOOKMARK [2][-]{subsection.1.1.2}{Objetivos espec\355ficos}{section.1.1}% 5
-\BOOKMARK [1][-]{section.1.2}{Justificaci\363n}{chapter.1}% 6
+\BOOKMARK [1][-]{section.1.2}{Justificaci\363n }{chapter.1}% 6
 \BOOKMARK [1][-]{section.1.3}{Caracterizaci\363n de la empresa}{chapter.1}% 7
 \BOOKMARK [2][-]{subsection.1.3.1}{Datos generales de la empresa}{section.1.3}% 8
 \BOOKMARK [3][-]{section*.3}{Misi\363n}{subsection.1.3.1}% 9
@@ -32,30 +32,41 @@
 \BOOKMARK [2][-]{subsection.2.2.8}{MariaDB }{section.2.2}% 32
 \BOOKMARK [2][-]{subsection.2.2.9}{SQLite}{section.2.2}% 33
 \BOOKMARK [2][-]{subsection.2.2.10}{OpenCV }{section.2.2}% 34
-\BOOKMARK [2][-]{subsection.2.2.11}{IntraFace}{section.2.2}% 35
+\BOOKMARK [2][-]{subsection.2.2.11}{IntraFace }{section.2.2}% 35
 \BOOKMARK [1][-]{section.2.3}{Lenguajes de programaci\363n}{chapter.2}% 36
 \BOOKMARK [2][-]{subsection.2.3.1}{C++}{section.2.3}% 37
 \BOOKMARK [3][-]{section*.11}{Historia}{subsection.2.3.1}% 38
 \BOOKMARK [3][-]{section*.12}{Caracter\355sticas}{subsection.2.3.1}% 39
-\BOOKMARK [3][-]{section*.13}{Conceptos generales de POO}{subsection.2.3.1}% 40
-\BOOKMARK [2][-]{subsection.2.3.2}{Python }{section.2.3}% 41
-\BOOKMARK [3][-]{section*.14}{Instalacion de Python}{subsection.2.3.2}% 42
-\BOOKMARK [3][-]{section*.15}{Herramientas b\341sicas}{subsection.2.3.2}% 43
-\BOOKMARK [2][-]{subsection.2.3.3}{R }{section.2.3}% 44
-\BOOKMARK [1][-]{section.2.4}{Metodolog\355as de desarrollo de software}{chapter.2}% 45
-\BOOKMARK [2][-]{subsection.2.4.1}{Metodolog\355a de desarrollo extremo }{section.2.4}% 46
-\BOOKMARK [3][-]{section*.16}{El proceso de desarrollo extremo}{subsection.2.4.1}% 47
-\BOOKMARK [3][-]{section*.17}{Interacci\363n con el cliente }{subsection.2.4.1}% 48
-\BOOKMARK [3][-]{section*.18}{Planificaci\363n del proyecto}{subsection.2.4.1}% 49
-\BOOKMARK [3][-]{section*.19}{Dise\361o, desarrollo y pruebas}{subsection.2.4.1}% 50
-\BOOKMARK [3][-]{section*.20}{Resumen de XP}{subsection.2.4.1}% 51
-\BOOKMARK [0][-]{chapter.3}{DESCRIPCI\323N DE ACTIVIDADES REALIZADAS}{}% 52
-\BOOKMARK [1][-]{section.3.1}{An\341lisis}{chapter.3}% 53
-\BOOKMARK [1][-]{section.3.2}{Dise\361o}{chapter.3}% 54
-\BOOKMARK [1][-]{section.3.3}{Desarrollo}{chapter.3}% 55
-\BOOKMARK [1][-]{section.3.4}{Pruebas}{chapter.3}% 56
-\BOOKMARK [1][-]{section.3.5}{Implementaci\363n}{chapter.3}% 57
-\BOOKMARK [1][-]{section.3.6}{Retroalimentaci\363n}{chapter.3}% 58
-\BOOKMARK [1][-]{section.3.7}{Resultados}{chapter.3}% 59
-\BOOKMARK [1][-]{section.3.8}{Conclusiones y recomendaciones}{chapter.3}% 60
-\BOOKMARK [1][-]{section.3.9}{Referencias Bibliogr\341ficas \046 Glosario}{chapter.3}% 61
+\BOOKMARK [2][-]{subsection.2.3.2}{Python }{section.2.3}% 40
+\BOOKMARK [3][-]{section*.13}{Instalacion de Python}{subsection.2.3.2}% 41
+\BOOKMARK [3][-]{section*.14}{Herramientas b\341sicas}{subsection.2.3.2}% 42
+\BOOKMARK [2][-]{subsection.2.3.3}{R }{section.2.3}% 43
+\BOOKMARK [3][-]{section*.15}{\277Qu\351 es R?}{subsection.2.3.3}% 44
+\BOOKMARK [3][-]{section*.16}{Historia}{subsection.2.3.3}% 45
+\BOOKMARK [1][-]{section.2.4}{Metodolog\355as de desarrollo de software}{chapter.2}% 46
+\BOOKMARK [2][-]{subsection.2.4.1}{Metodolog\355a de desarrollo extremo }{section.2.4}% 47
+\BOOKMARK [3][-]{section*.17}{El proceso de desarrollo extremo}{subsection.2.4.1}% 48
+\BOOKMARK [3][-]{section*.18}{Interacci\363n con el cliente }{subsection.2.4.1}% 49
+\BOOKMARK [3][-]{section*.19}{Planificaci\363n del proyecto}{subsection.2.4.1}% 50
+\BOOKMARK [3][-]{section*.20}{Dise\361o, desarrollo y pruebas}{subsection.2.4.1}% 51
+\BOOKMARK [3][-]{section*.21}{Resumen de xTreme Programing}{subsection.2.4.1}% 52
+\BOOKMARK [2][-]{subsection.2.4.2}{Programaci\363n Orientada a Objetos }{section.2.4}% 53
+\BOOKMARK [0][-]{chapter.3}{DESCRIPCI\323N DE ACTIVIDADES REALIZADAS}{}% 54
+\BOOKMARK [1][-]{section.3.1}{An\341lisis}{chapter.3}% 55
+\BOOKMARK [2][-]{subsection.3.1.1}{Requisitos funcionales }{section.3.1}% 56
+\BOOKMARK [2][-]{subsection.3.1.2}{Requisitos no funcionales }{section.3.1}% 57
+\BOOKMARK [1][-]{section.3.2}{Dise\361o}{chapter.3}% 58
+\BOOKMARK [2][-]{subsection.3.2.1}{Aproximaci\363n cl\341sica }{section.3.2}% 59
+\BOOKMARK [2][-]{subsection.3.2.2}{Aproximaci\363n por Red Neural convolucional }{section.3.2}% 60
+\BOOKMARK [3][-]{section*.23}{Dise\361o de objetos.}{subsection.3.2.2}% 61
+\BOOKMARK [3][-]{section*.26}{Dise\361o de interfaces}{subsection.3.2.2}% 62
+\BOOKMARK [1][-]{section.3.3}{Desarrollo}{chapter.3}% 63
+\BOOKMARK [2][-]{subsection.3.3.1}{Captura de v\355deo y detecci\363n de rostros}{section.3.3}% 64
+\BOOKMARK [2][-]{subsection.3.3.2}{Normalizar im\341genes}{section.3.3}% 65
+\BOOKMARK [2][-]{subsection.3.3.3}{Procesado}{section.3.3}% 66
+\BOOKMARK [2][-]{subsection.3.3.4}{Amplificaci\363n}{section.3.3}% 67
+\BOOKMARK [1][-]{section.3.4}{Pruebas}{chapter.3}% 68
+\BOOKMARK [1][-]{section.3.5}{Resultados}{chapter.3}% 69
+\BOOKMARK [1][-]{section.3.6}{Conclusiones}{chapter.3}% 70
+\BOOKMARK [0][-]{chapter*.29}{Apendice}{}% 71
+\BOOKMARK [1][-]{section.3.7}{Redes Neuronales }{chapter*.29}% 72
