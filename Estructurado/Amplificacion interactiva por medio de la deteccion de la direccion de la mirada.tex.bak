@@ -536,7 +536,7 @@ $\ $
 	cuales se da una descripción a continuación:
 	\subsection*{Software de desarrollo}	
 	\subsection{Visual Studio Community 2015 \label{VS}}
-		\textsc{Visual Studio Community 2015} es un entorno de desarrollo integrado creado y distribuido por \textsc{Microsoft}, 
+		\textsc{Visual Studio Community 2015} [\ref{i_vs}] es un entorno de desarrollo integrado creado y distribuido por \textsc{Microsoft}, 
 		para el sistema operativo de la misma.
 		Soporta una gran variedad de lenguajes de programación tales como, \textsc{ C++, C\#, Visual Basic, .NET, F\#, Java, Python, 
 		Ruby, PHP}, al igual que entornos de desarrollo web como \textsc{ASP.NET MVC, Django, etc.,} a lo cual sumarle las nuevas
@@ -546,26 +546,28 @@ $\ $
 		y pequeños equipos  de profesionales.
 		
 	\subsection{Qt Creator \label{qt}}
-	Qt Creator es un IDE (entorno de desarrollo integrado) multiplataforma que se ajusta a las necesidades de los desarrolladores Qt. 
-	Este es parte de Qt Project \footnote{\textit{\scriptsize \href{http://www.qt.io/}{Qt Project}}}.
-	
-	Qt Creator se centra en proporcionar características que ayudan a los nuevos usuarios de Qt a aprender y comenzar a desarrollar
-	rápidamente, también aumenta la productividad de los desarrolladores con experiencia en Qt.
-	\begin{multicols}{2}
-	\begin{itemize}
-		\item Editor de código con soporte para C+, QML y ECMAscript
-		\item Herramientas para la rapida navegacion del codigo
-    	\item Resaltado de sintaxis y auto-completado de código
-		\item Control estático de código y estilo a medida que se escribe
-	    \item Soporte para refactoring de código
-    	\item Ayuda sensitiva al contexto
-	    \item Plegado de código (code folding)
-    	\item Paréntesis coincidentes y modos de selección
-	\end{itemize}
-	\end{multicols}
+		\textsc{Qt Creator} [\ref{i_crator}] es un IDE (entorno de desarrollo integrado) multiplataforma que se ajusta a las necesidades de los 
+		desarrolladores Qt. 
+		Este es parte de Qt Project \footnote{\textit{\scriptsize \href{http://www.qt.io/}{Qt Project}}}.
+		
+		Qt Creator se centra en proporcionar características que ayudan a los nuevos usuarios de Qt a aprender y comenzar a desarrollar
+		rápidamente, también aumenta la productividad de los desarrolladores con experiencia en Qt.
+		\begin{multicols}{2}
+		\begin{itemize}
+			\item Editor de código con soporte para C+, QML y ECMAscript
+			\item Herramientas para la rapida navegacion del codigo
+	    	\item Resaltado de sintaxis y auto-completado de código
+			\item Control estático de código y estilo a medida que se escribe
+		    \item Soporte para refactoring de código
+	    	\item Ayuda sensitiva al contexto
+		    \item Plegado de código (code folding)
+	    	\item Paréntesis coincidentes y modos de selección
+		\end{itemize}
+		\end{multicols}
 	
 	\subsection{PyCharm \label{pych}}
-		\textsc{Pycharm} es un entorno integrado de desarrollo (\textsc{IDE}) usado para la programacion en \textsc{Python} (\ref{python}). 
+		\textsc{Pycharm} [\ref{i_pycharm}] es un entorno integrado de desarrollo (\textsc{IDE}) usado para la programacion en \textsc{Python} 
+		(\ref{python}). 
 		Provee herramientas de análisis de código, depurador gráfico, pruebas unitarias, integración con sistemas de control de versiones
 		y soporte para el desarrollo con \textsc{Django}.\\
 		Desarrollado por la compañía \href{https://en.wikipedia.org/wiki/JetBrains}{JetBrains}
@@ -588,9 +590,21 @@ $\ $
 			\item Integración con CVS.
 		\end{itemize}
 		\end{multicols}
-		
+		\begin{figure}[hbt]
+			\centering
+			\subfigure[PyCharm]{\includegraphics[width=110mm]{pycharm.png} \label{i_pycharm}}
+			\subfigure[Qt Creator]{\includegraphics[width=110mm]{qt_creator.png} \label{i_crator}}
+			\subfigure[Visual Studio]{\includegraphics[width=110mm]{vs.png} \label{i_vs}}			
+			\caption{Herramientas de desarrollo. \label{f-lenete-uml}}
+		\end{figure}	
+		\begin{figure}[hbt]
+			\centering
+			\subfigure[Sublime-Text]{\includegraphics[width=110mm]{subl3.png} \label{i_sublime}}
+			\subfigure[RStudio]{\includegraphics[width=110mm]{rstudio.png} \label{i_rstudio}}	
+			\caption{Herramientas de desarrollo. \label{f-lenete-uml}}
+		\end{figure}	
 	\subsection{Sublime-Text \label{subl}}
-		Sublime Text es un editor de texto y editor de código fuente está escrito en C++ y Python para los plugins. Desarrollado
+		Sublime Text [\ref{i_sublime}] es un editor de texto y editor de código fuente está escrito en C++ y Python para los plugins. Desarrollado
 		originalmente como una extensión de \texttt{Vim}, con el tiempo fue creando una identidad propia, por esto aún conserva un modo 
 		de edición tipo vi llamado Vintage mode.\\
 		
@@ -620,7 +634,7 @@ $\ $
 		
 		
 	\subsection{Rstudio \label{RS}}
-		RStudio es un entorno de desarrollo integrado (\textsc{IDE}) para R (\ref{r}).\
+		RStudio [\ref{i_rstudio}] es un entorno de desarrollo integrado (\textsc{IDE}) para R (\ref{r}).\
 		Esta disponible de forma libres y en edición comercial, se ejecuta en entornos multiplataforma (Windows, Mac OS X y Linux) o
 		sobre navegadores web conectados a \textsc{RStudio Server o RStudio Server Pro (Debian/Ubuntu, RedHat/CentOS y SUSE Linux)}.\\
 		
@@ -764,17 +778,32 @@ $\ $
 	
 \section{Lenguajes de programación}
 	
-	Un lenguaje de programación es una herramienta que nos permite comunicarnos e instruir a la computadora para que realice una tarea
-	especifica. Cada lenguaje de programación posee una sintaxis y un léxico particular, es decir, la forma de escribirse, que es 
-	diferente en cada uno por la forma en que fue creado y por la forma que trabaja su compilador para revisar, acomodar y reservar el
-	programa en memoria.
+	Un lenguaje de programación es un lenguaje formal diseñado para realizar procesos que pueden ser llevados a cabo por máquinas como las computadoras.
+	Pueden usarse para crear programas que controlen el comportamiento físico y lógico de una máquina, para expresar algoritmos con precisión, o como 
+	modo de comunicación humana.\\
+	Está formado por un conjunto de símbolos, reglas sintácticas y semánticas que definen su estructura y el significado de sus elementos y expresiones. 
+	al proceso por el cual se escribe, se prueba, se depura, se compila (de ser necesario) y se mantiene el código fuente de un programa informático se 
+	le llama programación.\\
 	
-	Existen muchos lenguajes, sin embargo en este proyecto solo nos interesan los siguientes:
+	También la palabra programación se define como el proceso de creación de un programa de computadora, mediante la aplicación de procedimientos 
+	lógicos, a través de los siguientes pasos:
+	\begin{multicols}{2}	
+		\begin{itemize}
+			\item El desarrollo lógico del programa para resolver un problema en particular.
+			\item Escritura de la lógica del programa empleando un lenguaje de programación específico \textit{(codificación del programa)}
+			\item Ensamblaje o compilación del programa hasta convertirlo en lenguaje de máquina.
+			\item Prueba y depuración del programa.
+			\item Desarrollo de la documentación.
+		\end{itemize}
+	\end{multicols}
+	
+	Existen multitud lenguajes disponibles en la actualidad, en este proyecto y dadas las características del mismo, los lenguajes que más se 
+	adaptan a estas son los siguientes:
 	\begin{multicols}{3}	
 		\begin{itemize}
-			\item C++
-			\item Python
-			\item R		
+			\item \texttt{C++}
+			\item \texttt{Python}
+			\item \texttt{R}		
 		\end{itemize}
 	\end{multicols}
 	

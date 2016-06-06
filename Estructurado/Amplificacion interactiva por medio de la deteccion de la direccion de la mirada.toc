@@ -36,38 +36,38 @@
 \contentsline {subsection}{\numberline {2.2.11}IntraFace }{26}{subsection.2.2.11}
 \contentsline {section}{\numberline {2.3}Lenguajes de programaci\IeC {\'o}n}{27}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}C++}{27}{subsection.2.3.1}
-\contentsline {subsubsection}{Historia}{27}{section*.11}
-\contentsline {subsubsection}{Caracter\IeC {\'\i }sticas}{28}{section*.12}
-\contentsline {subsection}{\numberline {2.3.2}Python }{28}{subsection.2.3.2}
-\contentsline {subsubsection}{Instalacion de Python}{29}{section*.13}
-\contentsline {subsubsection}{Herramientas b\IeC {\'a}sicas}{30}{section*.14}
-\contentsline {subsection}{\numberline {2.3.3}R }{30}{subsection.2.3.3}
-\contentsline {subsubsection}{\IeC {\textquestiondown }Qu\IeC {\'e} es R?}{30}{section*.15}
-\contentsline {subsubsection}{Historia}{30}{section*.16}
+\contentsline {subsubsection}{Historia}{28}{section*.13}
+\contentsline {subsubsection}{Caracter\IeC {\'\i }sticas}{28}{section*.14}
+\contentsline {subsection}{\numberline {2.3.2}Python }{29}{subsection.2.3.2}
+\contentsline {subsubsection}{Instalacion de Python}{29}{section*.15}
+\contentsline {subsubsection}{Herramientas b\IeC {\'a}sicas}{30}{section*.16}
+\contentsline {subsection}{\numberline {2.3.3}R }{31}{subsection.2.3.3}
+\contentsline {subsubsection}{\IeC {\textquestiondown }Qu\IeC {\'e} es R?}{31}{section*.17}
+\contentsline {subsubsection}{Historia}{31}{section*.18}
 \contentsline {section}{\numberline {2.4}Metodolog\IeC {\'\i }as de desarrollo de software}{32}{section.2.4}
 \contentsline {subsection}{\numberline {2.4.1}Metodolog\IeC {\'\i }a de desarrollo extremo }{32}{subsection.2.4.1}
-\contentsline {subsubsection}{El proceso de desarrollo extremo}{32}{section*.17}
-\contentsline {subsubsection}{Interacci\IeC {\'o}n con el cliente }{32}{section*.18}
-\contentsline {subsubsection}{Planificaci\IeC {\'o}n del proyecto}{34}{section*.19}
-\contentsline {subsubsection}{Dise\IeC {\~n}o, desarrollo y pruebas}{34}{section*.20}
-\contentsline {subsubsection}{Resumen de xTreme Programing}{36}{section*.21}
+\contentsline {subsubsection}{El proceso de desarrollo extremo}{32}{section*.19}
+\contentsline {subsubsection}{Interacci\IeC {\'o}n con el cliente }{32}{section*.20}
+\contentsline {subsubsection}{Planificaci\IeC {\'o}n del proyecto}{34}{section*.21}
+\contentsline {subsubsection}{Dise\IeC {\~n}o, desarrollo y pruebas}{34}{section*.22}
+\contentsline {subsubsection}{Resumen de xTreme Programing}{36}{section*.23}
 \contentsline {subsection}{\numberline {2.4.2}Programaci\IeC {\'o}n Orientada a Objetos }{37}{subsection.2.4.2}
-\contentsline {chapter}{\numberline {3}DESCRIPCI\IeC {\'O}N DE ACTIVIDADES REALIZADAS}{39}{chapter.3}
-\contentsline {section}{\numberline {3.1}An\IeC {\'a}lisis}{40}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Requisitos funcionales }{41}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Requisitos no funcionales }{41}{subsection.3.1.2}
-\contentsline {section}{\numberline {3.2}Dise\IeC {\~n}o}{43}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Aproximaci\IeC {\'o}n cl\IeC {\'a}sica }{43}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Aproximaci\IeC {\'o}n por Red Neural convolucional }{44}{subsection.3.2.2}
-\contentsline {subsubsection}{Dise\IeC {\~n}o de objetos.}{44}{section*.23}
-\contentsline {subsubsection}{Dise\IeC {\~n}o de interfaces}{45}{section*.26}
-\contentsline {section}{\numberline {3.3}Desarrollo}{46}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Captura de v\IeC {\'\i }deo y detecci\IeC {\'o}n de rostros}{47}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Normalizar im\IeC {\'a}genes}{47}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Procesado}{48}{subsection.3.3.3}
-\contentsline {subsection}{\numberline {3.3.4}Amplificaci\IeC {\'o}n}{49}{subsection.3.3.4}
-\contentsline {section}{\numberline {3.4}Pruebas}{50}{section.3.4}
-\contentsline {section}{\numberline {3.5}Resultados}{50}{section.3.5}
-\contentsline {section}{\numberline {3.6}Conclusiones}{50}{section.3.6}
-\contentsline {chapter}{Apendice}{51}{chapter*.29}
-\contentsline {section}{\numberline {3.7}Redes Neuronales }{52}{section.3.7}
+\contentsline {chapter}{\numberline {3}DESCRIPCI\IeC {\'O}N DE ACTIVIDADES REALIZADAS}{41}{chapter.3}
+\contentsline {section}{\numberline {3.1}An\IeC {\'a}lisis}{42}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Requisitos funcionales }{43}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Requisitos no funcionales }{43}{subsection.3.1.2}
+\contentsline {section}{\numberline {3.2}Dise\IeC {\~n}o}{45}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Aproximaci\IeC {\'o}n cl\IeC {\'a}sica }{45}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Aproximaci\IeC {\'o}n por Red Neural convolucional }{46}{subsection.3.2.2}
+\contentsline {subsubsection}{Dise\IeC {\~n}o de objetos.}{46}{section*.25}
+\contentsline {subsubsection}{Dise\IeC {\~n}o de interfaces}{47}{section*.28}
+\contentsline {section}{\numberline {3.3}Desarrollo}{48}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Captura de v\IeC {\'\i }deo y detecci\IeC {\'o}n de rostros}{49}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Normalizar im\IeC {\'a}genes}{49}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Procesado}{50}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}Amplificaci\IeC {\'o}n}{51}{subsection.3.3.4}
+\contentsline {section}{\numberline {3.4}Pruebas}{52}{section.3.4}
+\contentsline {section}{\numberline {3.5}Resultados}{52}{section.3.5}
+\contentsline {section}{\numberline {3.6}Conclusiones}{52}{section.3.6}
+\contentsline {chapter}{Apendice}{53}{chapter*.31}
+\contentsline {section}{\numberline {3.7}Redes Neuronales }{54}{section.3.7}
