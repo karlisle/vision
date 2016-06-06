@@ -142,16 +142,25 @@
 
 \begin{titlepage}
 
-\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+\newcommand{\HRule}{\rule{\linewidth}{0.1mm}} % Defines a new command for the horizontal lines, change thickness here
 
 \center % Center everything on the page
  
 %----------------------------------------------------------------------------------------
 %	HEADING SECTIONS
 %----------------------------------------------------------------------------------------
+\begin{figure}[]
+		 	\centering
+		 	\vspace{-2cm}
+		 	\subfigure{\includegraphics[width=20mm]{./imagenes/cavecera_portada1.png}} \hspace{3cm}
+		 	\subfigure{\includegraphics[width=20mm]{./imagenes/cavecera_portada.png} } \hspace{3cm}
+		 	\subfigure{\includegraphics[width=20mm]{./imagenes/cavecera_portada2.png}}
 
-\textsc{\LARGE Instituto Tecnológico de San Juan del Río}\\[1.5cm] % Name of your university/college
-\textsc{\Large Centro de Investigación en ciencia Aplicada y Tecnología Avanzada}\\[0.5cm] % Major heading such as course name
+\end{figure}
+%\includegraphics{./imagenes/itsjr_s.jpg}\\ % Include a department/university logo - this will require the graphicx package
+\textsc{\LARGE Dirección General de Educación Superior Tecnológica }\\[0.5cm] % Name of your university/college
+\textsc{\Large Instituto Tecnológico de San Juan del Río}\\[0.5cm] % Name of your university/college
+%\textsc{\Large Centro de Investigación en ciencia Aplicada y Tecnología Avanzada}\\[0.5cm] % Major heading such as course name
 %\textsc{\large Minor Heading}\\[0.5cm] % Minor heading such as course title
 
 %----------------------------------------------------------------------------------------
@@ -161,24 +170,27 @@
 \HRule \\[0.4cm]
 { \huge \bfseries Amplificación interactiva de contenido por medio de la detección de la dirección de la mirada.}\\[0.4cm] % Title of your document
 \HRule \\[1.5cm]
- 
+
+\textsc{\Large REPORTE TÉCNICO DE RESIDENCIA PROFESIONAL}\\[3cm] % Name of your university/college
 %----------------------------------------------------------------------------------------
 %	AUTHOR SECTION
 %----------------------------------------------------------------------------------------
+\begin{center}
 
-\begin{minipage}{0.4\textwidth}
-\begin{flushleft} \large
-\emph{Autor:}\\
-J. Carlos \textsc{\'Avila Reséndiz} % Your name
-\end{flushleft}
-\end{minipage}
-~
-\begin{minipage}{0.4\textwidth}
-\begin{flushright} \large
-\emph{Supervisor:} \\
-Dr. Joaquin  \textsc{Salas Rodriguez} % Supervisor's Name
-\end{flushright}
-\end{minipage}\\[4cm]
+	\emph{\Large Presenta:}\\
+	\Large Juan Carlos \textsc{\'Avila Reséndiz}\\[0.1cm] % Your name
+	\Large \textsc{11590163}\\[0.1cm]
+	\Large \textsc{Ingeniería en Sistemas Computacionales}\\[3cm]
+
+	
+\end{center}
+
+%\begin{minipage}{0.4\textwidth}
+%\begin{flushright} \large
+%\emph{Supervisor:} \\
+%Dr. Joaquin  \textsc{Salas Rodriguez} % Supervisor's Name
+%\end{flushright}
+%\end{minipage}\\[4cm]
 
 % If you don't want a supervisor, uncomment the two lines below and remove the section above
 %\Large \emph{Author:}\\
@@ -189,13 +201,13 @@ Dr. Joaquin  \textsc{Salas Rodriguez} % Supervisor's Name
 %	DATE SECTION
 %----------------------------------------------------------------------------------------
 
-{\large \today}\\[0.5cm] % Date, change the \today to a set date if you want to be precise
+\hspace{5cm} \Large San Juan del Río, Qro. Junio, 2016\\[0.5cm] % Date, change the \today to a set date if you want to be precise
 
 %----------------------------------------------------------------------------------------
 %	LOGO SECTION
 %----------------------------------------------------------------------------------------
 
-\includegraphics{./imagenes/itsjr_s.jpg}\\ % Include a department/university logo - this will require the graphicx package
+%\includegraphics{./imagenes/itsjr_s.jpg}\\ % Include a department/university logo - this will require the graphicx package
 
 %----------------------------------------------------------------------------------------
 
@@ -214,6 +226,9 @@ $\ $
 %\setcounter{lofdepth}{2}  % control table of figures depth 
 \pagenumbering{roman} 
 \tableofcontents % Include a table of contents
+\cleardoublepage
+\addcontentsline{toc}{chapter}{Lista de figuras} % para que aparezca en el indice de contenidos
+\listoffigures
 
 %\newpage % Begins the essay on a new page instead of on the same page as the table of contents
 $\ $
@@ -1306,6 +1321,7 @@ $\ $
 \newpage	
 \section{Pruebas}
 	
+	
 
 \section{Resultados}
 
@@ -1321,7 +1337,159 @@ $\ $
 
 
 	\section{Redes Neuronales \label{a-neuronales}}
+		Las Redes Neuronales son un campo muy importante dentro de la Inteligencia Artificial. Inspirándose en el comportamiento conocido del cerebro
+		humano (principalmente el referido a las neuronas y sus conexiones), trata de crear modelos artificiales que solucionen problemas difíciles de
+		resolver mediante técnicas algorítmicas convencionales.  
+		
+		En esta página web trataremos de acercar al visitante a este tema, mostrando las bases neurológicas y matemáticas, los principales modelos 
+		vigentes y ejemplos interactivos que solucionan algunos problemas de forma eficaz.
+		
+		\subsection{Historia}
+			Desde la década de los 40, en la que nació y comenzó a desarrollarse la informática, el modelo neuronal la ha acompañado. De hecho, la
+			aparición de los computadores digitales y el desarrollo de las teorías modernas acerca del aprendizaje y del procesamiento neuronal se
+			produjeron aproximadamente al mismo tiempo, a finales de los años cuarenta.
+			
+			Desde entonces hasta nuestros días, la investigación neurofisiológica y el estudio de sistemas neuronales artificiales (ANS, Artificial Neural
+			Systems) han ido de la mano. Sin embargo, los modelos de ANS no se centran en la investigación neurológica, si no que toma conceptos e ideas
+			del campo de las ciencias naturales para aplicarlos a la resolución de problemas pertenecientes a otras ramas de las ciencias y la ingeniería.
+			
+			Podemos decir que la tecnología ANS incluye modelos inspirados por nuestra comprensión del cerebro, pero que no tienen por qué ajustarse
+			exactamente a los modelos derivados de dicho entendimiento.
+			
+			Los primeros ejemplos de estos sistemas aparecen al final de la década de los cincuenta. La referencia histórica más corriente es la que 
+			alude al trabajo realizado por Frank Rosenblatt en un dispositivo denominado perceptrón. Hay otros ejemplos, tales como el desarrollo del
+			Adaline por el profesor Bernard Widrow.
+			
+			Durante todos estos años, la tecnología ANS no siempre ha tenido la misma consideración en las ramas de la ingeniería y las ciencias de 
+			la computación, más ansiosas de resultados que las ciencias neuronales. A partir de 1969, el pesimismo debido a las limitadas capacidades
+			del perceptrón hizo languidecer este tipo de investigación.
+			
+			A principios de los 80, por un lado Hopfield y sus conferencias acerca de la memoria autoasociativa y por otro lado la aparición del libro
+			Parallel Distributed Processing (PDP), escrito por Rumelhart y McClelland reactivaron la investigación en el campo de las redes neuronales.
+			Hubo grandes avances que propiciaron el uso comercial en campos tan variados como el diagnóstico de enfermedades, la aproximación de 
+			funciones o el reconocimiento de imágenes.
+			
+		\subsection{Modelo de neurona biológica}
+			Fue Ramón y Cajal (1888) quién descubrió la estructura celular (neurona) del sistema nervioso \ref{i_bioneuron}.  Defendió la teoría de que 
+			las neuronas se interconectaban entre sí de forma paralela, y no formando un circuito cerrado como el sistema sanguíneo.
+			Una neurona consta de un cuerpo celular (soma) de entre 10 y 80 mm, del que surge un denso árbol de ramificaciones (dendritas) y una fibra
+			tubular (axón) de entre 100 mm y un metro.
+			De alguna forma, una neurona es un procesador de información muy simple:
+			\begin{itemize}
+				\item  \textbf{ Canal de entrada:} dendritas.
+				\item \textbf{Procesador:} soma.
+				\item \textbf{Canal de salida:} axón.
+			\end{itemize}
+	        Una neurona cerebral puede recibir unas 10.000 entradas y enviar a su vez su salida a varios cientos de neuronas.
+	        La conexión entre neuronas se llama sinapsis. No es una conexión física, si no que hay unos 2 mm de separación. Son conexiones
+	        unidireccionales, en la que la transmisión de la información se hace de forma eléctrica en el interior de la neurona y de forma química entre
+	        neuronas; gracias a unas sustancias específicas llamadas neurotransmisores.
 
+
+		\subsection{Modelo de neurona artificial}
+			 El modelo de Rumelhart y McClelland (1986) define un elemento de proceso (EP), o neurona artificial \ref{i_artifneuron} , como un dispositivo
+			 que a partir de un conjunto de entradas, $xi (i=1...n)$ o vector x, genera una única salida y.
+			 Esta neurona artificial consta de los siguientes elementos:
+			 \begin{multicols}{2}
+			 \begin{itemize}
+			 	\item Conjunto de pesos sinápticos $wij$. Representan la interacción entre la neurona presináptica j y la postsináptica i.
+			 	\item Regla de propagación $d(wij,xj(t))$: proporciona el potencial postsináptico, $hi(t)$.
+			 	\item Función de activación $ai(t)=f(ai(t-1)$, $hi(t))$: proporciona el estado de activación de la neurona en función del estado anterior y
+			 		 el valor postsináptico
+			 	\item Función de salida $Fi(t)$: proporciona la salida $yi(t)$, en función del estado de activación.
+			 \end{itemize}
+			 \end{multicols}
+			  Las señales de entrada y salida pueden ser señales binarias (0,1 – neuronas de McCulloch y Pitts), bipolares (-1,1), números enteros o
+			  continuos, variables borrosas, etc.
+			  La regla de propagación suele ser una suma ponderada del producto escalar del vector de entrada y el vector de pesos: 
+			  $$ h_{i}(t) = \Sigma w_{ij}w_{j}$$
+			  También se usa a menudo la distancia euclídea entre ambos vectores: 
+			  $$ h_{i}(t) = \Sigma (w_{ij}w_{j})^{2}$$
+			  Existen otro tipo de reglas menos conocidas como la distancia de Voronoi, de Mahalanobis, etc.
+			  La función de activación no suele tener en cuenta el estado anterior de la neurona, sino sólo el potencial hi(t). Suele ser una función
+			  determinista y, casi siempre, continua y monótona creciente. Las más comunes son la función signo (+1 si hi(t)>0, -1 en caso contrario), 
+			  la función semilineal y las funciones sigmoides \ref{i_activacion}.
+			  La función de salida suele ser la identidad. En algunos casos es un valor umbral (la neurona no se activa hasta que su estado supera un
+			  determinado valor).
+
+		\begin{figure}[t]
+			\centering
+			\subfigure[Artificial]{\includegraphics[width=80mm]{neurona_artif.jpg} \label{i_artifneuron}}
+			\subfigure[Biológica]{\includegraphics[width=80mm]{neurona_bio.jpg} \label{i_bioneuron}}
+			\subfigure[Activacion]{\includegraphics[width=100mm]{funcionesActivacion.jpg} \label{i_activacion}}
+			\subfigure[Arquitectura]{\includegraphics[width=100mm]{arquitectura.jpg} \label{i_arquitectura}}
+			\caption{Modelos de neuronas \label{f-lenete-uml}}
+		\end{figure}	
+		
+		\subsection{Red Neuronal Artificial} 
+			Una red neuronal artificial (RNA) se puede definir (Hecht – Nielssen 93) como un grafo dirigido con las siguientes restricciones:	
+			\begin{multicols}{2}
+			 \begin{itemize}
+			 	\item Los nodos se llaman elementos de proceso (EP).
+			    \item Los enlaces se llaman conexiones y funcionan como caminos unidireccionales instantáneos
+			    \item Cada EP puede tener cualquier número de conexiones.
+			    \item Todas las conexiones que salgan de un EP deben tener la misma señal.
+			    \item Los EP pueden tener memoria local.
+			    \item Cada EP posee una función de transferencia que, en función de las entradas y la memoria local produce una señal de salida 
+			    y / o altera la memoria local.
+				\item Las entradas a la RNA llegan del mundo exterior, mientras que sus salidas son conexiones que abandonan la RNA.
+
+			 \end{itemize}
+			 \end{multicols}
+		\subsection{Tipos de arquitectura de las RNA}
+			 La arquitectura de una RNA es la estructura o patrón de conexiones de la red. Es conveniente recordar que las conexiones sinápticas son
+			 direccionales, es decir, la información sólo se transmite en un sentido.
+			 
+			En general, las neuronas suelen agruparse en unidades estructurales llamadas capas. Dentro de una capa, las neuronas suelen ser del mismo 
+			tipo. Se pueden distinguir tres tipos de capas:
+			\begin{multicols}{2}
+				\begin{itemize}
+			 		\item De entrada: reciben datos o señales procedentes del entorno.
+			 	   \item De salida: proporcionan la respuesta de la red a los estímulos de la entrada.
+			   	 \item Ocultas: no reciben ni suministran información al entorno (procesamiento interno de la red).
+			 	\end{itemize}
+			\end{multicols}
+			Generalmente las conexiones se realizan entre neuronas de distintas capas, pero puede haber conexiones intracapa o laterales y conexiones de
+			realimentación que siguen un sentido contrario al de entrada-salida.
+			
+		\subsection{Aprendizaje de las RNA}
+			 Es el proceso por el que una RNA actualiza los pesos (y, en algunos casos, la arquitectura) con el propósito de que la red pueda llevar a 
+			 cabo de forma efectiva una tarea determinada.
+			 Hay tres conceptos fundamentales en el aprendizaje:
+			 \begin{multicols}{2}
+				\begin{itemize}
+			 		\item \textbf{Paradigma de aprendizaje:} información de la que dispone la red.
+			 	   	\item \textbf{Regla de aprendizaje:} principios que gobiernan el aprendizaje.
+			   		 \item \textbf{Algoritmo de aprendizaje:} procedimiento numérico de ajuste de los pesos.
+			 	\end{itemize}
+			\end{multicols}
+			Existen dos paradigmas fundamentales de aprendizaje:
+			\begin{multicols}{2}
+				\begin{itemize}
+			 		\item \textbf{Supervisado:} la red trata de minimizar un error entre la salida que calcula y la salida deseada (conocida), 
+			 			de modo que la salida calculada termine siendo la deseada.
+			 	   	\item \textbf{No supervisado o auto rganizado:} la red conoce un conjunto de patrones sin conocer la respuesta deseada. 
+			 	   		Debe extraer rasgos o agrupar patrones similares.
+			 	\end{itemize}
+			\end{multicols}
+			En cuanto a los algoritmos de aprendizaje, tenemos cuatro tipos:
+			\begin{multicols}{2}
+				\begin{itemize}
+			 		\item \textbf{Minimización del error:} reducción del gradiente, retropropagación, etc. La modificación de pesos está orientada 
+			 			a que el error cometido sea mínimo.
+			 	   	\item \textbf{Boltzmann: }para redes estocásticas, donde se contemplan parámetros aleatorios.
+			 	   	\item \textbf{Hebb:} cuando el disparo de una célula activa otra, el peso de la conexión entre ambas tiende a reforzarse (Ley de Hebb).
+			 	   	\item \textbf{Competitivo:} sólo aprenden las neuronas que se acercan más a la salida deseada.
+				\end{itemize}
+			\end{multicols}
+			
+			Los algoritmos, y en general el proceso de aprendizaje, son complejos y suelen llevar bastante tiempo computacionalmente hablando. 
+			Su ventaja es que una vez ha aprendido, la red puede congelar sus pesos y funcionar en modo recuerdo o ejecución.
+			 
+			 
+			
+
+\newpage
 
 %----------------------------------------------------------------------------------------
 %	BEGIN GLOSARIO

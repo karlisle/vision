@@ -1,0 +1,28 @@
+\select@language {spanish}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Herramientas de desarrollo. \relax }}{38}{figure.caption.11}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {PyCharm}}}{38}{figure.caption.11}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Qt Creator}}}{38}{figure.caption.11}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Visual Studio}}}{38}{figure.caption.11}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Herramientas de desarrollo. \relax }}{39}{figure.caption.12}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Sublime-Text}}}{39}{figure.caption.12}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {RStudio}}}{39}{figure.caption.12}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {CMake}}}{39}{figure.caption.12}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Los dos diferentes enfoques considerados a) Clasico b) LeNet\relax }}{45}{figure.caption.26}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Cl\IeC {\'a}sico}}}{45}{figure.caption.26}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {LeNet}}}{45}{figure.caption.26}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Ejemplo de una red neuronal convolucional \relax }}{46}{figure.caption.28}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Diagramas de caso de uso. \relax }}{47}{figure.caption.29}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Diagramas de flujo, dise\IeC {\~n}o. \relax }}{48}{figure.caption.31}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {V\IeC {\'\i }deo}}}{48}{figure.caption.31}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Pooling \& LeNet \relax }}{51}{figure.caption.32}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Max Pooling}}}{51}{figure.caption.32}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {LeNet}}}{51}{figure.caption.32}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Tipica CNN}}}{51}{figure.caption.32}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Modelos de neuronas \relax }}{59}{figure.caption.34}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Artificial}}}{59}{figure.caption.34}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Biol\IeC {\'o}gica}}}{59}{figure.caption.34}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Activacion}}}{59}{figure.caption.34}
+\contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Arquitectura}}}{59}{figure.caption.34}
