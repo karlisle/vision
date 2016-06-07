@@ -94,6 +94,7 @@
     linkcolor=negro,
     filecolor=magenta,      
     urlcolor=blue,
+    citecolor=negro,
 }
 
 \urlstyle{same}
@@ -1408,20 +1409,30 @@ $\ $
 		Este modulo es el encargado de generar el flujo de entrada del sistema, comprobando la disponibilidad de la cámara, y el posterior 
 		procesado para el reconocimiento de rostros en cada uno de los cuadros capturados.
 		
-		Básicamente lo que hace este modulo es toma un cuadro del stream del vídeo y lo analiza usando IntrFace, la librería retorna varios
+		Básicamente lo que hace este modulo es toma un cuadro del flujo de vídeo y lo analiza usando IntraFace, la librería retorna varios
 		datos:
 		\begin{multicols}{2}
 			\begin{enumerate}
-				\item Orientación de la cabeza en el espacio 3D, \textit{en ángulos de Euler} \texttt{Roll, Yaw, Pitch}.
+				\item Orientación de la cabeza en el espacio 3D, \textit{en ángulos de Euler} \texttt{Roll, Yaw, Pitch} [\ref{i_aEuler}].
 				\item Un conjunto de marcadores faciales, entre los que se encuentran seis coordenadas (x,y) para cada ojo.
 				\item La cantidad de rostros detectados y la zona de la pantalla en la cual esta cada uno.
 			\end{enumerate}
 		\end{multicols}
 		Con todos estos datos es posible hacer recortes de la imagen en general y extraer regiones de interés, que en este caso son el 
 		área  de los ojos y los datos sobre la orientación de la cabeza.
-		Los cuales son enviados posteriormente a diferentes clases para seguir el proceso.
+		En la imagen [\ref{i_face}] se pueden observar todos los puntos que tenemos a disposición, para nuestros fines solo usamos 
+		los que rodean los ojos. Una vez son extraídos son enviados posteriormente a diferentes módulos para seguir el proceso.
+		\begin{figure}[hbt]
+			\centering
+				%\subfigure[Marcadores faciales]{\includegraphics[width=60mm]{./intraface/face19.png} \label{i_face}
+				\subfigure[Marcadores faciales]{\includegraphics[width=40mm]{/intraface/face19.png} \label{i_face}} \hspace{3cm}
+				\subfigure[\'Angulos de Euler]{\includegraphics[width=40mm]{/euler.png} \label{i_aEuler}}
+				%\subfigure[Ángulos de Euler]{\includegraphics[width=40mm]{/euler.png} \label{i_eAngulos}]}
+			\caption{Marcadores faciales provistos y ángulos de Euler.}
+		\end{figure}
+	
 
-	\subsection{Clasificador de parpadeo}
+	\subsection{Clasificador de parpadeo} 
 		La construcción de este modulo no fue planeada en un inicio, y por ello no forma parte de los requerimientos, sin embargo
 		durante el proceso de adquisición de imágenes se hizo necesario el discriminar entre capturas utilizables y aquellas que no.
 		La idea básica es determinar cuando el ojo esta abierto [\ref{i_faceEyeOpen}] y cuando esta cerrado [\ref{i_faceEyeClose}], 
@@ -1454,6 +1465,13 @@ $\ $
 		de \texttt{AUC: 0.964}, deja claro que la confiabilidad es mas que aceptable.
 		
 	\subsection{Normalizar imágenes}
+		\begin{figure}[t]
+			\centering
+			\subfigure[Max Pooling]{\includegraphics[width=50mm]{max_pooling.jpg} \label{i_pooling}} \hspace{2cm}
+			\subfigure[LeNet]{\includegraphics[width=50mm]{lenet_model.png} \label{i_lenetModel}}
+			\subfigure[Tipica CNN]{\includegraphics[width=130mm]{typical_cnn.png} \label{i_typical_cnn}}
+			\caption{Pooling \& LeNet}
+		\end{figure}
 		Antes de enviar las imágenes a la red neuronal \texttt{LeNet} para obtener la dirección de la mirada, es necesario realizar un 
 		tratamiento previo de las mismas, a fin de lograr los mejores resultados.
 		Basicamnete lo que se hace como en \cite{Sugano}, en resumen lo que se hace es normalizar tanto la imagen como la posición de 
@@ -1462,22 +1480,18 @@ $\ $
 		estimar la dirección de la mirada el estimador debe hacerlo considerando cambios en 6D espaciales.
 		Poro no toda esa información es necesaria, el estimador al final solo necesita dos grados de libertad, algo que se logra escalando 
 		y rotando la imagen a fin de compensar la perspectiva de la imagen, de forma que:
-		\begin{enumerate}
-			\item La cámara enfoque el punto medio entre los ojos desde una determinada distancia.
-			\item Hacer paralelos los ejes \textit{x}, en el espacio de coordenadas de la cabeza y de la cámara 
-			\item Recortar las secciones de lo ojos con una misma resolución \textsf{W x H} y una distancia focal en el espacio de normalizado
-				de la cámara.
-		\end{enumerate}
+		\begin{multicols}{2}
+			\begin{enumerate}
+				\item La cámara enfoque el punto medio entre los ojos desde una determinada distancia.
+				\item Hacer paralelos los ejes \textit{x}, en el espacio de coordenadas de la cabeza y de la cámara 
+				\item Recortar las secciones de lo ojos con una misma resolución \textsf{W x H} y una distancia focal en el espacio de normalizado
+					de la cámara.\\
+			\end{enumerate}
+		\end{multicols}
 		El resultado sera un conjunto de imágenes con una resolución estándar y un vector 2D de los ángulos de la cabeza (\textit{Yaw y Pitch)}.
 		De esta forma los valores reales de la posición de la mirada son convertidos al espacio normalizado en 2D de la cámara.
 		Para reducir el efecto de las condiciones de iluminación el histograma de las imágenes es equializado antes del procesos de normalizar.
-	\begin{figure}[t]
-		\centering
-		\subfigure[Max Pooling]{\includegraphics[width=80mm]{max_pooling.jpg} \label{i_pooling}}
-		\subfigure[LeNet]{\includegraphics[width=80mm]{lenet_model.png} \label{i_lenetModel}}
-		\subfigure[Tipica CNN]{\includegraphics[width=100mm]{typical_cnn.png} \label{i_typical_cnn}}
-		\caption{Pooling \& LeNet}
-	\end{figure}	
+		
 	\subsection{Procesado}
 		La tarea de la CNN es aprender a extraer de los datos entradas (\textit{posición de la cabeza e imágenes de los ojos}, el angulo de la
 		mirada en el espacio normalizado.
@@ -1532,7 +1546,7 @@ $\ $
 		El esquema de pruebas aplicado, al menos para el clasificador de parpadeos, es el siguiente:
 		\begin{multicols}{2}
 			\begin{enumerate}
-				\item Se tomaron muestras correspondientes (\textit{1,000} a imágenes de los ojos, cada una de ellas, con los datos de los puntos
+				\item Se tomaron muestras correspondientes (\texttt{1,000}) a imágenes de los ojos, cada una de ellas, con los datos de los puntos
 					de interés de ambos ojos. 
 				\item Manualmente se asigno una etiquetado del estado del ojo en cada par de imágenes, siendo \texttt{0} cerrado y \texttt{1} abierto.
 				\item Para entrenar el clasificador se tomaron \texttt{70\% }de los datos para entrenamiento y el resto se dejo para pruebas.

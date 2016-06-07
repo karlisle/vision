@@ -22,15 +22,18 @@
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Diagramas de caso de uso. \relax }}{51}{figure.caption.30}
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Diagramas de flujo, dise\IeC {\~n}o.\relax }}{52}{figure.caption.32}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {V\IeC {\'\i }deo}}}{52}{figure.caption.32}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Ojos abiertos, cerrados y puntos de inter\IeC {\'e}s. \relax }}{54}{figure.caption.33}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Ojos abiertos.}}}{54}{figure.caption.33}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Ojos cerrado. }}}{54}{figure.caption.33}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Puntos ojos. }}}{54}{figure.caption.33}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Resultados clasificador\relax }}{54}{figure.caption.34}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Derecho}}}{54}{figure.caption.34}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Izquierdo}}}{54}{figure.caption.34}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Resultados clasificador: curva ROC. \relax }}{55}{figure.caption.35}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Pooling \& LeNet\relax }}{56}{figure.caption.36}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Max Pooling}}}{56}{figure.caption.36}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {LeNet}}}{56}{figure.caption.36}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Tipica CNN}}}{56}{figure.caption.36}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Marcadores faciales provistos y \IeC {\'a}ngulos de Euler.\relax }}{53}{figure.caption.33}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Marcadores faciales}}}{53}{figure.caption.33}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {\'Angulos de Euler}}}{53}{figure.caption.33}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Ojos abiertos, cerrados y puntos de inter\IeC {\'e}s. \relax }}{54}{figure.caption.34}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Ojos abiertos.}}}{54}{figure.caption.34}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Ojos cerrado. }}}{54}{figure.caption.34}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Puntos ojos. }}}{54}{figure.caption.34}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Resultados clasificador\relax }}{54}{figure.caption.35}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Derecho}}}{54}{figure.caption.35}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Izquierdo}}}{54}{figure.caption.35}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Resultados clasificador: curva ROC. \relax }}{55}{figure.caption.36}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Pooling \& LeNet\relax }}{56}{figure.caption.37}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Max Pooling}}}{56}{figure.caption.37}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {LeNet}}}{56}{figure.caption.37}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Tipica CNN}}}{56}{figure.caption.37}
