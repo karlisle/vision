@@ -5,9 +5,9 @@ using namespace std;
 
 int main(int argc, char** argv)
 {
-	cout << "\n\n\t****************************" << endl;
-	cout << "\t* Welcome to EyeGaze-Dev!  *" << endl;
-	cout << "\t****************************" << endl;
+	cout << "\n\n\t*****************************" << endl;
+	cout << "\t* Welcome to EyeGaze-Dev!   *" << endl;
+	cout << "\t*****************************" << endl;
 
 	CaptureFrame capture;
 	capture.menu();
