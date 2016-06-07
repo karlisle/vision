@@ -71,11 +71,14 @@
 \contentsline {subsubsection}{Dise\IeC {\~n}o de interfaces}{51}{section*.31}
 \contentsline {section}{\numberline {3.3}Desarrollo}{52}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Captura de v\IeC {\'\i }deo y detecci\IeC {\'o}n de rostros}{53}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Clasificador de parpadeos}{53}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Normalizar im\IeC {\'a}genes}{53}{subsection.3.3.3}
-\contentsline {subsection}{\numberline {3.3.4}Procesado}{54}{subsection.3.3.4}
-\contentsline {subsection}{\numberline {3.3.5}Amplificaci\IeC {\'o}n}{56}{subsection.3.3.5}
-\contentsline {section}{\numberline {3.4}Pruebas}{57}{section.3.4}
-\contentsline {section}{\numberline {3.5}Conclusiones}{57}{section.3.5}
-\contentsline {chapter}{Apendice}{59}{chapter*.34}
-\contentsline {chapter}{Apendice}{61}{chapter*.35}
+\contentsline {subsection}{\numberline {3.3.2}Clasificador de parpadeo}{53}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Normalizar im\IeC {\'a}genes}{54}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}Procesado}{55}{subsection.3.3.4}
+\contentsline {subsection}{\numberline {3.3.5}Amplificaci\IeC {\'o}n}{57}{subsection.3.3.5}
+\contentsline {chapter}{Resultados}{59}{chapter*.37}
+\contentsline {section}{\numberline {3.4}Pruebas}{59}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Pruebas clasificador de parpadeo}{59}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}rendimiento de las librer\IeC {\'\i }as}{60}{subsection.3.4.2}
+\contentsline {chapter}{Conclusiones y recomendaciones}{61}{chapter*.38}
+\contentsline {subsection}{\numberline {3.4.3}Recomendaciones}{61}{subsection.3.4.3}
+\contentsline {section}{\numberline {3.5}Conclusiones}{61}{section.3.5}

@@ -70,11 +70,14 @@
 \BOOKMARK [3][-]{section*.31}{Dise\361o de interfaces}{subsection.3.2.2}% 70
 \BOOKMARK [1][-]{section.3.3}{Desarrollo}{chapter.3}% 71
 \BOOKMARK [2][-]{subsection.3.3.1}{Captura de v\355deo y detecci\363n de rostros}{section.3.3}% 72
-\BOOKMARK [2][-]{subsection.3.3.2}{Clasificador de parpadeos}{section.3.3}% 73
+\BOOKMARK [2][-]{subsection.3.3.2}{Clasificador de parpadeo}{section.3.3}% 73
 \BOOKMARK [2][-]{subsection.3.3.3}{Normalizar im\341genes}{section.3.3}% 74
 \BOOKMARK [2][-]{subsection.3.3.4}{Procesado}{section.3.3}% 75
 \BOOKMARK [2][-]{subsection.3.3.5}{Amplificaci\363n}{section.3.3}% 76
-\BOOKMARK [1][-]{section.3.4}{Pruebas}{chapter.3}% 77
-\BOOKMARK [1][-]{section.3.5}{Conclusiones}{chapter.3}% 78
-\BOOKMARK [0][-]{chapter*.34}{Apendice}{}% 79
-\BOOKMARK [0][-]{chapter*.35}{Apendice}{}% 80
+\BOOKMARK [0][-]{chapter*.37}{Resultados}{}% 77
+\BOOKMARK [1][-]{section.3.4}{Pruebas}{chapter*.37}% 78
+\BOOKMARK [2][-]{subsection.3.4.1}{Pruebas clasificador de parpadeo}{section.3.4}% 79
+\BOOKMARK [2][-]{subsection.3.4.2}{rendimiento de las librer\355as}{section.3.4}% 80
+\BOOKMARK [0][-]{chapter*.38}{Conclusiones y recomendaciones}{}% 81
+\BOOKMARK [1][-]{subsection.3.4.3}{Recomendaciones}{chapter*.38}% 82
+\BOOKMARK [1][-]{section.3.5}{Conclusiones}{chapter*.38}% 83

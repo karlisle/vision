@@ -1,28 +1,36 @@
 \select@language {spanish}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Herramientas de desarrollo. \relax }}{41}{figure.caption.11}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Herramientas de desarrollo.\relax }}{41}{figure.caption.11}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {PyCharm}}}{41}{figure.caption.11}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Qt Creator}}}{41}{figure.caption.11}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Visual Studio}}}{41}{figure.caption.11}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Herramientas de desarrollo. \relax }}{42}{figure.caption.12}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Herramientas de desarrollo.\relax }}{42}{figure.caption.12}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Sublime-Text}}}{42}{figure.caption.12}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {RStudio}}}{42}{figure.caption.12}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {CMake}}}{42}{figure.caption.12}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Modelos de neuronas \relax }}{43}{figure.caption.26}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Modelos de neuronas\relax }}{43}{figure.caption.26}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Artificial}}}{43}{figure.caption.26}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Biol\IeC {\'o}gica}}}{43}{figure.caption.26}
 \contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Activacion}}}{43}{figure.caption.26}
 \contentsline {subfigure}{\numberline {(d)}{\ignorespaces {Arquitectura}}}{43}{figure.caption.26}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Los dos diferentes enfoques considerados a) Clasico b) LeNet\relax }}{49}{figure.caption.27}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Los dos diferentes enfoques considerados a) Clasico b) LeNet \relax }}{49}{figure.caption.27}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Cl\IeC {\'a}sico}}}{49}{figure.caption.27}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {LeNet}}}{49}{figure.caption.27}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Ejemplo de una red neuronal convolucional \relax }}{50}{figure.caption.29}
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Diagramas de caso de uso. \relax }}{51}{figure.caption.30}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Diagramas de flujo, dise\IeC {\~n}o. \relax }}{52}{figure.caption.32}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Diagramas de flujo, dise\IeC {\~n}o.\relax }}{52}{figure.caption.32}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {V\IeC {\'\i }deo}}}{52}{figure.caption.32}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Pooling \& LeNet \relax }}{55}{figure.caption.33}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Max Pooling}}}{55}{figure.caption.33}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {LeNet}}}{55}{figure.caption.33}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Tipica CNN}}}{55}{figure.caption.33}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Ojos abiertos, cerrados y puntos de inter\IeC {\'e}s. \relax }}{54}{figure.caption.33}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Ojos abiertos.}}}{54}{figure.caption.33}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Ojos cerrado. }}}{54}{figure.caption.33}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Puntos ojos. }}}{54}{figure.caption.33}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Resultados clasificador\relax }}{54}{figure.caption.34}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Derecho}}}{54}{figure.caption.34}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Izquierdo}}}{54}{figure.caption.34}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Resultados clasificador: curva ROC. \relax }}{55}{figure.caption.35}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Pooling \& LeNet\relax }}{56}{figure.caption.36}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Max Pooling}}}{56}{figure.caption.36}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {LeNet}}}{56}{figure.caption.36}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Tipica CNN}}}{56}{figure.caption.36}

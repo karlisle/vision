@@ -103,7 +103,7 @@
 \usepackage{caption}
 \graphicspath{{./imagenes/}} % Specifies the directory where pictures are stored
 
-\definecolor{miorange}{rgb}{0.11, 0.43, 0.21}
+\definecolor{miorange}{rgb}{0.10, 0.43, 0.21}
 \definecolor{negro}{RGB}{35, 0, 0}
 \definecolor{blue}{RGB}{0, 0, 255}
 
@@ -612,14 +612,14 @@ $\ $
 			\subfigure[PyCharm]{\includegraphics[width=110mm]{pycharm.png} \label{i_pycharm}}
 			\subfigure[Qt Creator]{\includegraphics[width=110mm]{qt_creator.png} \label{i_crator}}
 			\subfigure[Visual Studio]{\includegraphics[width=110mm]{vs.png} \label{i_vs}}			
-			\caption{Herramientas de desarrollo. \label{f-lenete-uml}}
+			\caption{Herramientas de desarrollo.}
 		\end{figure}	
 		\begin{figure}[hbt]
 			\centering
 			\subfigure[Sublime-Text]{\includegraphics[width=110mm]{subl3.png} \label{i_sublime}}
 			\subfigure[RStudio]{\includegraphics[width=110mm]{rstudio.png} \label{i_rstudio}}
 			\subfigure[CMake]{\includegraphics[width=80mm]{cmake.png} \label{i_cmake}}
-			\caption{Herramientas de desarrollo. \label{f-lenete-uml}}
+			\caption{Herramientas de desarrollo.}
 		\end{figure}	
 	\subsection{Sublime-Text \label{subl}}
 		Sublime Text [\ref{i_sublime}] es un editor de texto y editor de código fuente está escrito en C++ y Python para los plugins. Desarrollado
@@ -1173,7 +1173,7 @@ $\ $
 		\subfigure[Biológica]{\includegraphics[width=80mm]{neurona_bio.jpg} \label{i_bioneuron}}
 		\subfigure[Activacion]{\includegraphics[width=100mm]{funcionesActivacion.jpg} \label{i_activacion}}
 		\subfigure[Arquitectura]{\includegraphics[width=100mm]{arquitectura.jpg} \label{i_arquitectura}}
-		\caption{Modelos de neuronas \label{f-lenete-uml}}
+		\caption{Modelos de neuronas}
 	\end{figure}	
 	
 	\subsection{Red Neuronal Artificial} 
@@ -1345,8 +1345,7 @@ $\ $
 		 	\centering
 		 	\subfigure[Clásico]{\includegraphics[width=69mm]{./Diagramas/clasico.pdf} \label{f_clasic}}
 		 	\subfigure[LeNet]{\includegraphics[width=69mm]{./Diagramas/cnn.pdf} \label{f_lenet}}
-			\caption{Los dos diferentes enfoques considerados a) Clasico b) LeNet} 
-			\label{fig:enfoque_clásico}
+			\caption{Los dos diferentes enfoques considerados a) Clasico b) LeNet \label{fig:enfoque_clásico}} 
 		\end{figure}
 	\subsection{Aproximación por Red Neural convolucional \label{lenet}}
 		Sin embargo la solución clásica, nos es optima en condiciones no controladas, es decir fuera de las condiciones de un laboratorio, este método 
@@ -1403,7 +1402,7 @@ $\ $
 	\begin{figure}[t]
 		\centering
 		\subfigure[Vídeo]{\includegraphics[width=60mm]{./Diagramas/video.pdf} \label{f_uml_video}}
-		\caption{Diagramas de flujo, diseño. \label{f-lenete-uml}}
+		\caption{Diagramas de flujo, diseño.}
 	\end{figure}	
 	\subsection{Captura de vídeo y detección de rostros}
 		Este modulo es el encargado de generar el flujo de entrada del sistema, comprobando la disponibilidad de la cámara, y el posterior 
@@ -1422,11 +1421,37 @@ $\ $
 		área  de los ojos y los datos sobre la orientación de la cabeza.
 		Los cuales son enviados posteriormente a diferentes clases para seguir el proceso.
 
-	\subsection{Clasificador de parpadeos}
-		La construcción de este modulo no fue planeada e un inicio, y por ello no forma parte de los requerimientos, sin embargo
+	\subsection{Clasificador de parpadeo}
+		La construcción de este modulo no fue planeada en un inicio, y por ello no forma parte de los requerimientos, sin embargo
 		durante el proceso de adquisición de imágenes se hizo necesario el discriminar entre capturas utilizables y aquellas que no.
-		La idea básica es determinar cuando el ojo esta abierto y cuando esta cerrado, para ello se se usaron cuatro de los puntos del
-		contorno del ojo, puntos que IntraFace proporciona, 
+		La idea básica es determinar cuando el ojo esta abierto [\ref{i_faceEyeOpen}] y cuando esta cerrado [\ref{i_faceEyeClose}], 
+		se usaron cuatro de los puntos centrales del contorno de cada ojo, de los cuales el dato de interés es el valor en el eje \texttt{y},
+		los puntos en los extremos de los ojos, se usan para normalizar la distancia \textit{d}.
+		Cada uno de los cuatro puntos usados esta compuesto de un par de coordenadas en la imagen \texttt{(x, y)}, determinar si el ojo se 
+		encuentra abierto o cerrado, para determinar esto se aplico una regresión logística sobre las distancias verticales normalizadas 
+		($D_{1}, D_{2})$, como se puede ver en la figura: [\ref{i_puntos}].		
+		\begin{figure}[t]
+			\centering
+			\subfigure[Ojos abiertos.]{\includegraphics[width=40mm]{/intraface/face10_crop.png} \label{i_faceEyeOpen}}
+			\subfigure[Ojos cerrado. ]{\includegraphics[width=40mm]{/intraface/face25_crop.png} \label{i_faceEyeClose}}
+			\subfigure[Puntos ojos. ]{\includegraphics[width=40mm]{/puntos_ojos.png} \label{i_puntos}}
+			\caption{Ojos abiertos, cerrados y puntos de interés. }
+		\end{figure}	
+		
+		Los resultados de la regresión los podemos observar en imagen de la 
+		\begin{figure}[hbt]
+			\centering
+			\subfigure[Derecho]{\includegraphics[width=50mm]{rightEye.jpg} \label{i_clasifDer}}
+			\subfigure[Izquierdo]{\includegraphics[width=50mm]{leftEye.jpg} \label{i_clasifIzq}}
+			\caption{Resultados clasificador}
+		\end{figure}
+		\begin{figure}[hbt]
+			\centering
+			\includegraphics[width=100mm]{/curva_roc.png} 
+			\caption{Resultados clasificador: curva ROC. \label{i_curva_roc}}
+		\end{figure}
+		El resultado de efectividad del clasificador es de acuerdo a los datos de la curva ROC [\ref{i_curva_roc}], con un área bajo la curva 
+		de \texttt{AUC: 0.964}, deja claro que la confiabilidad es mas que aceptable.
 		
 	\subsection{Normalizar imágenes}
 		Antes de enviar las imágenes a la red neuronal \texttt{LeNet} para obtener la dirección de la mirada, es necesario realizar un 
@@ -1451,7 +1476,7 @@ $\ $
 		\subfigure[Max Pooling]{\includegraphics[width=80mm]{max_pooling.jpg} \label{i_pooling}}
 		\subfigure[LeNet]{\includegraphics[width=80mm]{lenet_model.png} \label{i_lenetModel}}
 		\subfigure[Tipica CNN]{\includegraphics[width=100mm]{typical_cnn.png} \label{i_typical_cnn}}
-		\caption{Pooling \& LeNet \label{f-lenete-uml}}
+		\caption{Pooling \& LeNet}
 	\end{figure}	
 	\subsection{Procesado}
 		La tarea de la CNN es aprender a extraer de los datos entradas (\textit{posición de la cabeza e imágenes de los ojos}, el angulo de la
@@ -1477,15 +1502,65 @@ $\ $
 		El resultado es una ventana que muestra la sección de la pantalla
 	
 \newpage	
-\section{Pruebas}
-	Las pruebas realizadas hasta el momento aun no se aplican al sistema completo, en el estado actual de desarrollo solo se han hecho pruebas
-	unitarias para cada uno de los módulos, de acuerdo a la metodología, cada uno de ellos fue agregado al sistema solo cuando su comportamiento 
-	cumplió las  especificaciones iniciales.
-	
-	Una vez terminada de construir e implementar la rede neuronal con el resto de los componentes se incluirán los resultados de las pruebas de 
-	rendimiento.
+
+\chapter*{Resultados}
+\markboth{}{}
+\thispagestyle{empty}
+\lhead[\thepage]{}
+\rhead[]{\thepage}
+\addcontentsline{toc}{chapter}{Resultados}
+
+	Al momento de realizar este reporte, no se ha terminado de implementar aun el sistema completo, la razón, la red neuronal aun
+	esta en fase de construcción y pruebas unitarias, por lo cual y de acuerdo a los pasos estipulados en la metodología de  desarrollo [\ref{XP}],
+	un modulo no se integrara al sistema hasta que este completo.
+	Los resultados de las pruebas que se apliquen una vez completado e integrado al resto de los componentes, se agregara en cuanto los 
+	resultados estén listos.\\
+	Aun si, por ahora no hay resultados de pruebas a esta parte del sistema, se espera que estos sean similares a los obtenidos en \cite{Sugano}.
 	
 
+
+\section{Pruebas}
+	En este punto los resultados de las pruebas de rendimiento aplicadas, se detallan a continuación, en cuanto a las restantes, como se ha
+	explicado anteriormente, se anexaran en cuanto los resultados de las mismas sena validados y probados.
+	
+	\subsection{Pruebas clasificador de parpadeo}
+	
+		Las pruebas realizadas hasta el momento aun no se aplican al sistema completo, en el estado actual de desarrollo solo se han hecho pruebas
+		unitarias para cada uno de los módulos, de acuerdo a la metodología, cada uno de ellos fue agregado al sistema solo cuando su comportamiento 
+		cumplió las  especificaciones iniciales.
+		
+		El esquema de pruebas aplicado, al menos para el clasificador de parpadeos, es el siguiente:
+		\begin{multicols}{2}
+			\begin{enumerate}
+				\item Se tomaron muestras correspondientes (\textit{1,000} a imágenes de los ojos, cada una de ellas, con los datos de los puntos
+					de interés de ambos ojos. 
+				\item Manualmente se asigno una etiquetado del estado del ojo en cada par de imágenes, siendo \texttt{0} cerrado y \texttt{1} abierto.
+				\item Para entrenar el clasificador se tomaron \texttt{70\% }de los datos para entrenamiento y el resto se dejo para pruebas.
+			\end{enumerate}
+		\end{multicols}
+		El resultado fue un vector de coeficientes que una vez incluidos en la codificaron del modulo, dieron el nivel de efectividad que se puede 
+		observar  en la imagen de la curva ROC (\ref{i_curva_roc}].
+		
+	
+	\subsection{rendimiento de las librerías}	
+			El rendimiento de las librerías usadas, \texttt{IntraFace, OpenCV}, es el indicado en sus respectivas documentaciones, es comprensible
+			que haya algunas fluctuaciones, pero nada significativo para el funcionamiento general del sistema. 
+			La articulo referente a IntrFace en \cite{IntraFace} y la documentación oficial de de OpenCV, pueden ser revisadas para mayor detalle 
+			sobre el desempeño de ambas librerías.
+
+\chapter*{Conclusiones y recomendaciones}
+\markboth{}{}
+\thispagestyle{empty}
+\lhead[\thepage]{}
+\rhead[]{\thepage}
+\addcontentsline{toc}{chapter}{Conclusiones y recomendaciones}
+
+\subsection{Recomendaciones}
+	Es importante mencionar que la metodología permite las libertades de desarrollo que se han venido viendo a lo largo del documento, el hecho de estar
+	enfocada en el desarrollo de prototipos rápidos hace que tener resultados de algunos de las partes que integran el sistema sea mucho mas rápido
+	que aplicando alguna de las otra existentes, esa característica pese a ser muy útil si lo que se quieren es ver resultados rápidos, tiene el 
+	inconveniente de ser parcial en cuanto a documentación se refiere.
+	
 \section{Conclusiones}
 	Divertido e interesante, si tuviera que definir lo que este proyecto ha sido para mi, esas serian las palabras que elegiría.
 	Obviamente hay muchas cosas más que me ha dejado, la cantidad de aprendizaje ha sido monumental, comenzado por la que es quizá la lección más
@@ -1506,23 +1581,6 @@ $\ $
 	Como último debo agradecer al Dr. Joaquín, mi asesor interno por parte de CICATA, pues de alguna forma despertó en mi el interés por seguir 
 	preparándome, y quien sabe, es posible que el próximo semestre este aquí comenzando la maestría.
 	
-
-\chapter*{Resultados}
-\markboth{}{}
-\thispagestyle{empty}
-\lhead[\thepage]{}
-\rhead[]{\thepage}
-\addcontentsline{toc}{chapter}{Apendice}
-\newpage
-
-\chapter*{Conclusiones y recomendaciones}
-\markboth{}{}
-\thispagestyle{empty}
-\lhead[\thepage]{}
-\rhead[]{\thepage}
-\addcontentsline{toc}{chapter}{Apendice}
-\newpage
-
 
 
 			
@@ -1570,6 +1628,10 @@ Y.Sugano, Y. Matsushita and Y. Sato.
 [\textit{Learning-by-sythesis for appeareance-based 3d gaze estimation.}]
 In Proc. CVR, pages 1821-1828, 2014, 1,2,3,4,5,6,7,8.
 
+\bibitem{IntraFace}{\textbf{Fernando De la Torre}}
+Wen-Sheng Chu and Xuehan Xiong, Francisco Vicente, Xiaoyu Ding, Jeffrey F. Cohn
+[\textit{IEEE International Conference on Automatic Face and Gesture Recognition (FG)}]
+Ljubljana, Slovenia. , 2015.
 
 \bibitem{python}{\textbf{Rául Gonzáles Duque}},
 Rául Gonzáles Duque
