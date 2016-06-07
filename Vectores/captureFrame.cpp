@@ -11,12 +11,12 @@ void CaptureFrame::menu()
 {
 	cout << "\t*****************************" << endl;
 	cout << "\t*   Seleccione una opción   *" << endl;
-	cout << "\t* 1) Cargar (CDF)           *" << endl;
+	cout << "\t* 1) Iniciar                *" << endl;
 	cout << "\t* 2) Entrenar               *" << endl;
-	cout << "\t* 3) Tomar muestras        *" << endl;
-	cout << "\t* 4) Tomar muestras/seccion*" << endl;
-	cout << "\t* 0) Salir                 *" << endl;
-	cout << "\t****************************" << endl;
+	//cout << "\t* 3) Tomar muestras         *" << endl;
+	//cout << "\t* 4) Tomar muestras/seccion *" << endl;
+	cout << "\t* 0) Salir                  *" << endl;
+	cout << "\t*****************************" << endl;
 	cout << "\t>>> ";
 
 	Database data;
