@@ -14,66 +14,68 @@
 \contentsline {subsubsection}{Objetivo}{9}{section*.8}
 \contentsline {subsubsection}{Estructura Organizativa}{10}{section*.9}
 \contentsline {subsection}{\numberline {1.3.2}Descripci\IeC {\'o}n del departamento o \IeC {\'a}rea de trabajo}{10}{subsection.1.3.2}
-\contentsline {section}{\numberline {1.4}Problemas a resolver}{12}{section.1.4}
-\contentsline {section}{\numberline {1.5}Alcances y limitaciones}{13}{section.1.5}
-\contentsline {subsection}{\numberline {1.5.1}Alcances}{13}{subsection.1.5.1}
-\contentsline {subsection}{\numberline {1.5.2}Limitaciones}{13}{subsection.1.5.2}
-\contentsline {chapter}{\numberline {2}FUNDAMENTACI\IeC {\'O}N TE\IeC {\'O}RICA}{15}{chapter.2}
-\contentsline {section}{\numberline {2.1}Ingenier\IeC {\'\i }a del software}{16}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Concepto de Software}{16}{subsection.2.1.1}
-\contentsline {subsection}{\numberline {2.1.2}Clasificaci\IeC {\'o}n del software }{16}{subsection.2.1.2}
-\contentsline {subsection}{\numberline {2.1.3}Concepto de la Ingenier\IeC {\'\i }a de Software}{18}{subsection.2.1.3}
-\contentsline {section}{\numberline {2.2}Herramientas de desarrollo}{19}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}Visual Studio Community 2015 }{19}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}Qt Creator }{19}{subsection.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}PyCharm }{20}{subsection.2.2.3}
-\contentsline {subsection}{\numberline {2.2.4}Sublime-Text }{21}{subsection.2.2.4}
-\contentsline {subsection}{\numberline {2.2.5}Rstudio }{22}{subsection.2.2.5}
-\contentsline {subsection}{\numberline {2.2.6}CMake }{22}{subsection.2.2.6}
-\contentsline {subsection}{\numberline {2.2.7}Sistema de control de versiones Git }{23}{subsection.2.2.7}
-\contentsline {subsection}{\numberline {2.2.8}MariaDB }{24}{subsection.2.2.8}
-\contentsline {subsection}{\numberline {2.2.9}SQLite}{25}{subsection.2.2.9}
-\contentsline {subsection}{\numberline {2.2.10}OpenCV }{25}{subsection.2.2.10}
-\contentsline {subsection}{\numberline {2.2.11}IntraFace }{26}{subsection.2.2.11}
-\contentsline {section}{\numberline {2.3}Lenguajes de programaci\IeC {\'o}n}{27}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}C++}{27}{subsection.2.3.1}
-\contentsline {subsubsection}{Historia}{28}{section*.15}
-\contentsline {subsubsection}{Caracter\IeC {\'\i }sticas}{28}{section*.16}
-\contentsline {subsection}{\numberline {2.3.2}Python }{29}{subsection.2.3.2}
-\contentsline {subsubsection}{Instalacion de Python}{29}{section*.17}
-\contentsline {subsubsection}{Herramientas b\IeC {\'a}sicas}{30}{section*.18}
-\contentsline {subsection}{\numberline {2.3.3}R }{31}{subsection.2.3.3}
-\contentsline {subsubsection}{\IeC {\textquestiondown }Qu\IeC {\'e} es R?}{31}{section*.19}
-\contentsline {subsubsection}{Historia}{31}{section*.20}
-\contentsline {section}{\numberline {2.4}Metodolog\IeC {\'\i }as de desarrollo de software}{32}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Metodolog\IeC {\'\i }a de desarrollo extremo }{32}{subsection.2.4.1}
-\contentsline {subsubsection}{El proceso de desarrollo extremo}{32}{section*.21}
-\contentsline {subsubsection}{Interacci\IeC {\'o}n con el cliente }{32}{section*.22}
-\contentsline {subsubsection}{Planificaci\IeC {\'o}n del proyecto}{34}{section*.23}
-\contentsline {subsubsection}{Dise\IeC {\~n}o, desarrollo y pruebas}{34}{section*.24}
-\contentsline {subsubsection}{Resumen de xTreme Programing}{36}{section*.25}
-\contentsline {subsection}{\numberline {2.4.2}Programaci\IeC {\'o}n Orientada a Objetos }{37}{subsection.2.4.2}
-\contentsline {chapter}{\numberline {3}DESCRIPCI\IeC {\'O}N DE ACTIVIDADES REALIZADAS}{41}{chapter.3}
-\contentsline {section}{\numberline {3.1}An\IeC {\'a}lisis}{42}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Requisitos funcionales }{43}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Requisitos no funcionales }{43}{subsection.3.1.2}
-\contentsline {section}{\numberline {3.2}Dise\IeC {\~n}o}{45}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Aproximaci\IeC {\'o}n cl\IeC {\'a}sica }{45}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Aproximaci\IeC {\'o}n por Red Neural convolucional }{46}{subsection.3.2.2}
-\contentsline {subsubsection}{Dise\IeC {\~n}o de objetos.}{46}{section*.27}
-\contentsline {subsubsection}{Dise\IeC {\~n}o de interfaces}{47}{section*.30}
-\contentsline {section}{\numberline {3.3}Desarrollo}{48}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Captura de v\IeC {\'\i }deo y detecci\IeC {\'o}n de rostros}{49}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Normalizar im\IeC {\'a}genes}{49}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Procesado}{50}{subsection.3.3.3}
-\contentsline {subsection}{\numberline {3.3.4}Amplificaci\IeC {\'o}n}{51}{subsection.3.3.4}
-\contentsline {section}{\numberline {3.4}Pruebas}{52}{section.3.4}
-\contentsline {section}{\numberline {3.5}Conclusiones}{52}{section.3.5}
-\contentsline {chapter}{Apendice}{55}{chapter*.33}
-\contentsline {section}{\numberline {3.6}Redes Neuronales }{56}{section.3.6}
-\contentsline {subsection}{\numberline {3.6.1}Historia}{56}{subsection.3.6.1}
-\contentsline {subsection}{\numberline {3.6.2}Modelo de neurona biol\IeC {\'o}gica}{57}{subsection.3.6.2}
-\contentsline {subsection}{\numberline {3.6.3}Modelo de neurona artificial}{57}{subsection.3.6.3}
-\contentsline {subsection}{\numberline {3.6.4}Red Neuronal Artificial}{58}{subsection.3.6.4}
-\contentsline {subsection}{\numberline {3.6.5}Tipos de arquitectura de las RNA}{59}{subsection.3.6.5}
-\contentsline {subsection}{\numberline {3.6.6}Aprendizaje de las RNA}{60}{subsection.3.6.6}
+\contentsline {section}{\numberline {1.4}Problemas a resolver}{11}{section.1.4}
+\contentsline {section}{\numberline {1.5}Alcances y limitaciones}{12}{section.1.5}
+\contentsline {subsection}{\numberline {1.5.1}Alcances}{12}{subsection.1.5.1}
+\contentsline {subsection}{\numberline {1.5.2}Limitaciones}{12}{subsection.1.5.2}
+\contentsline {chapter}{\numberline {2}FUNDAMENTACI\IeC {\'O}N TE\IeC {\'O}RICA}{13}{chapter.2}
+\contentsline {section}{\numberline {2.1}Ingenier\IeC {\'\i }a del software}{14}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Concepto de Software}{14}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Clasificaci\IeC {\'o}n del software }{14}{subsection.2.1.2}
+\contentsline {subsection}{\numberline {2.1.3}Concepto de la Ingenier\IeC {\'\i }a de Software}{16}{subsection.2.1.3}
+\contentsline {section}{\numberline {2.2}Herramientas de desarrollo}{17}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Visual Studio Community 2015 }{17}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Qt Creator }{17}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}PyCharm }{18}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}Sublime-Text }{19}{subsection.2.2.4}
+\contentsline {subsection}{\numberline {2.2.5}Rstudio }{20}{subsection.2.2.5}
+\contentsline {subsection}{\numberline {2.2.6}CMake }{20}{subsection.2.2.6}
+\contentsline {subsection}{\numberline {2.2.7}Sistema de control de versiones Git }{21}{subsection.2.2.7}
+\contentsline {subsection}{\numberline {2.2.8}MariaDB }{22}{subsection.2.2.8}
+\contentsline {subsection}{\numberline {2.2.9}SQLite}{23}{subsection.2.2.9}
+\contentsline {subsection}{\numberline {2.2.10}OpenCV }{23}{subsection.2.2.10}
+\contentsline {subsection}{\numberline {2.2.11}IntraFace }{24}{subsection.2.2.11}
+\contentsline {section}{\numberline {2.3}Lenguajes de programaci\IeC {\'o}n}{25}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}C++}{25}{subsection.2.3.1}
+\contentsline {subsubsection}{Historia}{26}{section*.15}
+\contentsline {subsubsection}{Caracter\IeC {\'\i }sticas}{26}{section*.16}
+\contentsline {subsection}{\numberline {2.3.2}Python }{27}{subsection.2.3.2}
+\contentsline {subsubsection}{Instalacion de Python}{27}{section*.17}
+\contentsline {subsubsection}{Herramientas b\IeC {\'a}sicas}{28}{section*.18}
+\contentsline {subsection}{\numberline {2.3.3}R }{29}{subsection.2.3.3}
+\contentsline {subsubsection}{\IeC {\textquestiondown }Qu\IeC {\'e} es R?}{29}{section*.19}
+\contentsline {subsubsection}{Historia}{29}{section*.20}
+\contentsline {section}{\numberline {2.4}Metodolog\IeC {\'\i }as de desarrollo de software}{30}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Metodolog\IeC {\'\i }a de desarrollo extremo }{30}{subsection.2.4.1}
+\contentsline {subsubsection}{El proceso de desarrollo extremo}{30}{section*.21}
+\contentsline {subsubsection}{Interacci\IeC {\'o}n con el cliente }{30}{section*.22}
+\contentsline {subsubsection}{Planificaci\IeC {\'o}n del proyecto}{32}{section*.23}
+\contentsline {subsubsection}{Dise\IeC {\~n}o, desarrollo y pruebas}{32}{section*.24}
+\contentsline {subsubsection}{Resumen de xTreme Programing}{34}{section*.25}
+\contentsline {subsection}{\numberline {2.4.2}Programaci\IeC {\'o}n Orientada a Objetos }{35}{subsection.2.4.2}
+\contentsline {section}{\numberline {2.5}Redes Neuronales }{36}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Historia}{36}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}Modelo de neurona biol\IeC {\'o}gica}{37}{subsection.2.5.2}
+\contentsline {subsection}{\numberline {2.5.3}Modelo de neurona artificial}{37}{subsection.2.5.3}
+\contentsline {subsection}{\numberline {2.5.4}Red Neuronal Artificial}{38}{subsection.2.5.4}
+\contentsline {subsection}{\numberline {2.5.5}Tipos de arquitectura de las RNA}{39}{subsection.2.5.5}
+\contentsline {subsection}{\numberline {2.5.6}Aprendizaje de las RNA}{40}{subsection.2.5.6}
+\contentsline {chapter}{\numberline {3}DESCRIPCI\IeC {\'O}N DE ACTIVIDADES REALIZADAS}{45}{chapter.3}
+\contentsline {section}{\numberline {3.1}An\IeC {\'a}lisis}{46}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Requisitos funcionales }{47}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Requisitos no funcionales }{47}{subsection.3.1.2}
+\contentsline {section}{\numberline {3.2}Dise\IeC {\~n}o}{49}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Aproximaci\IeC {\'o}n cl\IeC {\'a}sica }{49}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Aproximaci\IeC {\'o}n por Red Neural convolucional }{50}{subsection.3.2.2}
+\contentsline {subsubsection}{Dise\IeC {\~n}o de objetos.}{50}{section*.28}
+\contentsline {subsubsection}{Dise\IeC {\~n}o de interfaces}{51}{section*.31}
+\contentsline {section}{\numberline {3.3}Desarrollo}{52}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Captura de v\IeC {\'\i }deo y detecci\IeC {\'o}n de rostros}{53}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Clasificador de parpadeos}{53}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Normalizar im\IeC {\'a}genes}{53}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}Procesado}{54}{subsection.3.3.4}
+\contentsline {subsection}{\numberline {3.3.5}Amplificaci\IeC {\'o}n}{56}{subsection.3.3.5}
+\contentsline {section}{\numberline {3.4}Pruebas}{57}{section.3.4}
+\contentsline {section}{\numberline {3.5}Conclusiones}{57}{section.3.5}
+\contentsline {chapter}{Apendice}{59}{chapter*.34}
+\contentsline {chapter}{Apendice}{61}{chapter*.35}

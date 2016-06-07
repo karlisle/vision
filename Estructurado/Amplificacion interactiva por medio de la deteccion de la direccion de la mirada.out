@@ -52,27 +52,29 @@
 \BOOKMARK [3][-]{section*.24}{Dise\361o, desarrollo y pruebas}{subsection.2.4.1}% 52
 \BOOKMARK [3][-]{section*.25}{Resumen de xTreme Programing}{subsection.2.4.1}% 53
 \BOOKMARK [2][-]{subsection.2.4.2}{Programaci\363n Orientada a Objetos }{section.2.4}% 54
-\BOOKMARK [0][-]{chapter.3}{DESCRIPCI\323N DE ACTIVIDADES REALIZADAS}{}% 55
-\BOOKMARK [1][-]{section.3.1}{An\341lisis}{chapter.3}% 56
-\BOOKMARK [2][-]{subsection.3.1.1}{Requisitos funcionales }{section.3.1}% 57
-\BOOKMARK [2][-]{subsection.3.1.2}{Requisitos no funcionales }{section.3.1}% 58
-\BOOKMARK [1][-]{section.3.2}{Dise\361o}{chapter.3}% 59
-\BOOKMARK [2][-]{subsection.3.2.1}{Aproximaci\363n cl\341sica }{section.3.2}% 60
-\BOOKMARK [2][-]{subsection.3.2.2}{Aproximaci\363n por Red Neural convolucional }{section.3.2}% 61
-\BOOKMARK [3][-]{section*.27}{Dise\361o de objetos.}{subsection.3.2.2}% 62
-\BOOKMARK [3][-]{section*.30}{Dise\361o de interfaces}{subsection.3.2.2}% 63
-\BOOKMARK [1][-]{section.3.3}{Desarrollo}{chapter.3}% 64
-\BOOKMARK [2][-]{subsection.3.3.1}{Captura de v\355deo y detecci\363n de rostros}{section.3.3}% 65
-\BOOKMARK [2][-]{subsection.3.3.2}{Normalizar im\341genes}{section.3.3}% 66
-\BOOKMARK [2][-]{subsection.3.3.3}{Procesado}{section.3.3}% 67
-\BOOKMARK [2][-]{subsection.3.3.4}{Amplificaci\363n}{section.3.3}% 68
-\BOOKMARK [1][-]{section.3.4}{Pruebas}{chapter.3}% 69
-\BOOKMARK [1][-]{section.3.5}{Conclusiones}{chapter.3}% 70
-\BOOKMARK [0][-]{chapter*.33}{Apendice}{}% 71
-\BOOKMARK [1][-]{section.3.6}{Redes Neuronales }{chapter*.33}% 72
-\BOOKMARK [2][-]{subsection.3.6.1}{Historia}{section.3.6}% 73
-\BOOKMARK [2][-]{subsection.3.6.2}{Modelo de neurona biol\363gica}{section.3.6}% 74
-\BOOKMARK [2][-]{subsection.3.6.3}{Modelo de neurona artificial}{section.3.6}% 75
-\BOOKMARK [2][-]{subsection.3.6.4}{Red Neuronal Artificial}{section.3.6}% 76
-\BOOKMARK [2][-]{subsection.3.6.5}{Tipos de arquitectura de las RNA}{section.3.6}% 77
-\BOOKMARK [2][-]{subsection.3.6.6}{Aprendizaje de las RNA}{section.3.6}% 78
+\BOOKMARK [1][-]{section.2.5}{Redes Neuronales }{chapter.2}% 55
+\BOOKMARK [2][-]{subsection.2.5.1}{Historia}{section.2.5}% 56
+\BOOKMARK [2][-]{subsection.2.5.2}{Modelo de neurona biol\363gica}{section.2.5}% 57
+\BOOKMARK [2][-]{subsection.2.5.3}{Modelo de neurona artificial}{section.2.5}% 58
+\BOOKMARK [2][-]{subsection.2.5.4}{Red Neuronal Artificial}{section.2.5}% 59
+\BOOKMARK [2][-]{subsection.2.5.5}{Tipos de arquitectura de las RNA}{section.2.5}% 60
+\BOOKMARK [2][-]{subsection.2.5.6}{Aprendizaje de las RNA}{section.2.5}% 61
+\BOOKMARK [0][-]{chapter.3}{DESCRIPCI\323N DE ACTIVIDADES REALIZADAS}{}% 62
+\BOOKMARK [1][-]{section.3.1}{An\341lisis}{chapter.3}% 63
+\BOOKMARK [2][-]{subsection.3.1.1}{Requisitos funcionales }{section.3.1}% 64
+\BOOKMARK [2][-]{subsection.3.1.2}{Requisitos no funcionales }{section.3.1}% 65
+\BOOKMARK [1][-]{section.3.2}{Dise\361o}{chapter.3}% 66
+\BOOKMARK [2][-]{subsection.3.2.1}{Aproximaci\363n cl\341sica }{section.3.2}% 67
+\BOOKMARK [2][-]{subsection.3.2.2}{Aproximaci\363n por Red Neural convolucional }{section.3.2}% 68
+\BOOKMARK [3][-]{section*.28}{Dise\361o de objetos.}{subsection.3.2.2}% 69
+\BOOKMARK [3][-]{section*.31}{Dise\361o de interfaces}{subsection.3.2.2}% 70
+\BOOKMARK [1][-]{section.3.3}{Desarrollo}{chapter.3}% 71
+\BOOKMARK [2][-]{subsection.3.3.1}{Captura de v\355deo y detecci\363n de rostros}{section.3.3}% 72
+\BOOKMARK [2][-]{subsection.3.3.2}{Clasificador de parpadeos}{section.3.3}% 73
+\BOOKMARK [2][-]{subsection.3.3.3}{Normalizar im\341genes}{section.3.3}% 74
+\BOOKMARK [2][-]{subsection.3.3.4}{Procesado}{section.3.3}% 75
+\BOOKMARK [2][-]{subsection.3.3.5}{Amplificaci\363n}{section.3.3}% 76
+\BOOKMARK [1][-]{section.3.4}{Pruebas}{chapter.3}% 77
+\BOOKMARK [1][-]{section.3.5}{Conclusiones}{chapter.3}% 78
+\BOOKMARK [0][-]{chapter*.34}{Apendice}{}% 79
+\BOOKMARK [0][-]{chapter*.35}{Apendice}{}% 80

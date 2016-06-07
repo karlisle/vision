@@ -65,9 +65,9 @@
 
 % Pie de pagina
 
-\lfoot[]{ITSJR}
+%\lfoot[]{ITSJR}
 \cfoot[]{}
-\rfoot[J.C. Àvila Resendiz]{CICATA}
+%\rfoot[J.C. Àvila Resendiz]{CICATA}
 \renewcommand{\footrulewidth}{0.5pt}
 \usepackage{emptypage}
 
@@ -91,9 +91,9 @@
 
 \hypersetup{
     colorlinks=true,
-    linkcolor=rosa1,
+    linkcolor=negro,
     filecolor=magenta,      
-    urlcolor=cyan,
+    urlcolor=blue,
 }
 
 \urlstyle{same}
@@ -104,7 +104,8 @@
 \graphicspath{{./imagenes/}} % Specifies the directory where pictures are stored
 
 \definecolor{miorange}{rgb}{0.11, 0.43, 0.21}
-\definecolor{rosa1}{RGB}{236, 46, 80}
+\definecolor{negro}{RGB}{35, 0, 0}
+\definecolor{blue}{RGB}{0, 0, 255}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %----------------------------------------------------------------------------------------
@@ -257,16 +258,16 @@ $\ $
 	complicadas.\\
 	
 	No obstante las limitaciones que la tecnología actual presenta al momento de abordar dicha tarea, hay en este campo de la
-	\textit{visión artificial} un iteres constante en buscar y encontrar soluciones, al ya viejo problema de hacer que las 
+	\textit{visión artificial} un interés constante en buscar y encontrar soluciones, al ya viejo problema de hacer que las 
 	máquinas puedan ver el mundo tal como nosotros lo hacemos.\\
 	Debe decirse que se han realizado enormes avances en el área 
 	desde que la idea fue propuesta, pero remontemos la memoria a mucho antes, quizá hasta los tiempos 
 	de grandes filósofos y matemáticos griegos, por ejemplo \textit{Thales de Mileto (640-585 A.C)}, fue capaz de predecir un 
 	eclipse y de medir una pirámide gracias a los conocimientos de geometría que poseía,
-	\textit{Euclides} concebía la trigonometría como un conjunto de lineas y puntos, independientemente del sistema de coordenadas.\\
-	Posteriormente vino el tiempo renacentista y con el grandes pintores, como \textit{Filippo Bruneleschi(1377-1446)} que invento
-	la perspectiva, algo que dio mucho sobre lo que estudiar en los años que siguieron, consiguiendo crear a partir de ella todo
-	un mundo de teorías y métodos al respecto.\\
+	\textit{Euclides} concebía la trigonometría como un conjunto de lineas y puntos, independientemente del sistema de coordenadas.\\	
+	Posteriormente vino el tiempo renacentista y con el grandes pintores, \textit{Filippo Bruneleschi} \texttt{(1377-1446) }por ejemplo, 
+	que invento	la perspectiva, algo que dio mucho sobre lo que estudiar en los años que siguieron, consiguiendo crear a partir 
+	de ella todo 	un mundo de teorías y métodos al respecto.\\
 	Todo esto termino dando como resultado la construcción de maquinas y/o dispositivos que ayudaran al artista a capturar una 
 	imagen, todas estas máquinas y técnicas sobre la perspectiva dieron como resultado la invención final, 
 	la \textit{cámara fotográfica}.\\
@@ -421,13 +422,14 @@ $\ $
 		 temas de interferometría, colorimetría, industrial, metrología, óptica, análisis de imágenes, procesamiento de imágenes, 
 		 reconstrucción tridimensional e interpretación visual de la actividad.
 
-\newpage
 \section{Problemas a resolver}
+	\begin{multicols}{2}
 	\begin{itemize}
 		\item Amplificar áreas de la pantalla donde se enfoque la vista usando la vista.
 		\item Detectar y seguir la dirección de la mirada.
 		\item Proporcionar una mayor accesibilidad a débiles visuales.
 	\end{itemize}
+	\end{multicols}
 \newpage
 \section{Alcances y limitaciones}
 	\subsection{Alcances}
@@ -437,7 +439,7 @@ $\ $
 		El uso directo e inmediato de la detección de la dirección de la mirada es el de proporcionar una forma interactiva 
 		para magnificar zonas de la pantalla donde se enfoque la mirada en un todo momento.\\
 		
-		Inicialmente el sistema será desarrollado para funcionar en maquinas con sistema operativo Windows.\\
+		Inicialmente el sistema será desarrollado para funcionar en maquinas con sistema operativo Microsoft Windows.\\
 		
 	\subsection{Limitaciones}
 		Ciertamente el proyecto presenta algunas dificultades técnicas y algunas otras funcionales, entre las cuales encontramos
@@ -446,7 +448,7 @@ $\ $
 		Las condiciones no controladas, se esperan condiciones de operación dentro de ciertos parámetros, el rendimiento se puede 
 		ver afectado acorde a las condiciones del entorno.\\
 		
-		La API de magnificación de Windows esta solo disponible en para arquitecturas de 32 bits, lo que imposibilita el desarrollo
+		La API de magnificación de Microsoft Windows esta solo disponible en para arquitecturas de 32 bits, lo que imposibilita el desarrollo
 		del sistema para arquitecturas de 64 bits.\\
 	
 		
@@ -1089,7 +1091,157 @@ $\ $
 			observador externo.\\
 			Esto favorece en gran medida la comunicación entre los responsables de las distintas etapas de desarrollo de software.
 			
+\section{Redes Neuronales \label{a-neuronales}}
+	Las Redes Neuronales son un campo muy importante dentro de la Inteligencia Artificial. Inspirándose en el comportamiento conocido del cerebro
+	humano (principalmente el referido a las neuronas y sus conexiones), trata de crear modelos artificiales que solucionen problemas difíciles de
+	resolver mediante técnicas algorítmicas convencionales.  
+	
+	En esta página web trataremos de acercar al visitante a este tema, mostrando las bases neurológicas y matemáticas, los principales modelos 
+	vigentes y ejemplos interactivos que solucionan algunos problemas de forma eficaz.
+	
+	\subsection{Historia}
+		Desde la década de los 40, en la que nació y comenzó a desarrollarse la informática, el modelo neuronal la ha acompañado. De hecho, la
+		aparición de los computadores digitales y el desarrollo de las teorías modernas acerca del aprendizaje y del procesamiento neuronal se
+		produjeron aproximadamente al mismo tiempo, a finales de los años cuarenta.
 		
+		Desde entonces hasta nuestros días, la investigación neurofisiológica y el estudio de sistemas neuronales artificiales (ANS, Artificial Neural
+		Systems) han ido de la mano. Sin embargo, los modelos de ANS no se centran en la investigación neurológica, si no que toma conceptos e ideas
+		del campo de las ciencias naturales para aplicarlos a la resolución de problemas pertenecientes a otras ramas de las ciencias y la ingeniería.
+		
+		Podemos decir que la tecnología ANS incluye modelos inspirados por nuestra comprensión del cerebro, pero que no tienen por qué ajustarse
+		exactamente a los modelos derivados de dicho entendimiento.
+		
+		Los primeros ejemplos de estos sistemas aparecen al final de la década de los cincuenta. La referencia histórica más corriente es la que 
+		alude al trabajo realizado por Frank Rosenblatt en un dispositivo denominado perceptrón. Hay otros ejemplos, tales como el desarrollo del
+		Adaline por el profesor Bernard Widrow.
+		
+		Durante todos estos años, la tecnología ANS no siempre ha tenido la misma consideración en las ramas de la ingeniería y las ciencias de 
+		la computación, más ansiosas de resultados que las ciencias neuronales. A partir de 1969, el pesimismo debido a las limitadas capacidades
+		del perceptrón hizo languidecer este tipo de investigación.
+		
+		A principios de los 80, por un lado Hopfield y sus conferencias acerca de la memoria autoasociativa y por otro lado la aparición del libro
+		Parallel Distributed Processing (PDP), escrito por Rumelhart y McClelland reactivaron la investigación en el campo de las redes neuronales.
+		Hubo grandes avances que propiciaron el uso comercial en campos tan variados como el diagnóstico de enfermedades, la aproximación de 
+		funciones o el reconocimiento de imágenes.
+		
+	\subsection{Modelo de neurona biológica}
+		Fue Ramón y Cajal (1888) quién descubrió la estructura celular (neurona) del sistema nervioso \ref{i_bioneuron}.  Defendió la teoría de que 
+		las neuronas se interconectaban entre sí de forma paralela, y no formando un circuito cerrado como el sistema sanguíneo.
+		Una neurona consta de un cuerpo celular (soma) de entre 10 y 80 mm, del que surge un denso árbol de ramificaciones (dendritas) y una fibra
+		tubular (axón) de entre 100 mm y un metro.
+		De alguna forma, una neurona es un procesador de información muy simple:
+		\begin{itemize}
+			\item  \textbf{ Canal de entrada:} dendritas.
+			\item \textbf{Procesador:} soma.
+			\item \textbf{Canal de salida:} axón.
+		\end{itemize}
+        Una neurona cerebral puede recibir unas 10.000 entradas y enviar a su vez su salida a varios cientos de neuronas.
+        La conexión entre neuronas se llama sinapsis. No es una conexión física, si no que hay unos 2 mm de separación. Son conexiones
+        unidireccionales, en la que la transmisión de la información se hace de forma eléctrica en el interior de la neurona y de forma química entre
+        neuronas; gracias a unas sustancias específicas llamadas neurotransmisores.
+
+
+	\subsection{Modelo de neurona artificial}
+		 El modelo de Rumelhart y McClelland (1986) define un elemento de proceso (EP), o neurona artificial \ref{i_artifneuron} , como un dispositivo
+		 que a partir de un conjunto de entradas, $xi (i=1...n)$ o vector x, genera una única salida y.
+		 Esta neurona artificial consta de los siguientes elementos:
+		 \begin{multicols}{2}
+		 \begin{itemize}
+		 	\item Conjunto de pesos sinápticos $wij$. Representan la interacción entre la neurona presináptica j y la postsináptica i.
+		 	\item Regla de propagación $d(wij,xj(t))$: proporciona el potencial postsináptico, $hi(t)$.
+		 	\item Función de activación $ai(t)=f(ai(t-1)$, $hi(t))$: proporciona el estado de activación de la neurona en función del estado anterior y
+		 		 el valor postsináptico
+		 	\item Función de salida $Fi(t)$: proporciona la salida $yi(t)$, en función del estado de activación.
+		 \end{itemize}
+		 \end{multicols}
+		  Las señales de entrada y salida pueden ser señales binarias (0,1 – neuronas de McCulloch y Pitts), bipolares (-1,1), números enteros o
+		  continuos, variables borrosas, etc.
+		  La regla de propagación suele ser una suma ponderada del producto escalar del vector de entrada y el vector de pesos: 
+		  $$ h_{i}(t) = \Sigma w_{ij}w_{j}$$
+		  También se usa a menudo la distancia euclídea entre ambos vectores: 
+		  $$ h_{i}(t) = \Sigma (w_{ij}w_{j})^{2}$$
+		  Existen otro tipo de reglas menos conocidas como la distancia de Voronoi, de Mahalanobis, etc.
+		  La función de activación no suele tener en cuenta el estado anterior de la neurona, sino sólo el potencial $hi(t)$. Suele ser una función
+		  determinista y, casi siempre, continua y monótona creciente. Las más comunes son la función signo $(+1 s_{i} h_{i}(t)>0)$, $-1$ 
+		  en caso contrario), la función semilineal y las funciones sigmoides \ref{i_activacion}.
+		  La función de salida suele ser la identidad. En algunos casos es un valor umbral (la neurona no se activa hasta que su estado supera un
+		  determinado valor).
+
+		\begin{figure}[t]
+		\centering
+		\subfigure[Artificial]{\includegraphics[width=80mm]{neurona_artif.jpg} \label{i_artifneuron}}
+		\subfigure[Biológica]{\includegraphics[width=80mm]{neurona_bio.jpg} \label{i_bioneuron}}
+		\subfigure[Activacion]{\includegraphics[width=100mm]{funcionesActivacion.jpg} \label{i_activacion}}
+		\subfigure[Arquitectura]{\includegraphics[width=100mm]{arquitectura.jpg} \label{i_arquitectura}}
+		\caption{Modelos de neuronas \label{f-lenete-uml}}
+	\end{figure}	
+	
+	\subsection{Red Neuronal Artificial} 
+		Una red neuronal artificial (RNA) se puede definir (Hecht – Nielssen 93) como un grafo dirigido con las siguientes restricciones:	
+		\begin{multicols}{2}
+		 \begin{itemize}
+		 	\item Los nodos se llaman elementos de proceso (EP).
+		    \item Los enlaces se llaman conexiones y funcionan como caminos unidireccionales instantáneos
+		    \item Cada EP puede tener cualquier número de conexiones.
+		    \item Todas las conexiones que salgan de un EP deben tener la misma señal.
+		    \item Los EP pueden tener memoria local.
+		    \item Cada EP posee una función de transferencia que, en función de las entradas y la memoria local produce una señal de salida 
+		    y / o altera la memoria local.
+			\item Las entradas a la RNA llegan del mundo exterior, mientras que sus salidas son conexiones que abandonan la RNA.
+
+			 \end{itemize}
+		 \end{multicols}
+	\subsection{Tipos de arquitectura de las RNA}
+		 La arquitectura de una RNA es la estructura o patrón de conexiones de la red. Es conveniente recordar que las conexiones sinápticas son
+		 direccionales, es decir, la información sólo se transmite en un sentido.
+		 
+		En general, las neuronas suelen agruparse en unidades estructurales llamadas capas. Dentro de una capa, las neuronas suelen ser del mismo 
+		tipo. Se pueden distinguir tres tipos de capas:
+		\begin{multicols}{2}
+			\begin{itemize}
+		 		\item De entrada: reciben datos o señales procedentes del entorno.
+		 	   \item De salida: proporcionan la respuesta de la red a los estímulos de la entrada.
+		   	 \item Ocultas: no reciben ni suministran información al entorno (procesamiento interno de la red).
+		 	\end{itemize}
+		\end{multicols}
+		Generalmente las conexiones se realizan entre neuronas de distintas capas, pero puede haber conexiones intracapa o laterales y conexiones de
+		realimentación que siguen un sentido contrario al de entrada-salida.
+		
+	\subsection{Aprendizaje de las RNA}
+		 Es el proceso por el que una RNA actualiza los pesos (y, en algunos casos, la arquitectura) con el propósito de que la red pueda llevar a 
+		 cabo de forma efectiva una tarea determinada.
+		 Hay tres conceptos fundamentales en el aprendizaje:
+		 \begin{multicols}{2}
+			\begin{itemize}
+		 		\item \textbf{Paradigma de aprendizaje:} información de la que dispone la red.
+		 	   	\item \textbf{Regla de aprendizaje:} principios que gobiernan el aprendizaje.
+		   		 \item \textbf{Algoritmo de aprendizaje:} procedimiento numérico de ajuste de los pesos.
+		 	\end{itemize}
+		\end{multicols}
+		Existen dos paradigmas fundamentales de aprendizaje:
+		\begin{multicols}{2}
+			\begin{itemize}
+		 		\item \textbf{Supervisado:} la red trata de minimizar un error entre la salida que calcula y la salida deseada (conocida), 
+		 			de modo que la salida calculada termine siendo la deseada.
+		 	   	\item \textbf{No supervisado o auto rganizado:} la red conoce un conjunto de patrones sin conocer la respuesta deseada. 
+		 	   		Debe extraer rasgos o agrupar patrones similares.
+		 	\end{itemize}
+		\end{multicols}
+		En cuanto a los algoritmos de aprendizaje, tenemos cuatro tipos:
+		\begin{multicols}{2}
+			\begin{itemize}
+		 		\item \textbf{Minimización del error:} reducción del gradiente, retropropagación, etc. La modificación de pesos está orientada 
+		 			a que el error cometido sea mínimo.
+		 	   	\item \textbf{Boltzmann: }para redes estocásticas, donde se contemplan parámetros aleatorios.
+		 	   	\item \textbf{Hebb:} cuando el disparo de una célula activa otra, el peso de la conexión entre ambas tiende a reforzarse (Ley de Hebb).
+		 	   	\item \textbf{Competitivo:} sólo aprenden las neuronas que se acercan más a la salida deseada.
+			\end{itemize}
+		\end{multicols}
+		
+		Los algoritmos, y en general el proceso de aprendizaje, son complejos y suelen llevar bastante tiempo computacionalmente hablando. 
+		Su ventaja es que una vez ha aprendido, la red puede congelar sus pesos y funcionar en modo recuerdo o ejecución.
+		 
+		 		
 
 
 \chapter{DESCRIPCIÓN DE ACTIVIDADES REALIZADAS}
@@ -1269,6 +1421,12 @@ $\ $
 		Con todos estos datos es posible hacer recortes de la imagen en general y extraer regiones de interés, que en este caso son el 
 		área  de los ojos y los datos sobre la orientación de la cabeza.
 		Los cuales son enviados posteriormente a diferentes clases para seguir el proceso.
+
+	\subsection{Clasificador de parpadeos}
+		La construcción de este modulo no fue planeada e un inicio, y por ello no forma parte de los requerimientos, sin embargo
+		durante el proceso de adquisición de imágenes se hizo necesario el discriminar entre capturas utilizables y aquellas que no.
+		La idea básica es determinar cuando el ojo esta abierto y cuando esta cerrado, para ello se se usaron cuatro de los puntos del
+		contorno del ojo, puntos que IntraFace proporciona, 
 		
 	\subsection{Normalizar imágenes}
 		Antes de enviar las imágenes a la red neuronal \texttt{LeNet} para obtener la dirección de la mirada, es necesario realizar un 
@@ -1349,7 +1507,15 @@ $\ $
 	preparándome, y quien sabe, es posible que el próximo semestre este aquí comenzando la maestría.
 	
 
-\chapter*{Apéndice A}
+\chapter*{Resultados}
+\markboth{}{}
+\thispagestyle{empty}
+\lhead[\thepage]{}
+\rhead[]{\thepage}
+\addcontentsline{toc}{chapter}{Apendice}
+\newpage
+
+\chapter*{Conclusiones y recomendaciones}
 \markboth{}{}
 \thispagestyle{empty}
 \lhead[\thepage]{}
@@ -1358,157 +1524,7 @@ $\ $
 \newpage
 
 
-	\section{Redes Neuronales \label{a-neuronales}}
-		Las Redes Neuronales son un campo muy importante dentro de la Inteligencia Artificial. Inspirándose en el comportamiento conocido del cerebro
-		humano (principalmente el referido a las neuronas y sus conexiones), trata de crear modelos artificiales que solucionen problemas difíciles de
-		resolver mediante técnicas algorítmicas convencionales.  
-		
-		En esta página web trataremos de acercar al visitante a este tema, mostrando las bases neurológicas y matemáticas, los principales modelos 
-		vigentes y ejemplos interactivos que solucionan algunos problemas de forma eficaz.
-		
-		\subsection{Historia}
-			Desde la década de los 40, en la que nació y comenzó a desarrollarse la informática, el modelo neuronal la ha acompañado. De hecho, la
-			aparición de los computadores digitales y el desarrollo de las teorías modernas acerca del aprendizaje y del procesamiento neuronal se
-			produjeron aproximadamente al mismo tiempo, a finales de los años cuarenta.
-			
-			Desde entonces hasta nuestros días, la investigación neurofisiológica y el estudio de sistemas neuronales artificiales (ANS, Artificial Neural
-			Systems) han ido de la mano. Sin embargo, los modelos de ANS no se centran en la investigación neurológica, si no que toma conceptos e ideas
-			del campo de las ciencias naturales para aplicarlos a la resolución de problemas pertenecientes a otras ramas de las ciencias y la ingeniería.
-			
-			Podemos decir que la tecnología ANS incluye modelos inspirados por nuestra comprensión del cerebro, pero que no tienen por qué ajustarse
-			exactamente a los modelos derivados de dicho entendimiento.
-			
-			Los primeros ejemplos de estos sistemas aparecen al final de la década de los cincuenta. La referencia histórica más corriente es la que 
-			alude al trabajo realizado por Frank Rosenblatt en un dispositivo denominado perceptrón. Hay otros ejemplos, tales como el desarrollo del
-			Adaline por el profesor Bernard Widrow.
-			
-			Durante todos estos años, la tecnología ANS no siempre ha tenido la misma consideración en las ramas de la ingeniería y las ciencias de 
-			la computación, más ansiosas de resultados que las ciencias neuronales. A partir de 1969, el pesimismo debido a las limitadas capacidades
-			del perceptrón hizo languidecer este tipo de investigación.
-			
-			A principios de los 80, por un lado Hopfield y sus conferencias acerca de la memoria autoasociativa y por otro lado la aparición del libro
-			Parallel Distributed Processing (PDP), escrito por Rumelhart y McClelland reactivaron la investigación en el campo de las redes neuronales.
-			Hubo grandes avances que propiciaron el uso comercial en campos tan variados como el diagnóstico de enfermedades, la aproximación de 
-			funciones o el reconocimiento de imágenes.
-			
-		\subsection{Modelo de neurona biológica}
-			Fue Ramón y Cajal (1888) quién descubrió la estructura celular (neurona) del sistema nervioso \ref{i_bioneuron}.  Defendió la teoría de que 
-			las neuronas se interconectaban entre sí de forma paralela, y no formando un circuito cerrado como el sistema sanguíneo.
-			Una neurona consta de un cuerpo celular (soma) de entre 10 y 80 mm, del que surge un denso árbol de ramificaciones (dendritas) y una fibra
-			tubular (axón) de entre 100 mm y un metro.
-			De alguna forma, una neurona es un procesador de información muy simple:
-			\begin{itemize}
-				\item  \textbf{ Canal de entrada:} dendritas.
-				\item \textbf{Procesador:} soma.
-				\item \textbf{Canal de salida:} axón.
-			\end{itemize}
-	        Una neurona cerebral puede recibir unas 10.000 entradas y enviar a su vez su salida a varios cientos de neuronas.
-	        La conexión entre neuronas se llama sinapsis. No es una conexión física, si no que hay unos 2 mm de separación. Son conexiones
-	        unidireccionales, en la que la transmisión de la información se hace de forma eléctrica en el interior de la neurona y de forma química entre
-	        neuronas; gracias a unas sustancias específicas llamadas neurotransmisores.
 
-
-		\subsection{Modelo de neurona artificial}
-			 El modelo de Rumelhart y McClelland (1986) define un elemento de proceso (EP), o neurona artificial \ref{i_artifneuron} , como un dispositivo
-			 que a partir de un conjunto de entradas, $xi (i=1...n)$ o vector x, genera una única salida y.
-			 Esta neurona artificial consta de los siguientes elementos:
-			 \begin{multicols}{2}
-			 \begin{itemize}
-			 	\item Conjunto de pesos sinápticos $wij$. Representan la interacción entre la neurona presináptica j y la postsináptica i.
-			 	\item Regla de propagación $d(wij,xj(t))$: proporciona el potencial postsináptico, $hi(t)$.
-			 	\item Función de activación $ai(t)=f(ai(t-1)$, $hi(t))$: proporciona el estado de activación de la neurona en función del estado anterior y
-			 		 el valor postsináptico
-			 	\item Función de salida $Fi(t)$: proporciona la salida $yi(t)$, en función del estado de activación.
-			 \end{itemize}
-			 \end{multicols}
-			  Las señales de entrada y salida pueden ser señales binarias (0,1 – neuronas de McCulloch y Pitts), bipolares (-1,1), números enteros o
-			  continuos, variables borrosas, etc.
-			  La regla de propagación suele ser una suma ponderada del producto escalar del vector de entrada y el vector de pesos: 
-			  $$ h_{i}(t) = \Sigma w_{ij}w_{j}$$
-			  También se usa a menudo la distancia euclídea entre ambos vectores: 
-			  $$ h_{i}(t) = \Sigma (w_{ij}w_{j})^{2}$$
-			  Existen otro tipo de reglas menos conocidas como la distancia de Voronoi, de Mahalanobis, etc.
-			  La función de activación no suele tener en cuenta el estado anterior de la neurona, sino sólo el potencial hi(t). Suele ser una función
-			  determinista y, casi siempre, continua y monótona creciente. Las más comunes son la función signo (+1 si hi(t)>0, -1 en caso contrario), 
-			  la función semilineal y las funciones sigmoides \ref{i_activacion}.
-			  La función de salida suele ser la identidad. En algunos casos es un valor umbral (la neurona no se activa hasta que su estado supera un
-			  determinado valor).
-
-		\begin{figure}[t]
-			\centering
-			\subfigure[Artificial]{\includegraphics[width=80mm]{neurona_artif.jpg} \label{i_artifneuron}}
-			\subfigure[Biológica]{\includegraphics[width=80mm]{neurona_bio.jpg} \label{i_bioneuron}}
-			\subfigure[Activacion]{\includegraphics[width=100mm]{funcionesActivacion.jpg} \label{i_activacion}}
-			\subfigure[Arquitectura]{\includegraphics[width=100mm]{arquitectura.jpg} \label{i_arquitectura}}
-			\caption{Modelos de neuronas \label{f-lenete-uml}}
-		\end{figure}	
-		
-		\subsection{Red Neuronal Artificial} 
-			Una red neuronal artificial (RNA) se puede definir (Hecht – Nielssen 93) como un grafo dirigido con las siguientes restricciones:	
-			\begin{multicols}{2}
-			 \begin{itemize}
-			 	\item Los nodos se llaman elementos de proceso (EP).
-			    \item Los enlaces se llaman conexiones y funcionan como caminos unidireccionales instantáneos
-			    \item Cada EP puede tener cualquier número de conexiones.
-			    \item Todas las conexiones que salgan de un EP deben tener la misma señal.
-			    \item Los EP pueden tener memoria local.
-			    \item Cada EP posee una función de transferencia que, en función de las entradas y la memoria local produce una señal de salida 
-			    y / o altera la memoria local.
-				\item Las entradas a la RNA llegan del mundo exterior, mientras que sus salidas son conexiones que abandonan la RNA.
-
-			 \end{itemize}
-			 \end{multicols}
-		\subsection{Tipos de arquitectura de las RNA}
-			 La arquitectura de una RNA es la estructura o patrón de conexiones de la red. Es conveniente recordar que las conexiones sinápticas son
-			 direccionales, es decir, la información sólo se transmite en un sentido.
-			 
-			En general, las neuronas suelen agruparse en unidades estructurales llamadas capas. Dentro de una capa, las neuronas suelen ser del mismo 
-			tipo. Se pueden distinguir tres tipos de capas:
-			\begin{multicols}{2}
-				\begin{itemize}
-			 		\item De entrada: reciben datos o señales procedentes del entorno.
-			 	   \item De salida: proporcionan la respuesta de la red a los estímulos de la entrada.
-			   	 \item Ocultas: no reciben ni suministran información al entorno (procesamiento interno de la red).
-			 	\end{itemize}
-			\end{multicols}
-			Generalmente las conexiones se realizan entre neuronas de distintas capas, pero puede haber conexiones intracapa o laterales y conexiones de
-			realimentación que siguen un sentido contrario al de entrada-salida.
-			
-		\subsection{Aprendizaje de las RNA}
-			 Es el proceso por el que una RNA actualiza los pesos (y, en algunos casos, la arquitectura) con el propósito de que la red pueda llevar a 
-			 cabo de forma efectiva una tarea determinada.
-			 Hay tres conceptos fundamentales en el aprendizaje:
-			 \begin{multicols}{2}
-				\begin{itemize}
-			 		\item \textbf{Paradigma de aprendizaje:} información de la que dispone la red.
-			 	   	\item \textbf{Regla de aprendizaje:} principios que gobiernan el aprendizaje.
-			   		 \item \textbf{Algoritmo de aprendizaje:} procedimiento numérico de ajuste de los pesos.
-			 	\end{itemize}
-			\end{multicols}
-			Existen dos paradigmas fundamentales de aprendizaje:
-			\begin{multicols}{2}
-				\begin{itemize}
-			 		\item \textbf{Supervisado:} la red trata de minimizar un error entre la salida que calcula y la salida deseada (conocida), 
-			 			de modo que la salida calculada termine siendo la deseada.
-			 	   	\item \textbf{No supervisado o auto rganizado:} la red conoce un conjunto de patrones sin conocer la respuesta deseada. 
-			 	   		Debe extraer rasgos o agrupar patrones similares.
-			 	\end{itemize}
-			\end{multicols}
-			En cuanto a los algoritmos de aprendizaje, tenemos cuatro tipos:
-			\begin{multicols}{2}
-				\begin{itemize}
-			 		\item \textbf{Minimización del error:} reducción del gradiente, retropropagación, etc. La modificación de pesos está orientada 
-			 			a que el error cometido sea mínimo.
-			 	   	\item \textbf{Boltzmann: }para redes estocásticas, donde se contemplan parámetros aleatorios.
-			 	   	\item \textbf{Hebb:} cuando el disparo de una célula activa otra, el peso de la conexión entre ambas tiende a reforzarse (Ley de Hebb).
-			 	   	\item \textbf{Competitivo:} sólo aprenden las neuronas que se acercan más a la salida deseada.
-				\end{itemize}
-			\end{multicols}
-			
-			Los algoritmos, y en general el proceso de aprendizaje, son complejos y suelen llevar bastante tiempo computacionalmente hablando. 
-			Su ventaja es que una vez ha aprendido, la red puede congelar sus pesos y funcionar en modo recuerdo o ejecución.
-			 
-			 
 			
 
 \newpage
