@@ -73,7 +73,7 @@
 \contentsline {subsection}{\numberline {3.3.1}Captura de v\IeC {\'\i }deo y detecci\IeC {\'o}n de rostros}{53}{subsection.3.3.1}
 \contentsline {subsection}{\numberline {3.3.2}Clasificador de parpadeo}{54}{subsection.3.3.2}
 \contentsline {subsection}{\numberline {3.3.3}Normalizar im\IeC {\'a}genes}{55}{subsection.3.3.3}
-\contentsline {subsection}{\numberline {3.3.4}Procesado}{56}{subsection.3.3.4}
+\contentsline {subsection}{\numberline {3.3.4}Detecci\IeC {\'o}n del \IeC {\'a}ngulo de la mirada}{56}{subsection.3.3.4}
 \contentsline {subsection}{\numberline {3.3.5}Amplificaci\IeC {\'o}n}{57}{subsection.3.3.5}
 \contentsline {chapter}{Resultados}{59}{chapter*.38}
 \contentsline {section}{\numberline {3.4}Pruebas}{59}{section.3.4}

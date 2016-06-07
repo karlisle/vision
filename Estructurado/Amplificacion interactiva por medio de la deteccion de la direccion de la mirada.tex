@@ -22,7 +22,7 @@
 		\oddsidemargin = -1cm
 		\parindent = 5mm
 
-%\usepackage{geometry} % Required to change the page size to A4
+\usepackage{geometry} % Required to change the page size to A4
 %\geometry{a4paper} % Set the page size to be A4 as opposed to the default US Letter
 
 
@@ -33,22 +33,11 @@
  left=25mm,
  top=25mm,
  }
-
-
-
 \usepackage{graphicx} % Required for including pictures
-
 \usepackage{float} % Allows putting an [H] in \begin{figure} to specify the exact location of the figure
 \usepackage{wrapfig} % Allows in-line images such as the example fish picture
-
-
-
-
-%\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
-
 \linespread{1.5} % Line spacing
 
-%\setlength\parindent{0pt} % Uncomment to remove all indentation from paragraphs
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
 \usepackage[T1]{fontenc}
@@ -113,31 +102,38 @@
 %	begin {Glosario}
 %----------------------------------------------------------------------------------------
 
-\newglossaryentry{SO}{name={SO},description={Es el sistema o conjunto de aplicaciones que permiten que una computadora lleven a cabo sus funciones.}}
-\newglossaryentry{Linux}{name={Linux},description={GNU/Linux Sistema Operativo creado y distribuido por miles de 
-													personas alrededor del mundo}}
-													
-\newglossaryentry{Windows}{name={Windows},description={Sistema Operativo creado y distribuido por Microsoft.}}
-
-\newglossaryentry{Mac}{name={Mac},description={Sistema Operativo creado y distribuido por Apple}}
-
+\newglossaryentry{SO}{name={SO},description={Es el sistema o conjunto de aplicaciones que permiten que una computadora lleven a cabo sus 
+														funciones.}}
+\newglossaryentry{Linux}{name={GNU/Linux},description={GNU/Linux Sistema Operativo creado y distribuido por miles de 
+														personas alrededor del mundo}}												
+\newglossaryentry{Windows}{name={Microsoft Windows},description={Sistema Operativo creado y distribuido por Microsoft.}}
+\newglossaryentry{Mac}{name={Mac OS X},description={Sistema Operativo creado y distribuido por Apple.Inc}}
+\newglossaryentry{cv}{name={VC},description={La visión artificial, también conocida como visión por computador o visión técnica, es un subcampo de la inteligencia artificial.}}
+\newglossaryentry{ieee}{name={IEEE Std.},description={El Instituto de Ingeniería Eléctrica y Electrónica.}}
+\newglossaryentry{gui}{name={GUI},description={Interfaz Gráfica de Usuario, las ventanas que ve y usa en un entorno visual.}}
+\newglossaryentry{Linus}{name={Linus Tolvards},description={Linus Benedict Torvalds es un ingeniero de software finés americano, conocido por iniciar y mantener el desarrollo 
+														del "kernel" \gls{Linux}, basándose en el sistema operativo libre Minix creado por Andrew S.}} 
+\newglossaryentry{http}{name={HTTP},description={\textit{Hypertext Transfer Protocol} o HTTP (en español protocolo de transferencia de hipertexto).}}
+\newglossaryentry{ftp}{name={FTP},description={FTP (siglas en inglés de \textit{File Transfer Protocol}, ó \textit{Protocolo de Transferencia de Archivos})}}
+\newglossaryentry{ssh}{name={SSH},description={SSH (\textit{Secure SHell}, en español: \textit{intérprete de órdenes seguro}) }}
+\newglossaryentry{tcp}{name={TCP/IP},description={TCP/IP:\textit{Transmission Control Protocol/Internet Protocol} ó \textit{Protocolo de control de transmisión/Protocolo de Internet}}}
+\newglossaryentry{GPL}{name={GPL},description={Licencia Pública General de GNU o más conocida por su nombre en inglés GNU General Public License}}
+\newglossaryentry{SGBD}{name={SGBD},description={Sistema Gestor de Base de Datos}}
+\newglossaryentry{ACID}{name={ACID},description={En bases de datos se denomina ACID a las características de los parámetros que permiten clasificar las transacciones de los sistemas 														\gls{SGBD}}}
+\newglossaryentry{BSD}{name={BSD},description={La licencia BSD es la licencia de software otorgada principalmente para los sistemas BSD (Berkeley Software Distribution),}}
+\newglossaryentry{IPP}{name={IPP},description={Intel \textit{Integrated Performance Primitives} (Intel IPP) - Una librería de algoritmos altamente optimizados para la construcción de aplicaciones.}}
+%\newglossaryentry{}{name={},description={}}
+														
+														
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newglossaryentry{}{name={},description={}}
+\newglossaryentry{}{name={},description={}} 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 %----------------------------------------------------------------------------------------
 %	End {Glosario}
 %----------------------------------------------------------------------------------------
 
-
 \pagestyle{fancy}
-
 \begin{document}
-
-%\lhead[\thepage]{CAPÍTULO \thechapter. \rightmark}
-%\rhead[CAPÍTULO \thechapter. \leftmark]{\thepage}
-
-
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
@@ -169,9 +165,9 @@
 %	TITLE SECTION
 %----------------------------------------------------------------------------------------
 
-\HRule \\[0.4cm]
+\vspace{0.5cm}
 { \huge \bfseries Amplificación interactiva de contenido por medio de la detección de la dirección de la mirada.}\\[0.4cm] % Title of your document
-\HRule \\[1.5cm]
+\vspace{0.5cm}
 
 \textsc{\Large REPORTE TÉCNICO DE RESIDENCIA PROFESIONAL}\\[3cm] % Name of your university/college
 %----------------------------------------------------------------------------------------
@@ -184,7 +180,6 @@
 	\Large \textsc{11590163}\\[0.1cm]
 	\Large \textsc{Ingeniería en Sistemas Computacionales}\\[3cm]
 
-	
 \end{center}
 
 %\begin{minipage}{0.4\textwidth}
@@ -218,7 +213,6 @@
 $\ $
 \thispagestyle{empty}
 \end{titlepage}
-
 %----------------------------------------------------------------------------------------
 %	TABLE OF CONTENTS
 %----------------------------------------------------------------------------------------
@@ -231,11 +225,8 @@ $\ $
 \cleardoublepage
 \addcontentsline{toc}{chapter}{Lista de figuras} % para que aparezca en el indice de contenidos
 \listoffigures
-
-%\newpage % Begins the essay on a new page instead of on the same page as the table of contents
 $\ $
 \thispagestyle{empty} 
-%\appendix
 %----------------------------------------------------------------------------------------
 %	INTRODUCTION
 %----------------------------------------------------------------------------------------
@@ -254,11 +245,11 @@ $\ $
 	Técnicamente se llama visión a la capacidad de interpretar nuestro entorno gracias a los rayos de luz que alcanzan
 	el ojo. También se entiende por visión toda acción de ver.\\	
 	La acción simple de \textit{ver}, es en términos simples una de las mas complejas tareas que como humanos realizamos, en
-	todo momento, la cantidad de factores que influyen en la correcta percepción de los estímulos visuales y su posterior 
-	procesado e interpretación, son tareas que abordadas desde la perspectiva de un dispositivo electrónico, son extremadamente
+	todo momento, la cantidad de factores que involucrada en la correcta percepción de los estímulos visuales y su posterior 
+	procesamiento e interpretación, son tareas que abordadas desde la perspectiva de un dispositivo electrónico, son extremadamente
 	complicadas.\\
 	
-	No obstante las limitaciones que la tecnología actual presenta al momento de abordar dicha tarea, hay en este campo de la
+	La tecnología actual tiene limitaciones al tratar de abordar esta tare, hay en el campo de la
 	\textit{visión artificial} un interés constante en buscar y encontrar soluciones, al ya viejo problema de hacer que las 
 	máquinas puedan ver el mundo tal como nosotros lo hacemos.\\
 	Debe decirse que se han realizado enormes avances en el área 
@@ -266,7 +257,7 @@ $\ $
 	de grandes filósofos y matemáticos griegos, por ejemplo \textit{Thales de Mileto (640-585 A.C)}, fue capaz de predecir un 
 	eclipse y de medir una pirámide gracias a los conocimientos de geometría que poseía,
 	\textit{Euclides} concebía la trigonometría como un conjunto de lineas y puntos, independientemente del sistema de coordenadas.\\	
-	Posteriormente vino el tiempo renacentista y con el grandes pintores, \textit{Filippo Bruneleschi} \texttt{(1377-1446) }por ejemplo, 
+	Posteriormente en la época renacentista y grandes pintores, \textit{Filippo Bruneleschi} \texttt{(1377-1446) }por ejemplo, 
 	que invento	la perspectiva, algo que dio mucho sobre lo que estudiar en los años que siguieron, consiguiendo crear a partir 
 	de ella todo 	un mundo de teorías y métodos al respecto.\\
 	Todo esto termino dando como resultado la construcción de maquinas y/o dispositivos que ayudaran al artista a capturar una 
@@ -277,18 +268,18 @@ $\ $
 	
 	El presente proyecto es uno más de los trabajos que se realizan ahora mismo en el campo de visión por computadora o visión 
 	artificial, como se expone en los primeros párrafos la vista es uno de los sentidos que mas extensamente usamos en el día a día,
-	más aun en un mundo lleno de dispositivos que nos permiten visualizar información por medio de pantallas, específicamente,
+	más aun, en un mundo lleno de dispositivos que nos permiten visualizar información por medio de pantallas, específicamente,
 	\textit{computadoras}, sin embargo no todas las personas pueden hacerlo de manera optima o en condiciones que permitan 
 	obtener una buena \textit{visión} de las mismas, este segmento de personas son las que presentan alguna debilidad visual.\\
 	Por lo tanto, dicho segmento de personas tienen dificultades para sumergirse de manera optima en el medio digital, por ello
-	este proyecto busca una solución que permita un nivel de accesibilidad mucho mayor, ademas se busca de dotar de del elemento 
+	este proyecto busca una solución que permita un nivel de accesibilidad mucho mayor, ademas se busca de dotar del elemento 
 	interactivo a los propios ojos, pues sera por medio de la detección de la dirección de la mirada que se realice todo el proceso.\\	
-	El proyecto en si es ambicioso de primeas, pues actualmente pese a que la tecnología de asistencia para magnificar áreas de la
+	El proyecto en si es ambicioso de primeras, pues actualmente pese a que la tecnología de asistencia para magnificar áreas de la
 	pantalla ya existen, no hay una opción que permita a los usuarios hacerlo de forma interactiva, usando para ello solo la vista.\\
 	
-	Se abordara la el problema usando las herramientas de la ingeniería de software, las técnicas y herramientas se presentaran 
-	en los diferentes capítulos del presente documento, así como los resultados de las investigaciones y procesos para llevar a cavo 
-	la tarea expuesta.
+	Se abordara el problema usando las herramientas de la ingeniería de software, las técnicas y herramientas se presentaran 
+	en los diferentes capítulos del presente documento, así como los resultados de las investigaciones y procesos para llevar a 
+	buen término la tarea expuesta.
 
 \newpage
 
@@ -313,19 +304,19 @@ $\ $
 \section{Objetivos \label{objetivos}}
 	\subsection{Objetivo general}
 	
-		Desarrollar una aplicación de amplificación interactiva para computadoras con sistema operativo Windows, 
-		que asista a personas con bajas capacidades visuales, por medio del seguimiento y estimación de la dirección 
-		de la mirada sobre la pantalla de la computadora y en base a ello amplificar la zona de la pantalla en la 
-		que enfoca la vista.
+		Desarrollar una aplicación de amplificación interactiva para computadoras con sistema operativo Microsoft Windows, 
+		por medio del seguimiento y estimación de la dirección de la mirada sobre la pantalla de la computadora y en base 
+		a ello amplificar la zona de la pantalla en la que enfoca la vista, para asistir a personas con bajas capacidades 
+		visuales.
 	
 	\subsection{Objetivos específicos}
 		\begin{itemize}
 			\item Detección precisa y confiable del movimiento del globo ocular, con la ayuda de software de 
-			procesamiento de imágenes digitales.
+				procesamiento de imágenes digitales.
 			\item Hacer uso de las API’s del sistema operativo que proveen las herramientas que magnifican la zona de
-			la pantalla seleccionada.
-			\item Integrar los dos componentes anteriores y de esa forma obtener un magnificador con interacción visual.
-			\item Una vez se cuente con un prototipo, realizar pruebas de campo.
+				la pantalla enfocada.
+			\item Integrar los diferentes componentes para obtener un magnificador interactivo.
+%			\item Una vez se cuente con un prototipo, realizar pruebas de campo.
 		\end{itemize}
 		
 
@@ -333,9 +324,9 @@ $\ $
 \section{Justificación \label{justificacion}}
 	Pese al avance desmesurado de la tecnología en los últimos años en donde las capacidades de los dispositivos se
 	duplica cada cierto tiempo, respondiendo de forma bastante precisa la emblemática ley de 
-	\href{https://en.wikipedia.org/wiki/Moore's_law}{Moore} hay aun a día de hoy
-	ciertas cuestiones que no han sido abordadas, quizá en gran parte debido al amplio panorama de problemas que se
-	pueden afrontar con soluciones tecnológicas y de alguna forma ayudar a solventar o/y hacer más fácil las mismas.
+	\href{https://en.wikipedia.org/wiki/Moore's_law}{Moore} \footnote{\scriptsize Moore: https://en.wikipedia.org/wiki/Moore's\_law} 
+	hay aun a día de hoy ciertas cuestiones que no han sido abordadas, quizá en gran parte debido al amplio panorama de problemas
+	que se 	pueden afrontar con soluciones tecnológicas y de alguna forma ayudar a solventar o/y hacer más fácil las mismas.
 	
 	Aun si los programas de asistencia a personas con capacidades diferentes están a día de hoy cobrando mayor 			  	
 	relevancia en prácticamente todos los aspectos sociales, pues en la actualidad las posibilidades de llevar una vida
@@ -345,10 +336,10 @@ $\ $
 	principal componente proporcionado por las herramientas de accesibilidad de los Sistemas Operativos \gls{SO} actuales,
 	siendo común en los tres mas importantes \gls{Linux}, \gls{Windows}, \gls{Mac}.
 	
-	Siendo de los tres el segundo, Windows, en el cual se enfocaran los esfuerzos de hacer converger las herramientas de
-	accesibilidad ya mencionadas y las tecnologías de visión por computadora CV, para ofrecer a los discapacitados 
+	Siendo de los tres, \gls{Windows}, en el cual se enfocaran los esfuerzos de hacer converger las herramientas de
+	accesibilidad ya mencionadas y las tecnologías de visión por computadora (\gls{cv}), para ofrecer a los discapacitados 
 	visuales una forma de hacer uso de la tecnología, mismos que según datos de la OMS de 2002, eran mas de 161 millones
-	de personas, en especifico de computadoras, sin que su limitante visual les impida el poder interactuar con el 
+	de personas, en especifico de computadoras, sin que su limitación visual les impida el poder interactuar con el 
 	equipo.
 	
 	Específicamente el segmento de la población con discapacidad visual en el que se enfoca el desarrollo de este
@@ -373,8 +364,8 @@ $\ $
 		\item[Fax:] 5395 4147
 	\end{description}
 		\subsubsection{Misión}
-			Somos un centro de investigación creado por el IPN para fortalecer su impacto a nivel nacional, que atiende
-			necesidades de formación de recursos humanos y de desarrollo tecnológico de la región, a través de proyectos
+			Somos un centro de investigación creado por el Instituto Politécnico Nacional IPN para fortalecer su impacto a nivel nacional,
+			que atiende 	necesidades de formación de recursos humanos y de desarrollo tecnológico de la región, a través de proyectos
 			de investigación que contribuyen al desarrollo social y a la competitividad de los sectores productivo y de
 			servicios, con el respaldo de las capacidades del Instituto, con un enfoque multidisciplinario, innovador y
 			de excelencia, en un marco de sustentabilidad.
@@ -440,7 +431,7 @@ $\ $
 		El uso directo e inmediato de la detección de la dirección de la mirada es el de proporcionar una forma interactiva 
 		para magnificar zonas de la pantalla donde se enfoque la mirada en un todo momento.\\
 		
-		Inicialmente el sistema será desarrollado para funcionar en maquinas con sistema operativo Microsoft Windows.\\
+		Inicialmente el sistema será desarrollado para funcionar en maquinas con sistema operativo \gls{Windows}.\\
 		
 	\subsection{Limitaciones}
 		Ciertamente el proyecto presenta algunas dificultades técnicas y algunas otras funcionales, entre las cuales encontramos
@@ -449,7 +440,7 @@ $\ $
 		Las condiciones no controladas, se esperan condiciones de operación dentro de ciertos parámetros, el rendimiento se puede 
 		ver afectado acorde a las condiciones del entorno.\\
 		
-		La API de magnificación de Microsoft Windows esta solo disponible en para arquitecturas de 32 bits, lo que imposibilita el desarrollo
+		La API de magnificación de \gls{Windows} esta solo disponible en para arquitecturas de 32 bits, lo que imposibilita el desarrollo
 		del sistema para arquitecturas de 64 bits.\\
 	
 		
@@ -464,14 +455,14 @@ $\ $
 		Existen varias definiciones similares aceptadas para software, pero probablemente la más formal sea la siguiente:\\
 		
 		“Es el conjunto de los programas de cómputo, procedimientos, reglas, documentación y datos asociados que forman parte de las
-		operaciones de un sistema de computación” (IEEE Std, 1993).\\
+		operaciones de un sistema de computación” (\gls{ieee} 1993).\\
 		
 		Considerando esta definición, el concepto de software va más allá de los programas de computación en sus distintos estados: 
 		código fuente, binario o ejecutable; también su documentación, los datos a procesar e incluso la información de usuario forman
-		parte del software: es decir, abarca todo lo intangible, todo lo «no físico» relacionado.\\
+		parte del software: es decir, abarca todo lo intangible, todo lo \textit{«no físico» }relacionado.\\
 		
 		El término software fue usado por primera vez en este sentido por John W. Tukey en 1957. En la ingeniería de software y las
-		ciencias de la computación, el software es toda la información procesada por los sistemas informáticos: programas y datos.
+		ciencias de la computación, el software es toda la información procesada por los sistemas informáticos: \textit{programas y datos}.
 		
 	\subsection{Clasificación del software \label{clasSoft}}
 		Si bien la definición anterior de software es, en cierto modo arbitraria, y a veces confusa, a los fines prácticos se puede
@@ -510,10 +501,10 @@ $\ $
 			\begin{itemize}
 				\item Entornos de desarrollo integrado (\textsc{IDE}). Agrupan las anteriores herramientas, usualmente en un entorno
 				visual, de forma que el programador no necesite introducir múltiples instrucciones para compilar , interpretar y depurar.
-				Cuentan con una interfaz gráfica de usuario \textsc{GUI}.
+				Cuentan con una interfaz gráfica de usuario \textsc{gui}.
 			\end{itemize}
 			
-			\item \textbf{Software de aplicacion:} es aquel que permite a los usuarios llevar a cabo una o varias tareas específicas, en
+			\item \textbf{Software de aplicación:} es aquel que permite a los usuarios llevar a cabo una o varias tareas específicas, en
 			cualquier campo de actividad susceptible de ser automatizadas o asistido, con especial énfasis en los negocios. Incluye entre
 			muchos otros:
 			\begin{multicols}{2}
@@ -619,7 +610,7 @@ $\ $
 			\centering
 			\subfigure[Sublime-Text]{\includegraphics[width=110mm]{subl3.png} \label{i_sublime}}
 			\subfigure[RStudio]{\includegraphics[width=110mm]{rstudio.png} \label{i_rstudio}}
-			\subfigure[CMake]{\includegraphics[width=80mm]{cmake.png} \label{i_cmake}}
+			\subfigure[CMake]{\includegraphics[width=50mm]{cmake.png} \label{i_cmake}}
 			\caption{Herramientas de desarrollo.}
 		\end{figure}	
 	\subsection{Sublime-Text \label{subl}}
@@ -630,7 +621,7 @@ $\ $
 		Características:
 		\begin{multicols}{2}
 			\begin{itemize}
-				 \item Minimapa. consiste en una previsualización de la estructura del código
+				 \item Minimapa. consiste en una pre-visualización de la estructura del código
 				 \item Multi selección: Hace una selección múltiple de un término por diferentes partes del archivo.
 				 \item Multi cursor: Crea cursores con los que podemos escribir texto de forma arbitraria en diferentes posiciones del
 				 	   archivo.
@@ -709,7 +700,7 @@ $\ $
 	\subsection*{Software de aplicación}
 	
 	\subsection{Sistema de control de versiones Git \label{git}}
-		Git es un software de control de versiones diseñado por \textit{Linus Torvalds}, pensando en la eficiencia y la confiabilidad del
+		Git es un software de control de versiones diseñado por \gls{Linus}, pensando en la eficiencia y la confiabilidad del
 		mantenimiento de versiones de aplicaciones cuando éstas tienen un gran número de archivos de código fuente. Al principio, Git se
 		pensó como un motor de bajo nivel sobre el cual otros pudieran escribir la interfaz de usuario o front end como Cogito o StGIT. 
 		
@@ -722,8 +713,8 @@ $\ $
 				\item Fuerte apoyo al desarrollo no lineal, por ende rapidez en la gestión de ramas y mezclado de diferentes versiones. 
 				\item Gestión distribuida, Git le da a cada programador una copia local del historial del desarrollo entero, y los 
 				cambios se propagan entre los repositorios locales. 
-				\item Los almacenes de información pueden publicarse por HTTP, FTP, rsync o mediante un protocolo nativo, ya sea a través 
-				de una conexión TCP/IP simple o a través de cifrado SSH.
+				\item Los almacenes de información pueden publicarse por \gls{http}, \gls{ftp}, rsync o mediante un protocolo nativo, ya sea a través 
+				de una conexión \gls{tcp} simple o a través de cifrado \gls{ssh}.
 				\item Gestión eficiente de proyectos grandes, dada la rapidez de gestión de diferencias entre archivos.
 			\end{itemize}
 		\end{multicols}
@@ -733,21 +724,21 @@ $\ $
 	
 		
 	\subsection{MariaDB \label{maria}}
-		\textsc{MariaDB} es un sistema de gestión de bases de datos derivado de \textsc{MySQL} con licencia \textsc{GPL}. 
+		\textsc{MariaDB} es un sistema de gestión de bases de datos derivado de \textsc{MySQL} con licencia \textsc{\gls{GPL}}.
 		Está desarrollado por \textit{Michael (Monty) Widenius (fundador de MySQL)} y la comunidad de desarrolladores de software 
 		libre. 
 		
 		Introduce dos motores de almacenamiento nuevos, uno llamado Aria -que reemplaza con ventajas a \textsc{MyISAM}- y otro
 		lamado \textsc{XtraDB} -en sustitución de \textsc{InnoDB}. Tiene una alta compatibilidad con MySQL ya que posee las mismas
 		órdenes, interfaces, APIs y bibliotecas, siendo su objetivo poder cambiar un servidor por otro directamente. 
-		Este \textsc{SGBD} surge a raíz de la compra de \textit{Sun Microsystems}.
+		Este \textsc{\gls{SGBD}} surge a raíz de la compra de \textit{Sun Microsystems}.
 		
 		MariaDB es un fork directo de MySQL que asegura, permanecerá una versión de este producto con licencia GPL. 
 		La ultima versión estable se puede encontrar en la web oficial del proyecto \href{https://mariadb.org/}{MariaDB} 
 		\footnote{\scriptsize MariaDB: https://mariadb.org/}.
 		
 	\subsection{SQLite}
-		\textsc{SQLite} es un sistema de gestión de bases de datos relacional compatible con \textsc{ACID}, contenida en una
+		\textsc{SQLite} es un sistema de gestión de bases de datos relacional compatible con \textsc{\gls{ACID}}, contenida en una
 		relativamente pequeña (~275 kiB) biblioteca escrita en C. SQLite es un proyecto de dominio público creado por 
 		\textit{D. Richard Hipp}.
 		
@@ -772,17 +763,17 @@ $\ $
 		\textsc{OpenCV} es una biblioteca libre de visión artificial originalmente desarrollada por \textsc{Intel}. 
 		Desde que apareció su primera versión alfa en el mes de enero de 1999, se ha utilizado en infinidad de aplicaciones. 
 		Desde sistemas de seguridad con detección de movimiento, hasta aplicaciones de control de procesos donde se requiere
-		reconocimiento de objetos. Esto se debe a que su publicación se da bajo licencia \textsc{BSD}, que permite que sea usada
+		reconocimiento de objetos. Esto se debe a que su publicación se da bajo licencia \textsc{\gls{BSD}}, que permite que sea usada
 		libremente para propósitos comerciales y de investigación con las condiciones en ella expresadas.
 		
-		OpenCV es multiplataforma, existiendo versiones para \textsc{GNU/Linux, Mac OS X y Windows}. Contiene más de 500 funciones 
+		OpenCV es multiplataforma, existiendo versiones para \textsc{\gls{Linux}, \gls{Mac} y \gls{Windows}}. Contiene más de 500 funciones 
 		que abarcan una gran gama de áreas en el proceso de visión, como reconocimiento de objetos (reconocimiento facial), 
 		calibración de cámaras, visión estérea y visión robótica.
 		
 		El proyecto pretende proporcionar un entorno de desarrollo fácil de utilizar y altamente eficiente. Esto se ha logrado
 		realizando su programación en código C y C++ optimizados, aprovechando además las capacidades que proveen los procesadores
 		multinúcleo. OpenCV puede además utilizar el sistema de primitivas de rendimiento integradas de Intel, un conjunto de 
-		rutinas de bajo nivel específicas para procesadores Intel \textsc{(IPP)}.
+		rutinas de bajo nivel específicas para procesadores Intel \textsc{(\gls{IPP})}.
 		
 		
 	\subsection{IntraFace \label{intraface}}
@@ -1345,8 +1336,8 @@ $\ $
 		\begin{figure}[t]
 		 	\centering
 		 	\subfigure[Clásico]{\includegraphics[width=69mm]{./Diagramas/clasico.pdf} \label{f_clasic}}
-		 	\subfigure[LeNet]{\includegraphics[width=69mm]{./Diagramas/cnn.pdf} \label{f_lenet}}
-			\caption{Los dos diferentes enfoques considerados a) Clasico b) LeNet \label{fig:enfoque_clásico}} 
+		 	\subfigure[CNN]{\includegraphics[width=69mm]{./Diagramas/cnn.pdf} \label{f_lenet}}
+			\caption{Los dos diferentes enfoques considerados \label{fig:enfoque_clásico}} 
 		\end{figure}
 	\subsection{Aproximación por Red Neural convolucional \label{lenet}}
 		Sin embargo la solución clásica, nos es optima en condiciones no controladas, es decir fuera de las condiciones de un laboratorio, este método 
@@ -1492,7 +1483,7 @@ $\ $
 		De esta forma los valores reales de la posición de la mirada son convertidos al espacio normalizado en 2D de la cámara.
 		Para reducir el efecto de las condiciones de iluminación el histograma de las imágenes es equializado antes del procesos de normalizar.
 		
-	\subsection{Procesado}
+	\subsection{Detección del ángulo de la mirada}
 		La tarea de la CNN es aprender a extraer de los datos entradas (\textit{posición de la cabeza e imágenes de los ojos}, el angulo de la
 		mirada en el espacio normalizado.
 		Para lograr eso es el modelo usado es la arquitectura de red \texttt{LeNet} \ref{i_lenetModel} que consiste en una capa de convolución 
