@@ -22,7 +22,7 @@
 		\oddsidemargin = -1cm
 		\parindent = 5mm
 
-%\usepackage{geometry} % Required to change the page size to A4
+\usepackage{geometry} % Required to change the page size to A4
 %\geometry{a4paper} % Set the page size to be A4 as opposed to the default US Letter
 
 
@@ -33,22 +33,11 @@
  left=25mm,
  top=25mm,
  }
-
-
-
 \usepackage{graphicx} % Required for including pictures
-
 \usepackage{float} % Allows putting an [H] in \begin{figure} to specify the exact location of the figure
 \usepackage{wrapfig} % Allows in-line images such as the example fish picture
-
-
-
-
-%\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
-
 \linespread{1.5} % Line spacing
 
-%\setlength\parindent{0pt} % Uncomment to remove all indentation from paragraphs
 \usepackage[utf8]{inputenc}
 \usepackage[spanish]{babel}
 \usepackage[T1]{fontenc}
@@ -94,6 +83,7 @@
     linkcolor=negro,
     filecolor=magenta,      
     urlcolor=blue,
+    citecolor=negro,
 }
 
 \urlstyle{same}
@@ -103,7 +93,7 @@
 \usepackage{caption}
 \graphicspath{{./imagenes/}} % Specifies the directory where pictures are stored
 
-\definecolor{miorange}{rgb}{0.11, 0.43, 0.21}
+\definecolor{miorange}{rgb}{0.10, 0.43, 0.21}
 \definecolor{negro}{RGB}{35, 0, 0}
 \definecolor{blue}{RGB}{0, 0, 255}
 
@@ -112,31 +102,38 @@
 %	begin {Glosario}
 %----------------------------------------------------------------------------------------
 
-\newglossaryentry{SO}{name={SO},description={Es el sistema o conjunto de aplicaciones que permiten que una computadora lleven a cabo sus funciones.}}
-\newglossaryentry{Linux}{name={Linux},description={GNU/Linux Sistema Operativo creado y distribuido por miles de 
-													personas alrededor del mundo}}
-													
-\newglossaryentry{Windows}{name={Windows},description={Sistema Operativo creado y distribuido por Microsoft.}}
-
-\newglossaryentry{Mac}{name={Mac},description={Sistema Operativo creado y distribuido por Apple}}
-
+\newglossaryentry{SO}{name={SO},description={Es el sistema o conjunto de aplicaciones que permiten que una computadora lleven a cabo sus 
+														funciones.}}
+\newglossaryentry{Linux}{name={GNU/Linux},description={GNU/Linux Sistema Operativo creado y distribuido por miles de 
+														personas alrededor del mundo}}												
+\newglossaryentry{Windows}{name={Microsoft Windows},description={Sistema Operativo creado y distribuido por Microsoft.}}
+\newglossaryentry{Mac}{name={Mac OS X},description={Sistema Operativo creado y distribuido por Apple.Inc}}
+\newglossaryentry{cv}{name={VC},description={La visión artificial, también conocida como visión por computador o visión técnica, es un subcampo de la inteligencia artificial.}}
+\newglossaryentry{ieee}{name={IEEE Std.},description={El Instituto de Ingeniería Eléctrica y Electrónica.}}
+\newglossaryentry{gui}{name={GUI},description={Interfaz Gráfica de Usuario, las ventanas que ve y usa en un entorno visual.}}
+\newglossaryentry{Linus}{name={Linus Tolvards},description={Linus Benedict Torvalds es un ingeniero de software finés americano, conocido por iniciar y mantener el desarrollo 
+														del "kernel" \gls{Linux}, basándose en el sistema operativo libre Minix creado por Andrew S.}} 
+\newglossaryentry{http}{name={HTTP},description={\textit{Hypertext Transfer Protocol} o HTTP (en español protocolo de transferencia de hipertexto).}}
+\newglossaryentry{ftp}{name={FTP},description={FTP (siglas en inglés de \textit{File Transfer Protocol}, ó \textit{Protocolo de Transferencia de Archivos})}}
+\newglossaryentry{ssh}{name={SSH},description={SSH (\textit{Secure SHell}, en español: \textit{intérprete de órdenes seguro}) }}
+\newglossaryentry{tcp}{name={TCP/IP},description={TCP/IP:\textit{Transmission Control Protocol/Internet Protocol} ó \textit{Protocolo de control de transmisión/Protocolo de Internet}}}
+\newglossaryentry{GPL}{name={GPL},description={Licencia Pública General de GNU o más conocida por su nombre en inglés GNU General Public License}}
+\newglossaryentry{SGBD}{name={SGBD},description={Sistema Gestor de Base de Datos}}
+\newglossaryentry{ACID}{name={ACID},description={En bases de datos se denomina ACID a las características de los parámetros que permiten clasificar las transacciones de los sistemas 														\gls{SGBD}}}
+\newglossaryentry{BSD}{name={BSD},description={La licencia BSD es la licencia de software otorgada principalmente para los sistemas BSD (Berkeley Software Distribution),}}
+\newglossaryentry{IPP}{name={IPP},description={Intel \textit{Integrated Performance Primitives} (Intel IPP) - Una librería de algoritmos altamente optimizados para la construcción de aplicaciones.}}
+%\newglossaryentry{}{name={},description={}}
+														
+														
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newglossaryentry{}{name={},description={}}
+\newglossaryentry{}{name={},description={}} 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 %----------------------------------------------------------------------------------------
 %	End {Glosario}
 %----------------------------------------------------------------------------------------
 
-
 \pagestyle{fancy}
-
 \begin{document}
-
-%\lhead[\thepage]{CAPÍTULO \thechapter. \rightmark}
-%\rhead[CAPÍTULO \thechapter. \leftmark]{\thepage}
-
-
 %----------------------------------------------------------------------------------------
 %	TITLE PAGE
 %----------------------------------------------------------------------------------------
@@ -168,9 +165,9 @@
 %	TITLE SECTION
 %----------------------------------------------------------------------------------------
 
-\HRule \\[0.4cm]
+\vspace{0.5cm}
 { \huge \bfseries Amplificación interactiva de contenido por medio de la detección de la dirección de la mirada.}\\[0.4cm] % Title of your document
-\HRule \\[1.5cm]
+\vspace{0.5cm}
 
 \textsc{\Large REPORTE TÉCNICO DE RESIDENCIA PROFESIONAL}\\[3cm] % Name of your university/college
 %----------------------------------------------------------------------------------------
@@ -183,7 +180,6 @@
 	\Large \textsc{11590163}\\[0.1cm]
 	\Large \textsc{Ingeniería en Sistemas Computacionales}\\[3cm]
 
-	
 \end{center}
 
 %\begin{minipage}{0.4\textwidth}
@@ -217,7 +213,6 @@
 $\ $
 \thispagestyle{empty}
 \end{titlepage}
-
 %----------------------------------------------------------------------------------------
 %	TABLE OF CONTENTS
 %----------------------------------------------------------------------------------------
@@ -230,11 +225,8 @@ $\ $
 \cleardoublepage
 \addcontentsline{toc}{chapter}{Lista de figuras} % para que aparezca en el indice de contenidos
 \listoffigures
-
-%\newpage % Begins the essay on a new page instead of on the same page as the table of contents
 $\ $
 \thispagestyle{empty} 
-%\appendix
 %----------------------------------------------------------------------------------------
 %	INTRODUCTION
 %----------------------------------------------------------------------------------------
@@ -248,46 +240,23 @@ $\ $
 \rhead[]{\thepage}
 \addcontentsline{toc}{chapter}{Introducción}
 
-	La vista es uno de las principales capacidades sensoriales de los humanos que mas ocupamos en el día a día, 
-	nos sirve para percibir el color del mundo, orientarnos en el entorno, ver los peligros, etc.\\
+	La vista es una de las principales capacidades sensoriales de los humanos, 
+	nos sirve para percibir el color de las cosas, orientarnos en el entorno, ver los peligros, etc.\\
 	Técnicamente se llama visión a la capacidad de interpretar nuestro entorno gracias a los rayos de luz que alcanzan
-	el ojo. También se entiende por visión toda acción de ver.\\	
-	La acción simple de \textit{ver}, es en términos simples una de las mas complejas tareas que como humanos realizamos, en
-	todo momento, la cantidad de factores que influyen en la correcta percepción de los estímulos visuales y su posterior 
-	procesado e interpretación, son tareas que abordadas desde la perspectiva de un dispositivo electrónico, son extremadamente
-	complicadas.\\
-	
-	No obstante las limitaciones que la tecnología actual presenta al momento de abordar dicha tarea, hay en este campo de la
-	\textit{visión artificial} un interés constante en buscar y encontrar soluciones, al ya viejo problema de hacer que las 
-	máquinas puedan ver el mundo tal como nosotros lo hacemos.\\
-	Debe decirse que se han realizado enormes avances en el área 
-	desde que la idea fue propuesta, pero remontemos la memoria a mucho antes, quizá hasta los tiempos 
-	de grandes filósofos y matemáticos griegos, por ejemplo \textit{Thales de Mileto (640-585 A.C)}, fue capaz de predecir un 
-	eclipse y de medir una pirámide gracias a los conocimientos de geometría que poseía,
-	\textit{Euclides} concebía la trigonometría como un conjunto de lineas y puntos, independientemente del sistema de coordenadas.\\	
-	Posteriormente vino el tiempo renacentista y con el grandes pintores, \textit{Filippo Bruneleschi} \texttt{(1377-1446) }por ejemplo, 
-	que invento	la perspectiva, algo que dio mucho sobre lo que estudiar en los años que siguieron, consiguiendo crear a partir 
-	de ella todo 	un mundo de teorías y métodos al respecto.\\
-	Todo esto termino dando como resultado la construcción de maquinas y/o dispositivos que ayudaran al artista a capturar una 
-	imagen, todas estas máquinas y técnicas sobre la perspectiva dieron como resultado la invención final, 
-	la \textit{cámara fotográfica}.\\
-	En tiempos mas actuales fue la \textsc{NASA} en 1964 la que revoluciono el campo, logrando procesar por medios digitales
-	las imágenes del satélite \textsc{Mariner}, el avance desde entonces no ha parado en ningún momento.
+	el ojo.
+	La acción simple de \textit{ver}, es en términos simples una de las más complejas tareas que como humanos realizamos, en
+	todo momento, la cantidad de información involucrada en la correcta percepción de los estímulos visuales y su posterior 
+	procesamiento e interpretación, es sorprendentemente enorme y complicada de entender desde la perspectiva de un dispositivo 
+    electrónico.\\
 	
 	El presente proyecto es uno más de los trabajos que se realizan ahora mismo en el campo de visión por computadora o visión 
-	artificial, como se expone en los primeros párrafos la vista es uno de los sentidos que mas extensamente usamos en el día a día,
-	más aun en un mundo lleno de dispositivos que nos permiten visualizar información por medio de pantallas, específicamente,
-	\textit{computadoras}, sin embargo no todas las personas pueden hacerlo de manera optima o en condiciones que permitan 
-	obtener una buena \textit{visión} de las mismas, este segmento de personas son las que presentan alguna debilidad visual.\\
-	Por lo tanto, dicho segmento de personas tienen dificultades para sumergirse de manera optima en el medio digital, por ello
-	este proyecto busca una solución que permita un nivel de accesibilidad mucho mayor, ademas se busca de dotar de del elemento 
-	interactivo a los propios ojos, pues sera por medio de la detección de la dirección de la mirada que se realice todo el proceso.\\	
-	El proyecto en si es ambicioso de primeas, pues actualmente pese a que la tecnología de asistencia para magnificar áreas de la
-	pantalla ya existen, no hay una opción que permita a los usuarios hacerlo de forma interactiva, usando para ello solo la vista.\\
-	
-	Se abordara la el problema usando las herramientas de la ingeniería de software, las técnicas y herramientas se presentaran 
-	en los diferentes capítulos del presente documento, así como los resultados de las investigaciones y procesos para llevar a cavo 
-	la tarea expuesta.
+	artificial, en un mundo lleno de dispositivos que nos permiten visualizar información por medio de pantallas, sin embargo 
+    no todas las personas pueden hacerlo de manera optima o en condiciones que permitan obtener una buena \textit{visión} de las 
+    mismas, este segmento de personas son las que presentan alguna debilidad visual.\\
+    
+	Dicho segmento tiene dificultades para sumergirse de manera optima en el medio digital, por ello
+	este proyecto busca una solución que permita un nivel de accesibilidad mucho mayor, ademas se busca de dotar del elemento 
+	interactivo a los propios ojos, pues será por medio de la detección de la dirección de la mirada que se realice todo el proceso.
 
 \newpage
 
@@ -312,19 +281,18 @@ $\ $
 \section{Objetivos \label{objetivos}}
 	\subsection{Objetivo general}
 	
-		Desarrollar una aplicación de amplificación interactiva para computadoras con sistema operativo Windows, 
-		que asista a personas con bajas capacidades visuales, por medio del seguimiento y estimación de la dirección 
-		de la mirada sobre la pantalla de la computadora y en base a ello amplificar la zona de la pantalla en la 
-		que enfoca la vista.
+		Desarrollar una aplicación de amplificación interactiva para computadoras con sistema operativo Microsoft Windows, 
+		por medio del seguimiento y estimación de la dirección de la mirada sobre la pantalla de la computadora y en base 
+		a ello amplificar la zona de la pantalla en la que enfoca la vista, para asistir a personas con bajas capacidades 
+		visuales.
 	
 	\subsection{Objetivos específicos}
 		\begin{itemize}
 			\item Detección precisa y confiable del movimiento del globo ocular, con la ayuda de software de 
-			procesamiento de imágenes digitales.
+				procesamiento de imágenes digitales.
 			\item Hacer uso de las API’s del sistema operativo que proveen las herramientas que magnifican la zona de
-			la pantalla seleccionada.
-			\item Integrar los dos componentes anteriores y de esa forma obtener un magnificador con interacción visual.
-			\item Una vez se cuente con un prototipo, realizar pruebas de campo.
+				la pantalla enfocada.
+			\item Integrar los diferentes componentes para obtener un magnificador interactivo.
 		\end{itemize}
 		
 
@@ -332,22 +300,21 @@ $\ $
 \section{Justificación \label{justificacion}}
 	Pese al avance desmesurado de la tecnología en los últimos años en donde las capacidades de los dispositivos se
 	duplica cada cierto tiempo, respondiendo de forma bastante precisa la emblemática ley de 
-	\href{https://en.wikipedia.org/wiki/Moore's_law}{Moore} hay aun a día de hoy
-	ciertas cuestiones que no han sido abordadas, quizá en gran parte debido al amplio panorama de problemas que se
-	pueden afrontar con soluciones tecnológicas y de alguna forma ayudar a solventar o/y hacer más fácil las mismas.
+	\href{https://en.wikipedia.org/wiki/Moore's_law}{Moore} \footnote{\scriptsize Moore: https://en.wikipedia.org/wiki/Moore's\_law} 
+	hay aun a día de hoy ciertas cuestiones que no han sido abordadas.
 	
-	Aun si los programas de asistencia a personas con capacidades diferentes están a día de hoy cobrando mayor 			  	
+	Los programas de asistencia a personas con capacidades diferentes están a día de hoy cobrando mayor 			  	
 	relevancia en prácticamente todos los aspectos sociales, pues en la actualidad las posibilidades de llevar una vida
-	productiva y sin las limitaciones de antaño, son ya una realidad, entre las herramientas que se proporcionan a este
-	sector de la población están las llamadas tecnologías de asistencia o accesibilidad en entornos informáticos, mismas
+	productiva y sin las limitaciones de antaño es posible, entre las herramientas que se proporcionan a este
+	sector de la población, están las llamadas tecnologías de asistencia o accesibilidad en entornos informáticos, mismas
 	que van desde iconos monocromáticos de un mayor tamaño, hasta lectores de pantalla y lupas, siendo estas últimas el
 	principal componente proporcionado por las herramientas de accesibilidad de los Sistemas Operativos \gls{SO} actuales,
-	siendo común en los tres mas importantes \gls{Linux}, \gls{Windows}, \gls{Mac}.
+	siendo común en los tres más importantes \gls{Linux}, \gls{Windows}, \gls{Mac}.
 	
-	Siendo de los tres el segundo, Windows, en el cual se enfocaran los esfuerzos de hacer converger las herramientas de
-	accesibilidad ya mencionadas y las tecnologías de visión por computadora CV, para ofrecer a los discapacitados 
+	Siendo de los tres, \gls{Windows}, en el cual se enfocaran los esfuerzos de hacer converger las herramientas de
+	accesibilidad ya mencionadas y las tecnologías de visión por computadora (\gls{cv}), para ofrecer a los discapacitados 
 	visuales una forma de hacer uso de la tecnología, mismos que según datos de la OMS de 2002, eran mas de 161 millones
-	de personas, en especifico de computadoras, sin que su limitante visual les impida el poder interactuar con el 
+	de personas, en especifico de computadoras, sin que su limitación visual les impida el poder interactuar con el 
 	equipo.
 	
 	Específicamente el segmento de la población con discapacidad visual en el que se enfoca el desarrollo de este
@@ -365,15 +332,15 @@ $\ $
 		\item[Dirección:] Querétaro, Cerro Blanco No.141 Col. Colinas del Cimatario, C.P. 76090, Querétaro, Querétaro
 			 México.
 			 \begin{center}
-			 	\includegraphics[width=0.9\textwidth]{./imagenes/cicata}
+			 	\includegraphics[width=0.9\textwidth]{cicata}
 			 \end{center}
 		\item[Teléfonos:] 1 (442) 2290804 o 01 (55) 5729 6000 Ext. 81002
 		\item[E-Mail:] cicata@ipn.mx 
 		\item[Fax:] 5395 4147
 	\end{description}
 		\subsubsection{Misión}
-			Somos un centro de investigación creado por el IPN para fortalecer su impacto a nivel nacional, que atiende
-			necesidades de formación de recursos humanos y de desarrollo tecnológico de la región, a través de proyectos
+			Somos un centro de investigación creado por el Instituto Politécnico Nacional IPN para fortalecer su impacto a nivel nacional,
+			que atiende 	necesidades de formación de recursos humanos y de desarrollo tecnológico de la región, a través de proyectos
 			de investigación que contribuyen al desarrollo social y a la competitividad de los sectores productivo y de
 			servicios, con el respaldo de las capacidades del Instituto, con un enfoque multidisciplinario, innovador y
 			de excelencia, en un marco de sustentabilidad.
@@ -407,7 +374,7 @@ $\ $
  		
  		\subsubsection{Estructura Organizativa}
  			\begin{center}
-			 	\includegraphics[width=0.9\textwidth]{./imagenes/organigrama}
+			 	\includegraphics[width=0.9\textwidth]{organigrama}
 			 \end{center}
 			 
 	
@@ -430,25 +397,24 @@ $\ $
 		\item Proporcionar una mayor accesibilidad a débiles visuales.
 	\end{itemize}
 	\end{multicols}
-\newpage
 \section{Alcances y limitaciones}
 	\subsection{Alcances}
 		El sistema de seguimiento e identificación de la dirección de la mirada persigue el objetivo de permitir la interacción 
-		usuario-maquina usando en el proceso únicamente los ojos y, proporcionar interactividad a esta parte del cuerpo.\\
+		usuario-maquina usando en el proceso únicamente los ojos y, proporcionar el elemento interactivo a esta parte del cuerpo.\\
 		
 		El uso directo e inmediato de la detección de la dirección de la mirada es el de proporcionar una forma interactiva 
 		para magnificar zonas de la pantalla donde se enfoque la mirada en un todo momento.\\
 		
-		Inicialmente el sistema será desarrollado para funcionar en maquinas con sistema operativo Microsoft Windows.\\
+		Inicialmente el sistema será desarrollado para funcionar en maquinas con sistema operativo \gls{Windows}.\\
 		
 	\subsection{Limitaciones}
 		Ciertamente el proyecto presenta algunas dificultades técnicas y algunas otras funcionales, entre las cuales encontramos
 		las siguiente:\\
 		
 		Las condiciones no controladas, se esperan condiciones de operación dentro de ciertos parámetros, el rendimiento se puede 
-		ver afectado acorde a las condiciones del entorno.\\
+		ver afectado en proporción a las condiciones del entorno.\\
 		
-		La API de magnificación de Microsoft Windows esta solo disponible en para arquitecturas de 32 bits, lo que imposibilita el desarrollo
+		La API de magnificación de \gls{Windows} esta solo disponible en para arquitecturas de 32 bits, lo que imposibilita el desarrollo
 		del sistema para arquitecturas de 64 bits.\\
 	
 		
@@ -463,14 +429,14 @@ $\ $
 		Existen varias definiciones similares aceptadas para software, pero probablemente la más formal sea la siguiente:\\
 		
 		“Es el conjunto de los programas de cómputo, procedimientos, reglas, documentación y datos asociados que forman parte de las
-		operaciones de un sistema de computación” (IEEE Std, 1993).\\
+		operaciones de un sistema de computación” (\gls{ieee} 1993).\\
 		
 		Considerando esta definición, el concepto de software va más allá de los programas de computación en sus distintos estados: 
 		código fuente, binario o ejecutable; también su documentación, los datos a procesar e incluso la información de usuario forman
-		parte del software: es decir, abarca todo lo intangible, todo lo «no físico» relacionado.\\
+		parte del software: es decir, abarca todo lo intangible, todo lo \textit{«no físico» }relacionado.\\
 		
 		El término software fue usado por primera vez en este sentido por John W. Tukey en 1957. En la ingeniería de software y las
-		ciencias de la computación, el software es toda la información procesada por los sistemas informáticos: programas y datos.
+		ciencias de la computación, el software es toda la información procesada por los sistemas informáticos: \textit{programas y datos}.
 		
 	\subsection{Clasificación del software \label{clasSoft}}
 		Si bien la definición anterior de software es, en cierto modo arbitraria, y a veces confusa, a los fines prácticos se puede
@@ -509,10 +475,10 @@ $\ $
 			\begin{itemize}
 				\item Entornos de desarrollo integrado (\textsc{IDE}). Agrupan las anteriores herramientas, usualmente en un entorno
 				visual, de forma que el programador no necesite introducir múltiples instrucciones para compilar , interpretar y depurar.
-				Cuentan con una interfaz gráfica de usuario \textsc{GUI}.
+				Cuentan con una interfaz gráfica de usuario \textsc{gui}.
 			\end{itemize}
 			
-			\item \textbf{Software de aplicacion:} es aquel que permite a los usuarios llevar a cabo una o varias tareas específicas, en
+			\item \textbf{Software de aplicación:} es aquel que permite a los usuarios llevar a cabo una o varias tareas específicas, en
 			cualquier campo de actividad susceptible de ser automatizadas o asistido, con especial énfasis en los negocios. Incluye entre
 			muchos otros:
 			\begin{multicols}{2}
@@ -572,10 +538,10 @@ $\ $
 		\begin{multicols}{2}
 		\begin{itemize}
 			\item Editor de código con soporte para C+, QML y ECMAscript
-			\item Herramientas para la rapida navegacion del codigo
+			\item Herramientas para la rápida navegación del código
 	    	\item Resaltado de sintaxis y auto-completado de código
 			\item Control estático de código y estilo a medida que se escribe
-		    \item Soporte para refactoring de código
+		    \item Soporte para refactorización de código
 	    	\item Ayuda sensitiva al contexto
 		    \item Plegado de código (code folding)
 	    	\item Paréntesis coincidentes y modos de selección
@@ -583,18 +549,18 @@ $\ $
 		\end{multicols}
 	
 	\subsection{PyCharm \label{pych}}
-		\textsc{Pycharm} [\ref{i_pycharm}] es un entorno integrado de desarrollo (\textsc{IDE}) usado para la programacion en \textsc{Python} 
+		\textsc{Pycharm} [\ref{i_pycharm}] es un entorno integrado de desarrollo (\textsc{IDE}) usado para la programación en \textsc{Python} 
 		(\ref{python}). 
 		Provee herramientas de análisis de código, depurador gráfico, pruebas unitarias, integración con sistemas de control de versiones
 		y soporte para el desarrollo con \textsc{Django}.\\
 		Desarrollado por la compañía \href{https://en.wikipedia.org/wiki/JetBrains}{JetBrains}
 		\footnote{\scriptsize JetBrains: https://en.wikipedia.org/wiki/JetBrains}.\\
 		
-		Es multi-plataforma, funcionando en Windows, Mac OS X y Linux, cuenta con una version profesional liberada bajo licencia 
+		Es multi-plataforma, funcionando en \gls{Windows}, \gls{Mac} y \gls{Linux}, cuenta con una versión profesional liberada bajo licencia 
 		propietaria y con una versión comunitaria bajo los términos de \href {https://en.wikipedia.org/wiki/Apache_License}{Apache Licence}
 		\footnote{\scriptsize Apache: https://en.wikipedia.org/wiki/Apache\_License}, aunque esta última cuenta con algunas limitaciones.\\
 		
-		Entre sus características mas destables se encuentran las siguientes:
+		Entre sus características más destables se encuentran las siguientes:
 		\begin{multicols}{2}
 		\begin{itemize}
 			\item Asistencia en el análisis de código
@@ -612,51 +578,51 @@ $\ $
 			\subfigure[PyCharm]{\includegraphics[width=110mm]{pycharm.png} \label{i_pycharm}}
 			\subfigure[Qt Creator]{\includegraphics[width=110mm]{qt_creator.png} \label{i_crator}}
 			\subfigure[Visual Studio]{\includegraphics[width=110mm]{vs.png} \label{i_vs}}			
-			\caption{Herramientas de desarrollo. \label{f-lenete-uml}}
+			\caption{Herramientas de desarrollo.}
 		\end{figure}	
 		\begin{figure}[hbt]
 			\centering
 			\subfigure[Sublime-Text]{\includegraphics[width=110mm]{subl3.png} \label{i_sublime}}
 			\subfigure[RStudio]{\includegraphics[width=110mm]{rstudio.png} \label{i_rstudio}}
-			\subfigure[CMake]{\includegraphics[width=80mm]{cmake.png} \label{i_cmake}}
-			\caption{Herramientas de desarrollo. \label{f-lenete-uml}}
+			\subfigure[CMake]{\includegraphics[width=50mm]{cmake.png} \label{i_cmake}}
+			\caption{Herramientas de desarrollo.}
 		\end{figure}	
 	\subsection{Sublime-Text \label{subl}}
-		Sublime Text [\ref{i_sublime}] es un editor de texto y editor de código fuente está escrito en C++ y Python para los plugins. Desarrollado
-		originalmente como una extensión de \texttt{Vim}, con el tiempo fue creando una identidad propia, por esto aún conserva un modo 
-		de edición tipo vi llamado Vintage mode.\\
+		\texttt{Sublime Text} [\ref{i_sublime}] es un editor de texto y de código fuente está escrito en C++ y Python para los plugins.
+        Desarrollado originalmente como una extensión de \texttt{Vim}, con el tiempo fue creando una identidad propia, por esto aún conserva 
+        un modo de edición tipo vi llamado Vintage mode.\\
 		
 		Características:
 		\begin{multicols}{2}
 			\begin{itemize}
-				 \item Minimapa. consiste en una previsualización de la estructura del código
-				 \item Multi selección: Hace una selección múltiple de un término por diferentes partes del archivo.
-				 \item Multi cursor: Crea cursores con los que podemos escribir texto de forma arbitraria en diferentes posiciones del
+				 \item \textbf{Minimapa:} consiste en una pre-visualización de la estructura del código
+				 \item \textbf{Multi selección:} Hace una selección múltiple de un término por diferentes partes del archivo.
+				 \item \textbf{Multi cursor:} Crea cursores con los que podemos escribir texto de forma arbitraria en diferentes posiciones del
 				 	   archivo.
-				 \item Multi layout: Trae siete configuraciones de plantilla podemos elegir editar en una sola ventana o hacer una división
-				 \item Soporte nativo para infinidad de lenguajes: Soporta de forma nativa 43 lenguajes de programación y texto plano.
-				 \item Remarcado de sintaxis: El remarcado de sintaxis es completamente configurable a través de archivos de configuración 
+				 \item \textbf{Multi layout:} Trae siete configuraciones de plantilla podemos elegir editar en una sola ventana o hacer una división
+				 \item \textbf{Soporte nativo para infinidad de lenguajes:} Soporta de forma nativa 43 lenguajes de programación y texto plano.
+				 \item \textbf{Remarcado de sintaxis:} El remarcado de sintaxis es completamente configurable a través de archivos de configuración 
 				 	   del usuario.
-				 \item Búsqueda dinámica: Se puede hacer búsqueda de expresiones regulares o por archivos, proyectos, directorios, una 
+				 \item \textbf{Búsqueda dinámica:} Se puede hacer búsqueda de expresiones regulares o por archivos, proyectos, directorios, una 
 				 	   conjunción de ellos o todo a la vez.
-				 \item Keybindings: Todas las teclas pueden ser sobrescritas a nuestro gusto.
+				 \item \textbf{Keybindings:} Todas las teclas pueden ser sobrescritas a nuestro gusto.
 				 \item Etc.
 			\end{itemize}
 		\end{multicols}
 		
 		Se puede descargar desde el sitio web \href{https://www.sublimetext.com/}{Sublime-Text} 
 		\footnote{\scriptsize Subl-Text: https://www.sublimetext.com/}
-		y evaluar de forma gratuita. Sin embargo no es software libre o de código abiertoy se debe obtener una licencia 	para su uso
+		y evaluar de forma gratuita. Sin embargo no es software libre o de código abierto, se debe obtener una licencia 	para su uso
 		continuado, aunque la versión de evaluación es plenamente funcional y no tiene fecha de caducidad.
 				
 		
 		
 	\subsection{Rstudio \label{RS}}
-		RStudio [\ref{i_rstudio}] es un entorno de desarrollo integrado (\textsc{IDE}) para R (\ref{r}).\
-		Esta disponible de forma libres y en edición comercial, se ejecuta en entornos multiplataforma (Windows, Mac OS X y Linux) o
+		\texttt{RStudio} [\ref{i_rstudio}] es un entorno de desarrollo integrado (\textsc{IDE}) para R (\ref{r}).\
+		Está disponible de forma libre y en edición comercial, se ejecuta en entornos multiplataforma (\gls{Windows}, \gls{Mac} y \gls{Linux}) o
 		sobre navegadores web conectados a \textsc{RStudio Server o RStudio Server Pro (Debian/Ubuntu, RedHat/CentOS y SUSE Linux)}.\\
 		
-		RStudio tiene la misión de proporcionar el entorno informático estadístico R. Permite un análisis y desarrollo para que 
+		RStudio tiene la misión de proporcionar el entorno informático estadístico R. Permite el análisis y desarrollo para que 
 		cualquiera pueda analizar los datos con R.
 		
 		Entre sus características se encuentran la siguientes:
@@ -679,15 +645,16 @@ $\ $
 		
 	
 	\subsection{CMake \label{CM}}
-		\textsc{CMake} [\ref{i_cmake}] es una herramienta multiplataforma de generación o automatización de código. El nombre es una abreviatura para 
+		\texttt{CMake} [\ref{i_cmake}] es una herramienta multiplataforma de generación o automatización de código. El nombre es una abreviatura
+        para 
 		\textit{'cross platform make' (make multiplataforma)}; más allá del uso de \textit{'make'} en el nombre, CMake es una suite separada 
-		y de más alto nivel que el sistema \texttt{make} común de Unix, siendo similar a las autotools.
+		y de más alto nivel que el sistema \textit{make} común de Unix, siendo similar a las autotools.
 		
-		CMake es una familia de herramientas diseñada para construir, probar y empaquetar software. CMake se utiliza para controlar el
+		CMake es una familia de herramientas diseñada para construir, probar y empaquetar software. Se utiliza para controlar el
 		proceso de compilación del software usando ficheros de configuración sencillos e independientes de la plataforma. 
 		
 		Desarrollado por \textit{Andy Cedilnik, Bill Hoffman, Brad King, Ken Martin, Alexander Neundorf} se puede acceder a la ultima 
-		version estable en \href{www.cmake.org}{CMake} \footnote{\scriptsize CMake: www.cmake.org}.\\
+		versión estable en \href{www.cmake.org}{CMake} \footnote{\scriptsize CMake: www.cmake.org}.\\
 		
 		Entre las principales funcionalidad se encuentran las siguientes:
 		\begin{multicols}{2}
@@ -708,12 +675,12 @@ $\ $
 	\subsection*{Software de aplicación}
 	
 	\subsection{Sistema de control de versiones Git \label{git}}
-		Git es un software de control de versiones diseñado por \textit{Linus Torvalds}, pensando en la eficiencia y la confiabilidad del
+		\texttt{Git} es un software de control de versiones diseñado por \gls{Linus}, pensando en la eficiencia y la confiabilidad del
 		mantenimiento de versiones de aplicaciones cuando éstas tienen un gran número de archivos de código fuente. Al principio, Git se
 		pensó como un motor de bajo nivel sobre el cual otros pudieran escribir la interfaz de usuario o front end como Cogito o StGIT. 
 		
 		Sin embargo, Git se ha convertido desde entonces en un sistema de control de versiones con funcionalidad plena. Hay algunos
-		proyectos de mucha relevancia que usan Git, en particular, el grupo de programación del núcleo Linux.
+		proyectos de mucha relevancia que usan Git, en particular, el grupo de programación del núcleo \gls{Linux}.
 		
 		Entre las características más relevantes se encuentran:
 		\begin{multicols}{2}
@@ -721,8 +688,8 @@ $\ $
 				\item Fuerte apoyo al desarrollo no lineal, por ende rapidez en la gestión de ramas y mezclado de diferentes versiones. 
 				\item Gestión distribuida, Git le da a cada programador una copia local del historial del desarrollo entero, y los 
 				cambios se propagan entre los repositorios locales. 
-				\item Los almacenes de información pueden publicarse por HTTP, FTP, rsync o mediante un protocolo nativo, ya sea a través 
-				de una conexión TCP/IP simple o a través de cifrado SSH.
+				\item Los almacenes de información pueden publicarse por \gls{http}, \gls{ftp}, rsync o mediante un protocolo nativo, ya sea a través 
+				de una conexión \gls{tcp} simple o a través de cifrado \gls{ssh}.
 				\item Gestión eficiente de proyectos grandes, dada la rapidez de gestión de diferencias entre archivos.
 			\end{itemize}
 		\end{multicols}
@@ -732,21 +699,21 @@ $\ $
 	
 		
 	\subsection{MariaDB \label{maria}}
-		\textsc{MariaDB} es un sistema de gestión de bases de datos derivado de \textsc{MySQL} con licencia \textsc{GPL}. 
+		\texttt{MariaDB} es un sistema de gestión de bases de datos derivado de \textsc{MySQL} con licencia \textsc{\gls{GPL}}.
 		Está desarrollado por \textit{Michael (Monty) Widenius (fundador de MySQL)} y la comunidad de desarrolladores de software 
 		libre. 
 		
-		Introduce dos motores de almacenamiento nuevos, uno llamado Aria -que reemplaza con ventajas a \textsc{MyISAM}- y otro
-		lamado \textsc{XtraDB} -en sustitución de \textsc{InnoDB}. Tiene una alta compatibilidad con MySQL ya que posee las mismas
+		Introduce dos motores de almacenamiento nuevos, uno llamado Aria -que reemplaza con ventaja a \textsc{MyISAM}- y otro
+		llamado \textsc{XtraDB} -en sustitución de \textsc{InnoDB}. Tiene una alta compatibilidad con MySQL ya que posee las mismas
 		órdenes, interfaces, APIs y bibliotecas, siendo su objetivo poder cambiar un servidor por otro directamente. 
-		Este \textsc{SGBD} surge a raíz de la compra de \textit{Sun Microsystems}.
+		Este \textsc{\gls{SGBD}} surge a raíz de la compra de \textit{Sun Microsystems}.
 		
-		MariaDB es un fork directo de MySQL que asegura, permanecerá una versión de este producto con licencia GPL. 
+		MariaDB es una ramificación  directo de MySQL que asegura, permanecerá una versión de este producto con licencia GPL. 
 		La ultima versión estable se puede encontrar en la web oficial del proyecto \href{https://mariadb.org/}{MariaDB} 
 		\footnote{\scriptsize MariaDB: https://mariadb.org/}.
 		
 	\subsection{SQLite}
-		\textsc{SQLite} es un sistema de gestión de bases de datos relacional compatible con \textsc{ACID}, contenida en una
+		\texttt{SQLite} es un sistema de gestión de bases de datos relacional compatible con \textsc{\gls{ACID}}, contenida en una
 		relativamente pequeña (~275 kiB) biblioteca escrita en C. SQLite es un proyecto de dominio público creado por 
 		\textit{D. Richard Hipp}.
 		
@@ -768,27 +735,27 @@ $\ $
 	\subsection{OpenCV \label{cv}}
 			
 		
-		\textsc{OpenCV} es una biblioteca libre de visión artificial originalmente desarrollada por \textsc{Intel}. 
+		\texttt{OpenCV} es una biblioteca libre de visión artificial originalmente desarrollada por \textsc{Intel}. 
 		Desde que apareció su primera versión alfa en el mes de enero de 1999, se ha utilizado en infinidad de aplicaciones. 
 		Desde sistemas de seguridad con detección de movimiento, hasta aplicaciones de control de procesos donde se requiere
-		reconocimiento de objetos. Esto se debe a que su publicación se da bajo licencia \textsc{BSD}, que permite que sea usada
+		reconocimiento de objetos. Esto se debe a que su publicación se da bajo licencia \textsc{\gls{BSD}}, que permite que sea usada
 		libremente para propósitos comerciales y de investigación con las condiciones en ella expresadas.
 		
-		OpenCV es multiplataforma, existiendo versiones para \textsc{GNU/Linux, Mac OS X y Windows}. Contiene más de 500 funciones 
+		OpenCV es multiplataforma, existiendo versiones para \textsc{\gls{Linux}, \gls{Mac} y \gls{Windows}}. Contiene más de 500 funciones 
 		que abarcan una gran gama de áreas en el proceso de visión, como reconocimiento de objetos (reconocimiento facial), 
 		calibración de cámaras, visión estérea y visión robótica.
 		
 		El proyecto pretende proporcionar un entorno de desarrollo fácil de utilizar y altamente eficiente. Esto se ha logrado
 		realizando su programación en código C y C++ optimizados, aprovechando además las capacidades que proveen los procesadores
 		multinúcleo. OpenCV puede además utilizar el sistema de primitivas de rendimiento integradas de Intel, un conjunto de 
-		rutinas de bajo nivel específicas para procesadores Intel \textsc{(IPP)}.
+		rutinas de bajo nivel específicas para procesadores Intel \textsc{(\gls{IPP})}.
 		
 		
 	\subsection{IntraFace \label{intraface}}
-		IntraFace es una librería que incluye algoritmos para análisis de patrones faciales, se comenzó a desarrollar en 2010 en la
-		universidad \textsc{Carnigie Mellon \& University of Pittsburgh}, actualmente la ultima version de la misma es la 1.0, soportada 
+		\texttt{IntraFace} es una librería que incluye algoritmos para análisis de patrones faciales, se comenzó a desarrollar en 2010 en la
+		universidad \textsc{Carnigie Mellon \& University of Pittsburgh}, actualmente la ultima versión de la misma es la 1.0, soportada 
 		por Human Sensing Laboratory.\\
-		Para este proyecto se usa una version anterior de la misma, provista para fines educativos y/o investigación sin fines de lucro.
+		Para este proyecto se usa una versión anterior de la misma, provista para fines educativos y/o investigación sin fines de lucro.
 
 	
 		
@@ -796,12 +763,13 @@ $\ $
 	
 \section{Lenguajes de programación}
 	
-	Un lenguaje de programación es un lenguaje formal diseñado para realizar procesos que pueden ser llevados a cabo por máquinas como las computadoras.
-	Pueden usarse para crear programas que controlen el comportamiento físico y lógico de una máquina, para expresar algoritmos con precisión, o como 
-	modo de comunicación humana.\\
-	Está formado por un conjunto de símbolos, reglas sintácticas y semánticas que definen su estructura y el significado de sus elementos y expresiones. 
-	al proceso por el cual se escribe, se prueba, se depura, se compila (de ser necesario) y se mantiene el código fuente de un programa informático se 
-	le llama programación.\\
+	Un lenguaje de programación es un lenguaje formal diseñado para realizar procesos que pueden ser llevados a cabo por máquinas como las
+    computadoras.
+	Pueden usarse para crear programas que controlen el comportamiento físico y lógico de una máquina, para expresar algoritmos con precisión, 
+    o como modo de comunicación humana.\\
+	Está formado por un conjunto de símbolos, reglas sintácticas y semánticas que definen su estructura y el significado de sus elementos y
+    expresiones, al proceso por el cual se escribe, se prueba, se depura, se compila (de ser necesario) y se mantiene el código fuente de un 
+    programa informático se le llama programación.\\
 	
 	También la palabra programación se define como el proceso de creación de un programa de computadora, mediante la aplicación de procedimientos 
 	lógicos, a través de los siguientes pasos:
@@ -816,7 +784,7 @@ $\ $
 	\end{multicols}
 	
 	Existen multitud lenguajes disponibles en la actualidad, en este proyecto y dadas las características del mismo, los lenguajes que más se 
-	adaptan a estas son los siguientes:
+	adaptan son:
 	\begin{multicols}{3}	
 		\begin{itemize}
 			\item \texttt{C++}
@@ -826,11 +794,11 @@ $\ $
 	\end{multicols}
 	
 	\subsection{C++}
-		\textsc{C++} es un lenguaje de programación diseñado a mediados de los años 1980 por \textit{Bjarne Stroustrup}. La intención 
+		\texttt{C++} es un lenguaje de programación diseñado a mediados de los años 1980 por \textit{Bjarne Stroustrup}. La intención 
 		de su creación fue el extender al lenguaje de programación \textsc{C}, agregando mecanismos que permitieran la manipulación de
 		objetos. En ese sentido, desde el punto de vista de los lenguajes orientados a objetos, el C++ es un lenguaje híbrido, por un lado 
 		es un lenguaje que sigue muy ligado a hardware subyacente, manteniendo una considerable potencia para la programación a bajo nivel, 
-		pero se le han añadido elementos que le permiten un estilo de programación de alto nivel de abstracción.
+		pero se le han añadido elementos que permiten un estilo de programación de alto nivel de abstracción.
 		
 		La definición oficial nos dice que C++ es un lenguaje de propósito general basado en C, al que se le han añadido nuevos tipos de 
 		datos, plantillas, clases, mecanismos de acepciones, espacio de nombres (STD), funciones inline, sobrecarga de operadores, 
@@ -840,12 +808,9 @@ $\ $
 			El comité para el estándar ANSI C fue formado en 1983 con el objetivo de crear un lenguaje uniforme a partir del C original,
 			desarrollado por \textit{Kernighan y Ritchie} en 1972, en la AT\&T. Hasta entonces el estándar lo marcaba el libro escrito en
 			1978 por estos dos autores. 
-			El lenguaje C++ se comenzó a desarrollar en 1980. Su autor fue Bjarne Stroustrup, también de la AT\&T. 
-			Al comienzo era una extensión del lenguaje C que fue denominada \textit{C with classes}. Este nuevo lenguaje comenzó a ser
-			utilizado fuera de la AT\&T en 1983. El nombre C++ es también de ese año, y hace referencia al carácter del operador incremento
-			de C (++). Ante la gran difusión y éxito que iba obteniendo en el mundo de los programadores, la AT\&T comenzó a estandarizarlo
-			internamente en 1987. En 1989 se formó un comité ANSI (seguido algún tiempo después por un comité ISO) para estandarizarlo a
-			nivel americano e internacional.
+			El lenguaje C++ se comenzó a desarrollar en 1980. Su autor fue \textit{Bjarne Stroustrup}, también de la AT\&T. 
+			La AT\&T comenzó a estandarizar internamente en 1987. En 1989 se formó un comité ANSI (seguido algún tiempo después por un 
+            comité ISO) para estandarizar a nivel americano e internacional.
 			
 		 \subsubsection{Características}
 		 	Antes, mencionar que tanto C como C++ son lenguajes compilados, y no interpretados. Esta diferencia es muy importante, ya que
@@ -858,14 +823,14 @@ $\ $
 		
 		
 	\subsection{Python \label{python}}
-		Python es un lenguaje de programación creado por Guido van Rossum a principios de los años 90 cuyo nombre está inspirado en el grupo
-		de cómicos ingleses \textit{Monty Python}. Es un lenguaje similar a Perl, pero con una sintaxis muy limpia y que favorece un código 
-		legible \cite{python}.
+		\texttt{Python} es un lenguaje de programación creado por \textit{Guido van Rossum} a principios de los años 90 cuyo nombre está 
+        inspirado en el grupo de cómicos ingleses \textit{Monty Python}. Es un lenguaje similar a Perl, pero con una sintaxis muy limpia y que
+        favorece un código legible \cite{python}.
 		
 		Se trata de un lenguaje interpretado o de script, con tipado dinámico, fuertemente tipado, multiplataforma y orientado a objetos.\\
 		
 		El intérprete de Python está disponible en multitud de plataformas (\textsc{UNIX, Solaris, Linux, DOS, Windows, OS/2, Mac OS}, etc.)
-		por lo que si no utilizamos librerías específicas de cada plataforma nuestro programa podrá correr en todos estos sistemas sin
+		por lo que si utilizamos las librerías específicas de cada plataforma, nuestro programa podrá correr en todos estos sistemas sin
 		grandes cambios.\\
 		Python es un lenguaje que todo el mundo debería conocer. Su sintaxis simple, clara y sencilla; el tipado dinámico, el gestor de
 		memoria, la gran cantidad de librerías disponibles y la potencia del lenguaje, entre otros, hacen que desarrollar una aplicación en
@@ -876,11 +841,11 @@ $\ $
 		en  las que Python cada vez representa un tanto por ciento mayor de los programas disponibles.
 		
 		\subsubsection{Instalacion de Python}
-			Existen varias implementaciones distintas de Python: CPython, Jython, IronPython, PyPy, etc	
+			Existen varias implementaciones distintas de Python: \textit{CPython, Jython, IronPython, PyPy}, etc	
 			
 			CPython es la más utilizada, la más rápida y la más madura. Cuando la gente habla de Python normalmente se refiere a esta
 			implementación. 
-			En este caso tanto el intérprete como los módulos están escritos en C.\\
+			En este caso tanto el intérprete como los módulos están escritos en C/C++.\\
 			
 			Jython es la implementación en Java de Python, mientras que IronPython es su contrapartida en C\# (.NET). Su interés estriva en 
 			que utilizando estas implementaciones se pueden utilizar todas las librerías disponibles para los programadores de Java y .NET.
@@ -911,17 +876,17 @@ $\ $
 			intérprete para cada línea (sesión interactiva) o bien podemos escribir el código de un programa en un archivo de texto y
 			ejecutarlo.
 			
-			Para el trabajo del proyecto se uso PyCharm (\ref{pych}) como IDE de desarrollo, anque en algunas ocaciones se uso editor de
-			texto, \textsc{Sublime-text} (\ref{subl}) , para la edición rápida.
+			Para el trabajo del proyecto se uso PyCharm (\ref{pych}) como IDE de desarrollo, en algunas ocasiones se uso editor de
+			texto, \textsc{Sublime-text} (\ref{subl}).
 
 	\subsection{R \label{r}}
 		\subsubsection{¿Qué es R?}
-			Comenzaremos diciendoq ue \textsf{R}	es un lenguaje de programación interpretado, de distribucion libre, bajo Licencia GNU,
-			y se mantiene en un ambiente para el computo estadistico y gráfico. Este \textit{software} corre en distintas plataformas 
-			\textsc{Linux, Mac OS X, Windows} e incluso en \textsf{PlayStation 3}. El termino ambiente pretende caracterizalo como un sistema 
-			totalmente planificado y coherente, en lugar de una cumulación gradual de herramientas muy especificas y poco flexibles,
-			como suele ser con otro software de análisis de datos. El hecho que R sea un lenguaje y un sistema, es por que forma parte de 
-			la filosofía de creación.
+			Comenzaremos diciendo que \textsf{R} es un lenguaje de programación interpretado, de distribución libre, bajo Licencia GNU,
+			se mantiene en un ambiente para el computo estadístico y gráfico. Este \textit{software} corre en distintas plataformas 
+			\textsc{\gls{Linux}, \gls{Mac}, \gls{Windows}} e incluso en \textsf{PlayStation 3}. 
+            El termino ambiente pretende caracterizarlo como un sistema totalmente planificado y coherente, en lugar de una acumulación 
+            gradual de herramientas muy especificas y poco flexibles, como suele ser con otro software de análisis de datos. 
+            El hecho que R sea un lenguaje y un sistema, es por que forma parte de la filosofía de creación.
 			
 			Por ello en ves de pensar en R como un sistema estadístico es preferible verlo como un ambiente en el que se aplica técnicas
 			estadísticas. Por ejemplo, en este proyecto nos inclinaremos hacia el lado de la programación \textit{(lenguaje)} más que tocar
@@ -944,14 +909,11 @@ $\ $
 		La programación extrema se basa en una serie de reglas y principios que se han ido gestando a lo largo de toda la historia de la 
 		ingeniería del software. Usadas conjuntamente proporcionan una nueva metodología de desarrollo software que se puede englobar dentro
 		de las metodologías ligeras, que son aquéllas en la que se da 	prioridad a las tareas que dan resultados directos y que reducen la
-		burocracia que hay alrededor tanto como sea posible (pero no más).
+		burocracia que hay alrededor, tanto como sea posible (pero no más).
 		La programación extrema, dentro de las metodologías ágiles, se puede clasificar dentro de las evolutivas.
 		
 		Una de las características de \textsc{eXtreme Programming} es que muchos de, si no todos, sus ingredientes son de sobra conocidos
-		dentro de la rama de la ingeniería del software desde hace tiempo, incluso desde sus comienzos. Los autores de han seleccionado los
-		que han considerados como los mejores y han profundizado en sus relaciones y en cómo se refuerzan unos a otros. El resultado ha sido
-		una metodología única y compacta. Por eso, aunque se pueda alegar que la programación extrema no se base en	principios nada nuevos,
-		se ha de aclarar que, en conjunto, es una nueva forma de ver el desarrollo de software. 
+		dentro de la rama de la ingeniería del software desde hace tiempo, incluso desde sus comienzos.
 		
 		\subsubsection{El proceso de desarrollo extremo}
 			La programación extrema parte del caso habitual de una compañía que desarrolla software, generalmente software a medida, en la
@@ -965,7 +927,6 @@ $\ $
 			veremos más adelante. Además, será tarea suya retroalimentar al equipo de desarrolladores después de cada iteración con los
 			problemas con los que se ha encontrado, mostrando sus prioridades, expresando sus sensaciones... Existirán métodos como pruebas
 			de aceptación que ayudarán a que la labor del cliente sea lo más fructífera posible.
-			
 			
 			En resumen, el cliente se encuentra mucho más cercano al proceso de desarrollo. Se elimina la fase inicial de captura de
 			requisitos y se permite que éstos se vayan definiendo de una forma ordenada durante el tiempo que dura el proyecto. 
@@ -1066,29 +1027,30 @@ $\ $
 				\end{enumerate}
 			\end{multicols}
 			
-			Se puede considerar como el resumen de bolsillo de la metodología de desarrollo extremo, y llevarla a cada lugar en el que se este desarrollando.
+			Se puede considerar como el resumen de bolsillo de la metodología de desarrollo extremo, y llevarla a cada lugar en el que se este
+            desarrollando.
 		\subsection{Programación Orientada a Objetos \label{poo}}
 			El termino \textit{'objeto'} se muestra omnipresente en la literatura sobre \texttt{Programación Orientada a Objetos}, sin 
-			embargo es frecuente que después de leer diversa descripciones hay ciertas confusiones, esto generalmente el comenzara a 
+			embargo es frecuente que después de leer diversas descripciones hay ciertas confusiones, esto generalmente el comenzara a 
 			aproximarse al tema.\\
 			Así, se puede entender como correcto que \textit{'un objeto es una encapsulación de datos y de los métodos para manipular estos'},
 			o, \textit{'que es la instancia de una clase, siendo ésta la entidad conceptual que encapsula los comportamientos comunes a los 
 			objetos que representa'}, pero bien, estas definiciones son validas para eruditos de la materia, más no para todo el mundo, o sea, 
 			se asume que son verdaderas pero no dicen nada para el nonato.
-			Pero entonces, ¿qué es un objeto? Bien, un objeto es es una entidad que representa un objeto del mundo real, relacionado con
+			Pero entonces, ¿qué es un objeto?. bien, un objeto es es una entidad que representa un objeto del mundo real, relacionado con
 			el problema que se aborda, por ahora no intente relacionar esto con ningún elemento informático, es solo así, un objeto es algo
 			del mundo real y listo.
 			
 			La \texttt{POO} es, simplificando, un sistema de programación que utiliza objetos para la resolución de problemas, 
 			interrelacionándolos mediante mensajes.
 			Imaginemos, por ejemplo, que queremos desarrollar una aplicación para la gestión organizativa de un despacho profesional. En la vida
-			real nos encontraríamos con directores, secretarios, computadoras, impresoras, etc. Una posible solución en OPP seria trasladar estos 
+			real nos encontraríamos con directores, secretarios, computadoras, impresoras, etc. Una posible solución en OPP sería trasladar estos 
 			objetos al espacio de programación: el objeto teléfono, al sonar , lanzaría un mensaje primero al centro de control y luego a una 
 			determinada 	secretaria mecanizada, la cual, en calidad de objeto, podría responder reteniendo brevemente la llamada y enviando un 
 			mensaje de aviso a la operadora correcta.\\
 			Modelamos nuestra visión del problema a través de objetos que se relacionan entre si por \textit{pocos canales}, de forma que la 
-			comunicación de mensajes se pretende alta y clara. En resumen se busca que las ligamentos entre distintos objetos sean transparentes para un 	
-			observador externo.\\
+			comunicación de mensajes se pretende alta y clara. En resumen se busca que los ligamentos entre distintos objetos sean transparentes 
+            para un observador externo.\\
 			Esto favorece en gran medida la comunicación entre los responsables de las distintas etapas de desarrollo de software.
 			
 \section{Redes Neuronales \label{a-neuronales}}
@@ -1103,22 +1065,7 @@ $\ $
 		Desde la década de los 40, en la que nació y comenzó a desarrollarse la informática, el modelo neuronal la ha acompañado. De hecho, la
 		aparición de los computadores digitales y el desarrollo de las teorías modernas acerca del aprendizaje y del procesamiento neuronal se
 		produjeron aproximadamente al mismo tiempo, a finales de los años cuarenta.
-		
-		Desde entonces hasta nuestros días, la investigación neurofisiológica y el estudio de sistemas neuronales artificiales (ANS, Artificial Neural
-		Systems) han ido de la mano. Sin embargo, los modelos de ANS no se centran en la investigación neurológica, si no que toma conceptos e ideas
-		del campo de las ciencias naturales para aplicarlos a la resolución de problemas pertenecientes a otras ramas de las ciencias y la ingeniería.
-		
-		Podemos decir que la tecnología ANS incluye modelos inspirados por nuestra comprensión del cerebro, pero que no tienen por qué ajustarse
-		exactamente a los modelos derivados de dicho entendimiento.
-		
-		Los primeros ejemplos de estos sistemas aparecen al final de la década de los cincuenta. La referencia histórica más corriente es la que 
-		alude al trabajo realizado por Frank Rosenblatt en un dispositivo denominado perceptrón. Hay otros ejemplos, tales como el desarrollo del
-		Adaline por el profesor Bernard Widrow.
-		
-		Durante todos estos años, la tecnología ANS no siempre ha tenido la misma consideración en las ramas de la ingeniería y las ciencias de 
-		la computación, más ansiosas de resultados que las ciencias neuronales. A partir de 1969, el pesimismo debido a las limitadas capacidades
-		del perceptrón hizo languidecer este tipo de investigación.
-		
+
 		A principios de los 80, por un lado Hopfield y sus conferencias acerca de la memoria autoasociativa y por otro lado la aparición del libro
 		Parallel Distributed Processing (PDP), escrito por Rumelhart y McClelland reactivaron la investigación en el campo de las redes neuronales.
 		Hubo grandes avances que propiciaron el uso comercial en campos tan variados como el diagnóstico de enfermedades, la aproximación de 
@@ -1149,8 +1096,8 @@ $\ $
 		 \begin{itemize}
 		 	\item Conjunto de pesos sinápticos $wij$. Representan la interacción entre la neurona presináptica j y la postsináptica i.
 		 	\item Regla de propagación $d(wij,xj(t))$: proporciona el potencial postsináptico, $hi(t)$.
-		 	\item Función de activación $ai(t)=f(ai(t-1)$, $hi(t))$: proporciona el estado de activación de la neurona en función del estado anterior y
-		 		 el valor postsináptico
+		 	\item Función de activación $ai(t)=f(ai(t-1)$, $hi(t))$: proporciona el estado de activación de la neurona en función del estado
+            anterior y el valor postsináptico
 		 	\item Función de salida $Fi(t)$: proporciona la salida $yi(t)$, en función del estado de activación.
 		 \end{itemize}
 		 \end{multicols}
@@ -1173,7 +1120,7 @@ $\ $
 		\subfigure[Biológica]{\includegraphics[width=80mm]{neurona_bio.jpg} \label{i_bioneuron}}
 		\subfigure[Activacion]{\includegraphics[width=100mm]{funcionesActivacion.jpg} \label{i_activacion}}
 		\subfigure[Arquitectura]{\includegraphics[width=100mm]{arquitectura.jpg} \label{i_arquitectura}}
-		\caption{Modelos de neuronas \label{f-lenete-uml}}
+		\caption{Modelos de neuronas}
 	\end{figure}	
 	
 	\subsection{Red Neuronal Artificial} 
@@ -1248,27 +1195,21 @@ $\ $
 \markboth{ACTIVIDADES REALIZADAS}{ACTIVIDADES REALIZADAS}
 \thispagestyle{empty}
 \newpage
-
-	Acorde a las normas estipuladas en las metodologías usadas [\ref{XP} y \ref{poo}] se han seguido una serie de pasos para la correcta 
-	y efectiva realización del proyecto. Pese a que, a primera vista, la metodología de desarrollo extremo muestra algunas diferencias marcadas 
-	respecto a las tradicionalmente usadas (\textit{Cascada, V, Espiral, etc.}) en el desarrollo de sistemas, en esencia conserva muchos de 
-	los puntos clave de estas, es el desarrollo mucho mas rápido y enfocado a generar los módulos por separado e
-	integrarlos al sistema solo y únicamente, cuando cada uno haya pasado las pruebas unitarias correspondientes, eso, en resumen es lo que 
-	la hace diferente de las otras.
 	En este capitulo se detallan las diferentes actividades, que componen el desarrollo tanto modular como integral del sistema, es importante 
-	notar que la naturaleza la metodología \textit{xTreme Programing} hace que sean ciertamente diferentes a las tradicionales.
+	notar que la naturaleza la metodología \textit{xTreme Programing} hace que el proceso sea diferente a las tradicionales.
+    
 \section{Análisis}
 	Es importante recalcar que la planificación inicial partió desde un punto ya establecido, por decirlo de alguna forma, el proyecto ya contaba
 	con una base inicial sobre la cual comenzar a trabajar, es por tanto importante tener en cuenta que la dirección a seguir ya había sido definida.
 	
 	Sin embargo la falta de documentación hicieron difícil el saber con exactitud como proceder, razón por la cual se tuvo la necesidad de hacer 
-	un nuevo análisis, partiendo de la idea central del proyecto, para ello una de las primeras cosas que se realizaron y, quizá una de las más
+	un nuevo análisis, partiendo de la idea central del proyecto, para ello una de las primeras cosas que se realizaron, quizá una de las más
 	importantes fue buscar si había o no, una solución parecida en el mercado, el resultado fue que pese a que actualmente existen en el medio
-	soluciones que proveen diferentes formas de accesibilidad, estas están lejos de afrontar el problema desde una solución parecida a la que se 
+	soluciones que proveen diferentes formas de accesibilidad, estas están lejos de afrontar el problema desde una perspectiva parecida a la que se 
 	propone en el presente documento.
 	
-	Posterior a eso se procedió a identificar las principales características necesarias para la construcción de la solución propuesta.\\
-	Las cuales de dividen en dos grandes áreas:
+	Posteriormente se procedió a identificar las principales características necesarias para la construcción de la solución propuesta.\\
+	Se dividen en dos grandes áreas:
 	\subsection{Requisitos funcionales \label{funcionales}}
 		En términos simples nos referimos a este tipo de requerimientos como \textit{aquellos que permiten la interacción directa del usuario
 		con la interfaz, su funcionalidad y en forma breve las funciones del sistema}, si nos referimos al capítulo (\ref{generalidades}) sección
@@ -1286,12 +1227,12 @@ $\ $
 			
 		\end{enumerate}
 		
-		Es claro que el nivel de interacción con el usuario a nivel de interfaz, es mínimo, la naturaleza del sistema lo hace ser mas una 
-		aplicación de asistencia.
+		Es claro que el nivel de interacción con el usuario a nivel de interfaz, es mínimo, la naturaleza del sistema es ser una 
+		aplicación de asistencia que no requiere de un alto nivel de interacción.
 		
 	\subsection{Requisitos no funcionales \label{nofuncionales}}
-		En esta sección se describen las funcionalidades que si bien forman parte integral del núcleo funcional del sistema, sí presentan una más
-		interacciones con el o determinan en cierta medida el funcionamiento del mismo.\\
+		En esta sección se describen las funcionalidades que no forman parte integral del núcleo del sistema, pero presentan 
+        una  o más interacciones directa o indirecta ó condicionan en cierta medida el funcionamiento del mismo.\\
 		Entre las que podemos encontrar las siguientes:
 		\begin{description}
 			\item[Interacción con el usuario:]\
@@ -1329,47 +1270,47 @@ $\ $
 				\end{multicols}
 			Estas son solo recomendaciones en cuanto al entorno de operación, con el único objetivo de aumentar el rendimiento y confiabilidad.
 		\end{description}
-		Las características tanto internas del sistema como las externas, son las mínimas consideradas para tener un sistema funcional que cunmpla con 
-		los objetivos planteados, cumplir con todos los puntos es por tanto algo que no se puede evitar a fin de conseguir un resultado aceptable en la
-		siguiente etapa.
+		Las características tanto internas del sistema como las externas, son las mínimas consideradas para tener un sistema funcional que 
+        cumpla con los objetivos planteados, cumplir con todos los puntos es por tanto algo que no se puede evitar a fin de conseguir un resultado
+        aceptable en la siguiente etapa.
 
 \newpage
 \section{Diseño}
 	Definidos los requerimientos, se deben generar un diseño que permita cumplir, de forma precisa todos los elementos que correspondan a 
 	al núcleo de la aplicación, así como los sub-sistemas periféricos.
 	\subsection{Aproximación clásica \label{clasica}}
-		Una primera aproximación tomando como base el trabajo que ya existía al momento de tomar el proyecto fue, por decirlo de alguna forma una aproximación 
-		clásica, fundamentada de lleno en la segmentación de imágenes por métodos convencionales, extracción y detección de características por medio de 
-		cálculos matemáticos y segmentación de imágenes, la siguiente imagen (\ref{f_clasic}) ilustra claramente este enfoque\\
+		Una primera aproximación tomando como base el trabajo que ya existía al momento de tomar el proyecto, fue por decirlo de alguna forma,
+    	clásica, realizar la extracción y detección de características por medio de cálculos matemáticos y segmentación de imágenes, la siguiente
+        imagen (\ref{f_clasic}) ilustra claramente este enfoque\\
 		\begin{figure}[t]
 		 	\centering
-		 	\subfigure[Clásico]{\includegraphics[width=69mm]{./Diagramas/clasico.pdf} \label{f_clasic}}
-		 	\subfigure[LeNet]{\includegraphics[width=69mm]{./Diagramas/cnn.pdf} \label{f_lenet}}
-			\caption{Los dos diferentes enfoques considerados a) Clasico b) LeNet} 
-			\label{fig:enfoque_clásico}
+		 	\subfigure[Clásico]{\includegraphics[width=69mm]{clasico.pdf} \label{f_clasic}}
+		 	\subfigure[CNN]{\includegraphics[width=69mm]{cnn.pdf} \label{f_lenet}}
+			\caption{Los dos diferentes enfoques considerados \label{fig:enfoque_clásico}} 
 		\end{figure}
-	\subsection{Aproximación por Red Neural convolucional \label{lenet}}
-		Sin embargo la solución clásica, nos es optima en condiciones no controladas, es decir fuera de las condiciones de un laboratorio, este método 
-		presenta rendimientos con niveles de precision bajos, las condiciones de iluminación, resolución, distancia a la cámara, etc., repercuten en el 
-		proceso de identificación de la dirección de la mirada.\\
-		Investigando maneras de reducir este problema y obtener un sistema mucho mas robusto y confiable, se descubrió una forma de afrontar el proyecto que
-		hasta este punto no se había considerado: \textsf{redes neuronales}.
+        
+	\subsection{Aproximación por Red Neuronal convolucional \label{lenet}}
+		Sin embargo la solución clásica, nos es óptima en condiciones no controladas, es decir fuera de las condiciones de un laboratorio, este
+        método presenta rendimientos con niveles de precisión variables, las condiciones de iluminación, resolución, distancia a la cámara, etc.,
+        repercuten en el proceso de identificación de la dirección de la mirada.\\
+		Investigando técnicas para reducir este problema y obtener un sistema mucho más robusto y confiable, se descubrió una forma de afrontar
+        el problema	hasta este punto no se había considerado: \textsf{redes neuronales}.
 		\footnote{\scriptsize Encontrará más información al respecto en el Apéndice A [\ref{a-neuronales}].}\\
 		\subsubsection{Diseño de objetos.}		
-			En la imagen [\ref{f_lenet}] se muestra el diseño del enfoque basado en esta aproximación, como se puede observar el es prácticamente igual,
-			al menos hasta la parte de la adquisición y reconocimiento del rostro, una ves obtenidos, el proceso cambia radicalmente pues la técnica
-			para determinar la dirección de la mirada se hace usando las capacidades de las redes neuronales convolucionales (\texttt{RNC}) como 	
-			en la figura [\ref{f-cnn}].
+			En la imagen [\ref{f_lenet}] se muestra el diseño del enfoque basado en esta aproximación, como se puede observar el es prácticamente
+            igual, al menos hasta la parte de la adquisición y reconocimiento del rostro, una ves obtenidos, el proceso cambia radicalmente pues la
+            técnica para determinar la dirección de la mirada se hace usando las capacidades de las redes neuronales convolucionales (\texttt{RNC})
+            como en la figura [\ref{f-cnn}].
 			\begin{figure}
 			\includegraphics[width=140mm]{mylenet.png}
 			\caption{Ejemplo de una red neuronal convolucional \label{f-cnn}}
 			\end{figure}
 			
-			Este modelo presenta enormes ventajas sobre el clásico, la capacidad de adaptarse a diferentes condiciones, hacen que las redes neuronales sean
-			la forma más confiable de abordar el problema.
+			Este modelo presenta enormes ventajas sobre el primero, la capacidad de adaptarse a diferentes condiciones, hacen que las redes
+            neuronales sean la forma más robusta de abordar el problema.
 			\begin{figure}[t]
 				\centering
-				\includegraphics[width=50mm]{./Diagramas/caso_uso_lenet.pdf} \label{f_uml_lenet}
+				\includegraphics[width=50mm]{caso_uso_lenet.pdf} \label{f_uml_lenet}
 				\caption{Diagramas de caso de uso. \label{f-lenete-uml}}
 			\end{figure}	
 			El diagrama [\ref{f-lenete-uml}] ilustra el modelo de interacción entre el usuario (\textit{actor}) y el sistema.
@@ -1385,143 +1326,214 @@ $\ $
 			En la etapa actual no es necesario que el usuario cuente con más opciones, pues dada la forma en que se procesara la información dentro 
 			de la red neuronal, el usuario realmente no necesita controlar los parámetros que esta usa para su funcionamiento.\\
 			
-		Definida la forma en la que se van a interactuar los componentes internos del sistema y la interacción con el usuario y el usuario, solo queda, 
-		construir el sistema.
+		Definida la forma en la que se van a interactuar los componentes internos del sistema y la interacción con el usuario y el usuario, 
+        solo queda construir el sistema.
 		
 \newpage
 \section{Desarrollo}
-	En esta fase del desarrollo y definidas las características, requerimientos y diseñados los modelos, la construcción  cada una de esas piezas 
-	que integran el sistema se debe hacer de forma que cumpla con cada una de ellas. Si nos referimos a la metodología POO y XP de la secciones 
-	[\ref{XP}] y [\ref{poo}], recordaremos pues que este proceso, incluidos los dos anteriores, los estaremos aplicando iteración, tras iteración, 
-	modulo tras modulo. La razón por la que en este documento no se ha incluido de forma explicita el proceso para cada uno de los módulos, es 
-	precisamente por eso, cada una de las piezas que componen el sistema se ha construido por separado, básicamente, solo una parte de todo
-	el sistema se ha mantenido en cada fase, y esa es la parte encargada de realizar la captura de vídeo desde la cámara web y la detección de 
-	rostros en cada cuadro obtenido, esto haciendo uso de las librerías \texttt{IntraFace}[\ref{intraface}] y \texttt{OpenCV}[\ref{cv}].\\
+	En esta fase del desarrollo ya definidas las características, requerimientos y diseñados los modelos, la construcción de cada una de las piezas 
+	que integraran el sistema. Si nos referimos a la metodología POO y XP de la secciones 
+	[\ref{XP}] y [\ref{poo}], recordaremos pues que esta etapa incluidas las dos anteriores, se estarán reescribiendo iteración, tras iteración, 
+	modulo tras modulo.
 	
 	Las siguientes secciones tratan en mayor profundidad el desarrollo de los diferentes componentes del sistema.
 	
 	\begin{figure}[t]
 		\centering
-		\subfigure[Vídeo]{\includegraphics[width=60mm]{./Diagramas/video.pdf} \label{f_uml_video}}
-		\caption{Diagramas de flujo, diseño. \label{f-lenete-uml}}
+		\subfigure[Vídeo]{\includegraphics[width=60mm]{video.pdf} \label{f_uml_video}}
+		\caption{Diagramas de flujo, diseño.}
 	\end{figure}	
 	\subsection{Captura de vídeo y detección de rostros}
 		Este modulo es el encargado de generar el flujo de entrada del sistema, comprobando la disponibilidad de la cámara, y el posterior 
 		procesado para el reconocimiento de rostros en cada uno de los cuadros capturados.
 		
-		Básicamente lo que hace este modulo es toma un cuadro del stream del vídeo y lo analiza usando IntrFace, la librería retorna varios
+		Básicamente lo que hace este modulo es tomar un cuadro del flujo de vídeo y lo analiza usando IntraFace, la librería retorna varios
 		datos:
 		\begin{multicols}{2}
 			\begin{enumerate}
-				\item Orientación de la cabeza en el espacio 3D, \textit{en ángulos de Euler} \texttt{Roll, Yaw, Pitch}.
+				\item Orientación de la cabeza en el espacio 3D, \textit{en ángulos de Euler} \texttt{Roll, Yaw, Pitch} [\ref{i_aEuler}].
 				\item Un conjunto de marcadores faciales, entre los que se encuentran seis coordenadas (x,y) para cada ojo.
-				\item La cantidad de rostros detectados y la zona de la pantalla en la cual esta cada uno.
+				\item La cantidad de rostros detectados y la zona de la imagen en la cual esta cada uno.
 			\end{enumerate}
 		\end{multicols}
 		Con todos estos datos es posible hacer recortes de la imagen en general y extraer regiones de interés, que en este caso son el 
 		área  de los ojos y los datos sobre la orientación de la cabeza.
-		Los cuales son enviados posteriormente a diferentes clases para seguir el proceso.
+		En la imagen [\ref{i_face}] se pueden observar todos los puntos que tenemos a disposición, para nuestros fines solo usamos 
+		los que rodean los ojos. Una vez son extraídos son enviados posteriormente a diferentes módulos para seguir el proceso.
+		\begin{figure}[hbt]
+			\centering
+				%\subfigure[Marcadores faciales]{\includegraphics[width=60mm]{face19.png} \label{i_face}
+				\subfigure[Marcadores faciales]{\includegraphics[width=40mm]{face19.png} \label{i_face}} \hspace{3cm}
+				\subfigure[\'Angulos de Euler]{\includegraphics[width=30mm]{euler.png} \label{i_aEuler}}
+				%\subfigure[Ángulos de Euler]{\includegraphics[width=40mm]{/euler.png} \label{i_eAngulos}]}
+			\caption{Marcadores faciales provistos y ángulos de Euler.}
+		\end{figure}
+	
 
-	\subsection{Clasificador de parpadeos}
-		La construcción de este modulo no fue planeada e un inicio, y por ello no forma parte de los requerimientos, sin embargo
-		durante el proceso de adquisición de imágenes se hizo necesario el discriminar entre capturas utilizables y aquellas que no.
-		La idea básica es determininar cuendo el ojo esta abierto y cuando esta cerrado,   
+	\subsection{Clasificador de parpadeo} 
+		La construcción de este modulo no fue planeada en un inicio, y por ello no forma parte de los requerimientos, sin embargo
+		durante el proceso de adquisición de imágenes se hizo necesario el discriminar entre capturas utilizables y no utilizables,
+        descrito en \cite{Joaquin}.\\
+		La idea básica es determinar cuando el ojo esta abierto [\ref{i_faceEyeOpen}] y cuando esta cerrado [\ref{i_faceEyeClose}], 
+		se usaron cuatro de los puntos centrales del contorno de cada ojo, de los cuales el dato de interés es el valor en el eje \texttt{y},
+		los puntos en los extremos de los ojos, se usan para normalizar la distancia \textit{d}.
+		Cada uno de los cuatro puntos usados esta compuesto de un par de coordenadas en la imagen \texttt{(x, y)}, determinar si el ojo se 
+		encuentra abierto o cerrado, para determinar esto se aplico una regresión logística sobre las distancias verticales normalizadas 
+		($D_{1}, D_{2})$, como se puede ver en la figura: [\ref{i_puntos}].		
+		\begin{figure}[t]
+			\centering
+			\subfigure[Ojos abiertos.]{\includegraphics[width=40mm]{face10_crop.png} \label{i_faceEyeOpen}}
+			\subfigure[Ojos cerrado. ]{\includegraphics[width=40mm]{face25_crop.png} \label{i_faceEyeClose}}
+			\subfigure[Puntos ojos. ]{\includegraphics[width=40mm]{puntos_ojos.png} \label{i_puntos}}
+			\caption{Ojos abiertos, cerrados y puntos de interés. }
+		\end{figure}	
+		
+		Los resultados de la regresión los podemos observar en imagen de la 
+		\begin{figure}[hbt]
+			\centering
+			\subfigure[Derecho]{\includegraphics[width=50mm]{rightEye.jpg} \label{i_clasifDer}}
+			\subfigure[Izquierdo]{\includegraphics[width=50mm]{leftEye.jpg} \label{i_clasifIzq}}
+			\caption{Resultados clasificador}
+		\end{figure}
+		\begin{figure}[hbt]
+			\centering
+			\includegraphics[width=100mm]{curva_roc.png} 
+			\caption{Resultados clasificador: curva ROC. \label{i_curva_roc}}
+		\end{figure}
+		El resultado de efectividad del clasificador es de acuerdo a los datos de la curva ROC [\ref{i_curva_roc}], con un área bajo la curva 
+		de \texttt{AUC: 0.964}, deja claro que la confiabilidad es mas que aceptable.
 		
 	\subsection{Normalizar imágenes}
+		\begin{figure}[t]
+			\centering
+			\subfigure[Max Pooling]{\includegraphics[width=50mm]{max_pooling.jpg} \label{i_pooling}} \hspace{2cm}
+			\subfigure[LeNet]{\includegraphics[width=50mm]{lenet_model.png} \label{i_lenetModel}}
+			\subfigure[Tipica CNN]{\includegraphics[width=130mm]{typical_cnn.png} \label{i_typical_cnn}}
+			\caption{Pooling \& LeNet}
+		\end{figure}
 		Antes de enviar las imágenes a la red neuronal \texttt{LeNet} para obtener la dirección de la mirada, es necesario realizar un 
 		tratamiento previo de las mismas, a fin de lograr los mejores resultados.
-		Basicamnete lo que se hace como en \cite{Sugano}, en resumen lo que se hace es normalizar tanto la imagen como la posición de 
-		la cabeza dentro del espacio de los ángulos polares. 
+		Basicamnete lo que se hace como en \cite{Sugano}, en resumen se normaliza tanto la imagen como la posición de 
+		la cabeza.
 		Para hacerlo, y entendiendo que fundamentalmente la posición de un objeto tiene seis grados de libertad, en el caso de querer 
 		estimar la dirección de la mirada el estimador debe hacerlo considerando cambios en 6D espaciales.
 		Poro no toda esa información es necesaria, el estimador al final solo necesita dos grados de libertad, algo que se logra escalando 
 		y rotando la imagen a fin de compensar la perspectiva de la imagen, de forma que:
-		\begin{enumerate}
-			\item La cámara enfoque el punto medio entre los ojos desde una determinada distancia.
-			\item Hacer paralelos los ejes \textit{x}, en el espacio de coordenadas de la cabeza y de la cámara 
-			\item Recortar las secciones de lo ojos con una misma resolución \textsf{W x H} y una distancia focal en el espacio de normalizado
-				de la cámara.
-		\end{enumerate}
+		\begin{multicols}{2}
+			\begin{enumerate}
+				\item La cámara enfoque el punto medio entre los ojos desde una determinada distancia.
+				\item Hacer paralelos los ejes \textit{x}, en el espacio de coordenadas de la cabeza y de la cámara 
+				\item Recortar las secciones de lo ojos con una misma resolución \textsf{W x H} y una distancia focal en el espacio de normalizado
+					de la cámara.\\
+			\end{enumerate}
+		\end{multicols}
 		El resultado sera un conjunto de imágenes con una resolución estándar y un vector 2D de los ángulos de la cabeza (\textit{Yaw y Pitch)}.
 		De esta forma los valores reales de la posición de la mirada son convertidos al espacio normalizado en 2D de la cámara.
 		Para reducir el efecto de las condiciones de iluminación el histograma de las imágenes es equializado antes del procesos de normalizar.
-	\begin{figure}[t]
-		\centering
-		\subfigure[Max Pooling]{\includegraphics[width=80mm]{max_pooling.jpg} \label{i_pooling}}
-		\subfigure[LeNet]{\includegraphics[width=80mm]{lenet_model.png} \label{i_lenetModel}}
-		\subfigure[Tipica CNN]{\includegraphics[width=100mm]{typical_cnn.png} \label{i_typical_cnn}}
-		\caption{Pooling \& LeNet \label{f-lenete-uml}}
-	\end{figure}	
-	\subsection{Procesado}
-		La tarea de la CNN es aprender a extraer de los datos entradas (\textit{posición de la cabeza e imágenes de los ojos}, el angulo de la
+		
+	\subsection{Detección del ángulo de la mirada}
+		La tarea de la CNN es aprender a extraer desde los datos de entrada (\textit{posición de la cabeza e imágenes de los ojos}, el angulo de la
 		mirada en el espacio normalizado.
-		Para lograr eso es el modelo usado es la arquitectura de red \texttt{LeNet} \ref{i_lenetModel} que consiste en una capa de convolución 
-		seguida de una capa 	de \textit{max-pooling} \ref{i_pooling}, una segunda capa de convolución y otra capa max-pooling, finalmente una 
+		Para lograr esto se usa arquitectura de red neuronal \texttt{LeNet} \ref{i_lenetModel} que consiste en una capa de convolución 
+		seguida de una capa de \textit{max-pooling} \ref{i_pooling}, una segunda capa de convolución y otra capa max-pooling, finalmente una 
 		capa totalmente conectada.
 		Una representación de esto la podemos ver en la imagen [\ref{i_typical_cnn}].
-		Se entreno una un regresor lineal sobre la capa totalmente conectada para predecir el vector del angulo de la mirada. Se uso una 
-		CNN multimodal, con eln de obtener ventaja de ambas imágenes de los ojos y la orientación de la cabeza.
-		La dirección dela mirada fue agregada a la salida de la capa totalmente conectada.
-		Las imagenes de entrada son de \textit{60 x 36 pixeles} en escala de grises, para las dos primeras capas convolucionales el tamaño
-		es de\textit{5 x 5 pixeles}, mientras que el número de características es de 20 para la primera y 50 para la segunda. El número de 
-		neuronas en la capa oculta es de 500, y cada una de ellas esta conectada a las características encontradas en la capa convolucional 
-		anterior y es calculada por la sumatoria de todos los valores de activación. La salida de la res es un vector \textit{g} 2D 
-		con los dos ángulos de la mirada \textit{yaw y Pitch}. Como función de error se usa la sumatoria de los errores individuales en la
-		medida de la distancias entre la predicción de g y el vector de ángulos actuales g.
+		Se entreno un regresor lineal sobre la capa totalmente conectada para predecir el vector del angulo de la mirada. Se uso una 
+		RNC multimodal, con el objetivo de obtener ventaja ambas imágenes de los ojos y la orientación de la cabeza.\\
+		Las imágenes de entrada son de \textit{60 x 36 pixeles} en escala de grises, previamente normalizadas, para las dos primeras capas
+        convolucionales el tamaño es de\textit{5 x 5 pixeles}, mientras que el número de características es de 20 para la primera y 50 para la
+        segunda. El número de neuronas en la capa oculta es de 500, y cada una de ellas conectada a los pesos encontrados en la 
+        capa convolucional anterior, restantes de la sumatoria de todos los valores de activación. 
+        La salida de la red es un vector \textit{g} 2D con los ángulos de la mirada \textit{yaw y Pitch}. Como función de error se usa la
+        sumatoria de los errores individuales en la relación a la predicción de g y el vector de ángulos final calculado g .
 		
 	\subsection{Amplificación}
-		Una 	vez que las CNN nos entrega el vector con los ángulos de la mirara, estos son convertidos a una coordenada aproximada en 
-		el sistema de de la pantalla en cuestión, una vez hecho ese paso, lo único que resta es llamar a la API de maginificación de 
-		Microsoft Windows y pasar como parámetros la coordenada (\textit{X, Y}) estimada del vector 2D g.
+		Una vez que las CNN nos entrega el vector con los ángulos de la mirara, estos son convertidos a una coordenada aproximada en 
+		el sistema de de la pantalla en cuestión, hecho esto, solo resta llamar a la API de maginificación de 
+		\gls{Windows} y pasar como parámetros la coordenada (\textit{X, Y}) estimada del vector \textit{g}.
 		El resultado es una ventana que muestra la sección de la pantalla
 	
 \newpage	
-\section{Pruebas}
-	Las pruebas realizadas hasta el momento aun no se aplican al sistema completo, en el estado actual de desarrollo solo se han hecho pruebas
-	unitarias para cada uno de los módulos, de acuerdo a la metodología, cada uno de ellos fue agregado al sistema solo cuando su comportamiento 
-	cumplió las  especificaciones iniciales.
-	
-	Una vez terminada de construir e implementar la rede neuronal con el resto de los componentes se incluirán los resultados de las pruebas de 
-	rendimiento.
-	
-
-\section{Conclusiones}
-	Divertido e interesante, si tuviera que definir lo que este proyecto ha sido para mi, esas serian las palabras que elegiría.
-	Obviamente hay muchas cosas más que me ha dejado, la cantidad de aprendizaje ha sido monumental, comenzado por la que es quizá la lección más
-	importante, me ha quedado claro que no debo subestimar la complejidad de un problema solo por que en la teoría y en la definición de los 
-	objetivos, suene y parezca algo fácil, mi asesor de \texttt{CICATA} me contó una historia  al inicio de la estadía que mas o menos va así:\\
-	\textit{En alguna universidad por los 50's, un alumno y un profesor platicando sobre el tema de visión artificial, salio pues el tema de 
-	como hacer posible que las máquinas puedan ver el mundo, el alumno subestimando el problema dijo al profesor que esperara, que el construiría
-	esa máquina, a día de hoy es algo que aun no logra hacer, las dificultades encontradas son grandes, pese a la simplicidad aparente de la tarea.}\\
-	
-	Creo que con algo de pena debo decir que he cometido el mismo error de ese estudiante, subestime el problema al inicio, al final me di cuenta 
-	que de haber abordado el problema con la responsabilidad que lo hago ahora, hubiese logrado resultados mucho más allá de los planteados.
-	
-	Por otro lado, es muy interesante ver como el modelo de aproximación que se implemento, es parte de una de las ramas de la tecnología que 
-	presenta actualmente un panorama muy prometedor en la industria de la información, las capacidades de calculo actuales son por primera vez, aptas
-	para llevar la potencia de calculo de los métodos aplicados, al usuario común.
-	El panorama que se ha abierto ante mi es alentador, me descubro a mi mismo, este será el camino que seguiré en mi linea de especialización.
-	
-	Como último debo agradecer al Dr. Joaquín, mi asesor interno por parte de CICATA, pues de alguna forma despertó en mi el interés por seguir 
-	preparándome, y quien sabe, es posible que el próximo semestre este aquí comenzando la maestría.
-	
 
 \chapter*{Resultados}
 \markboth{}{}
 \thispagestyle{empty}
 \lhead[\thepage]{}
 \rhead[]{\thepage}
-\addcontentsline{toc}{chapter}{Apendice}
-\newpage
+\addcontentsline{toc}{chapter}{Resultados}
+
+	Al momento de realizar el presente reporte, no se ha terminado de implementar aun el sistema completo, la razón, la red neuronal aun
+	esta en fase de construcción y pruebas unitarias, de acuerdo a los pasos estipulados en la metodología de  desarrollo [\ref{XP}],
+	un modulo no se integrara al sistema hasta que este completo.
+	Los resultados de las pruebas que se apliquen una vez completado e integrado al resto de los componentes, se agregara en cuanto los 
+	resultados estén listos y se hayan probado.\\
+	Aun si ahora no hay resultados de pruebas de ese modulo del sistema, se espera que estos sean similares a los obtenidos en \cite{Sugano}.
+	
+
+
+\section{Pruebas}
+	En este punto los resultados de las pruebas de rendimiento aplicadas, se detallan a continuación, en cuanto a las restantes, como se ha
+	explicado anteriormente, se anexaran en cuanto los resultados de las mismas sena validados y probados.
+	
+	\subsection{Pruebas clasificador de parpadeo}
+	
+		Las pruebas realizadas hasta el momento aun no se aplican al sistema completo, en el estado actual de desarrollo solo se han hecho pruebas
+		unitarias para cada uno de los módulos, de acuerdo a la metodología, cada uno de ellos fue agregado al sistema solo cuando su comportamiento 
+		cumplió las  especificaciones iniciales.
+		
+		El esquema de pruebas aplicado, al menos para el clasificador de parpadeos, es el siguiente:
+		\begin{multicols}{2}
+			\begin{enumerate}
+				\item Se tomaron muestras correspondientes (\texttt{1,000}) a imágenes de los ojos, cada una de ellas, con los datos de los puntos
+					de interés de ambos ojos. 
+				\item Manualmente se asigno una etiquetado del estado del ojo en cada par de imágenes, siendo \texttt{0} cerrado y \texttt{1} abierto.
+				\item Para entrenar el clasificador se tomaron \texttt{70\% }de los datos para entrenamiento y el resto se dejo para pruebas.
+			\end{enumerate}
+		\end{multicols}
+		El resultado fue un vector de coeficientes que una vez incluidos en la codificaron del modulo, dieron el nivel de efectividad que se puede 
+		observar  en la imagen de la curva ROC (\ref{i_curva_roc}].
+		
+	
+	\subsection{rendimiento de las librerías}	
+			El rendimiento de las librerías usadas, \texttt{IntraFace, OpenCV}, es el indicado en sus respectivas documentaciones, es comprensible
+			que haya algunas fluctuaciones, pero nada significativo para el funcionamiento general del sistema. 
+			La articulo referente a IntrFace en \cite{IntraFace} y la documentación oficial de de OpenCV, pueden ser revisadas para mayor detalle 
+			sobre el desempeño de ambas librerías.
 
 \chapter*{Conclusiones y recomendaciones}
 \markboth{}{}
 \thispagestyle{empty}
 \lhead[\thepage]{}
 \rhead[]{\thepage}
-\addcontentsline{toc}{chapter}{Apendice}
-\newpage
+\addcontentsline{toc}{chapter}{Conclusiones y recomendaciones}
 
+\subsection{Recomendaciones}
+	Es importante mencionar que la metodología permite las libertades de desarrollo que se han venido viendo a lo largo de todo el reporte, el hecho de estar
+	enfocada en el desarrollo de prototipos rápidos hace que tener resultados sobre algunas de las partes que integran el sistema se rápido,
+	esa característica pese a ser muy útil si lo que se requiere son ver resultados rápidos, tiene el 
+	inconveniente de ser parcial en cuanto a documentación se refiere.
+	
+\section{Conclusiones}
+	Divertido e interesante, si tuviera que definir lo que este proyecto ha sido para mi, esas serian las palabras que elegiría.
+	Obviamente hay muchas cosas más que me ha dejado, la cantidad de aprendizaje ha sido monumental, comenzado por la que es quizá la lección más
+	importante, me ha quedado claro que no debo subestimar la complejidad de un problema solo por que en la teoría y en la definición de los 
+	objetivos, suene y parezca algo fácil, mi asesor de \texttt{CICATA} me contó una historia  al inicio de la estadía que mas o menos va así:\\
+	
+	\textit{En alguna universidad por los 50's, un alumno y un profesor platicando sobre el tema de visión artificial, salio pues el tema de 
+	como hacer posible que las máquinas puedan ver el mundo, el alumno subestimando el problema dijo al profesor que esperara, que el construiría
+	esa máquina, a día de hoy es algo que aun no logra hacer, las dificultades encontradas son grandes, pese a la simplicidad aparente de la tarea.}\\
+	
+	Creo debo admitir, que he cometido el mismo error de ese estudiante, subestime el problema al inicio, al final me di cuenta 
+	que de haber abordado el problema con la responsabilidad que lo hago ahora, hubiese logrado resultados mucho más allá de los planteados.
+	
+	Por otro lado, es muy interesante ver como el modelo de aproximación que se implemento, es parte de una de las ramas de la tecnología que 
+	presenta actualmente un panorama muy prometedor en el campo de la informática, las capacidades de calculo actuales son por primera vez aptas
+	para llevar la potencia de calculo necesaria de los métodos aplicados, al usuario común.
+	El panorama que se ha abierto ante mi es alentador, me descubro a mi mismo, este será el camino que seguiré en mi linea de especialización.
+	
+	Como último debo agradecer al Dr. Joaquín Salas Rodríguez, mi asesor interno por parte de CICATA, pues de alguna forma despertó en mi el interés por seguir 
+	preparándome.
+	
 
 
 			
@@ -1569,6 +1581,10 @@ Y.Sugano, Y. Matsushita and Y. Sato.
 [\textit{Learning-by-sythesis for appeareance-based 3d gaze estimation.}]
 In Proc. CVR, pages 1821-1828, 2014, 1,2,3,4,5,6,7,8.
 
+\bibitem{IntraFace}{\textbf{Fernando De la Torre}}
+Wen-Sheng Chu and Xuehan Xiong, Francisco Vicente, Xiaoyu Ding, Jeffrey F. Cohn
+[\textit{IEEE International Conference on Automatic Face and Gesture Recognition (FG)}]
+Ljubljana, Slovenia. , 2015.
 
 \bibitem{python}{\textbf{Rául Gonzáles Duque}},
 Rául Gonzáles Duque
@@ -1580,6 +1596,10 @@ David E.Brumbaugh
 [\textit{Object-Oriented Developement with C++}]. 
 Edt.Wile, 1994.
 
+\bibitem{Joaquin}{\textbf{Joaquín Salas}}
+Joaquín Salas Rodríguez
+[\textit{Clasificador Lineal Ojos Abiertos/Cerrados}]. 
+Abril 14, 2016.
 
 \bibitem {xProgv}{\textbf{Fowler}}
 Martin Fowler 
